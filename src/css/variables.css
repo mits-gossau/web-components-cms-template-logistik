@@ -1,0 +1,65 @@
+/**
+ * Variables naming rule: --{selector aka component aka namespace}-{css property}-{pseudo class or media query name} eg. --p-background-color-hover 
+ * NOTE: Within the component don't use any name spacing eg. component header don't use --header-color just use --color the namespace can be added by the Shadow as an html attribute
+ * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
+ * - if a component holds other components you should share the attribute namespace with its children
+ */
+ html {
+  --a-color-hover: var(--color);
+  --a-color: var(--color);
+  --a-display: block;
+  --a-font-family-hover: var(--font-family-quinary);
+  --a-margin: 0;
+  --a-text-align: center;
+  --a-text-decoration-hover: underline;
+  --a-text-decoration: underline;
+  --animation: none;
+  --any-a-display: inline;
+  --background-color: #272727;
+  --color-hover: #ffffff;
+  --color-secondary: #d9adff;
+  --color: #D2BB61;
+  --content-spacing-mobile: var(--content-spacing);
+  --content-spacing: 1.59rem;
+  --content-width-mobile: 92%;
+  --content-width-not-web-component-mobile: 92%;
+  --content-width-not-web-component: 55%;
+  --content-width: 85%;
+  --flex-grow: 1;
+  --font-family-quaternary: Arial, sans-serif;
+  --font-family-quinary: Arial, sans-serif;
+  --font-family-secondary: "FuturaT", Arial, sans-serif;
+  --font-family-senary: Arial, sans-serif;
+  --font-family-tertiary: "OPTIFutura-ExtraBlackCond", Arial, sans-serif;
+  --font-family: Arial, sans-serif;
+  --font-size-mobile: min(18px, 5vw);
+  --font-size: max(22px, 1.1vw);
+  --h1-font-size-mobile: 1.67rem;
+  --h1-font-size: 2.5rem;
+  --h1-margin: 0;
+  --h2-font-size-mobile: var(--h1-font-size-mobile);
+  --h2-font-size: var(--h1-font-size);
+  --h2-margin: 0 auto 0.227rem;
+  --h2-padding: var(--content-spacing) 0 0;
+  --h3-font-size-mobile: 1.33rem;
+  --h3-font-size: 1.59rem;
+  --h3-margin: var(--h2-margin);
+  --h3-padding: var(--h2-padding);
+  --h4-font-size-mobile: var(--h1-font-size-mobile);
+  --h4-font-size: 1.82rem;
+  --h4-margin: 0;
+  --h5-margin: 0;
+  --h6-margin: 0;
+  --html-background-color: var(--background-color);
+  --p-color: var(--color);
+  --p-margin: 0 auto var(--content-spacing);
+  --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
+  --picture-width-mobile: var(--content-width-mobile);
+  --picture-width: var(--content-width);
+  --q-font-size-mobile: 1.333rem;
+  --q-font-size: 1.272rem;
+  --q-margin: 0 auto 0.227rem;
+  --spacer-height-mobile: 1.53rem;
+  --spacer-height: 4.41rem;
+  --video-margin: 0 auto;
+}

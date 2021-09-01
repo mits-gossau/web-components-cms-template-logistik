@@ -1,0 +1,24 @@
+/**
+ * NOTE: consider the following <link rel="preload" href="[url_to_font]"> to prefetch initially displayed fonts
+ */
+
+ @font-face {
+  font-family: 'FuturaT';
+  src: url('../es/components/web-components-cms-template/src/fonts/FuturaT/FuturaT-Book.eot');
+  src: url('../es/components/web-components-cms-template/src/fonts/FuturaT/FuturaT-Book.eot?#iefix') format('embedded-opentype'),
+      url('../es/components/web-components-cms-template/src/fonts/FuturaT/FuturaT-Book.woff2') format('woff2'),
+      url('../es/components/web-components-cms-template/src/fonts/FuturaT/FuturaT-Book.woff') format('woff');
+  font-display: block;
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OPTIFutura-ExtraBlackCond';
+  src:url('../es/components/web-components-cms-template/src/fonts/OPTIFutura-ExtraBlackCond/OPTIFutura-ExtraBlackCond.ttf.woff') format('woff'),
+      url('../es/components/web-components-cms-template/src/fonts/OPTIFutura-ExtraBlackCond/OPTIFutura-ExtraBlackCond.ttf.svg#OPTIFutura-ExtraBlackCond') format('svg'),
+      url('../es/components/web-components-cms-template/src/fonts/OPTIFutura-ExtraBlackCond/OPTIFutura-ExtraBlackCond.ttf.eot'),
+      url('../es/components/web-components-cms-template/src/fonts/OPTIFutura-ExtraBlackCond/OPTIFutura-ExtraBlackCond.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-display: block;
+  font-style: normal;
+  font-weight: normal;
+}

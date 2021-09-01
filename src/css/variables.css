@@ -50,6 +50,7 @@
   --h4-margin: 0;
   --h5-margin: 0;
   --h6-margin: 0;
+  --header-height: auto;
   --html-background-color: var(--background-color);
   --p-color: var(--color);
   --p-margin: 0 auto var(--content-spacing);

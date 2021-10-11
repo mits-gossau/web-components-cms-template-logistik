@@ -4,3 +4,6 @@
 [submodule "src/es/components/web-components"]
 	path = src/es/components/web-components
 	url = https://github.com/mits-gossau/web-components.git
+[submodule "src/es/components/web-components-cms-template-sparx"]
+	path = src/es/components/web-components-cms-template-sparx
+	url = https://github.com/mits-gossau/web-components-cms-template-sparx.git

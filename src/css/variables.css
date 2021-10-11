@@ -8,7 +8,6 @@
   --a-color-hover: var(--color);
   --a-color: var(--color);
   --a-display: block;
-  --a-font-family-hover: var(--font-family-quinary);
   --a-margin: 0;
   --a-text-align: center;
   --a-text-decoration-hover: underline;
@@ -26,12 +25,9 @@
   --content-width-not-web-component: 55%;
   --content-width: 85%;
   --flex-grow: 1;
-  --font-family-quaternary: Arial, sans-serif;
-  --font-family-quinary: Arial, sans-serif;
-  --font-family-secondary: "FuturaT", Arial, sans-serif;
-  --font-family-senary: Arial, sans-serif;
-  --font-family-tertiary: "OPTIFutura-ExtraBlackCond", Arial, sans-serif;
-  --font-family: Arial, sans-serif;
+  --font-family-secondary: display, Helvetica, Arial, sans-serif;
+  --font-family-tertiary: micro, Helvetica, Arial, sans-serif;
+  --font-family: text, Helvetica, Arial, sans-serif;
   --font-size-mobile: min(18px, 5vw);
   --font-size: max(22px, 1.1vw);
   --h1-font-size-mobile: 1.67rem;

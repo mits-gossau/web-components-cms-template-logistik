@@ -176,6 +176,10 @@
       url: 'web-components-cms-template/src/es/components/thirdParty/'
     },
     {
+      selector: 'sparx-a-',
+      url: 'web-components-cms-template-sparx/src/es/components/atoms/'
+    },
+    {
       selector: 'wc-a-',
       url: 'web-components/src/es/components/atoms/',
       separateFolder: true

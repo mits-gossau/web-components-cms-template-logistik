@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=../../../css/color.css rel=stylesheet>
   <link href=../../../css/variables.css rel=stylesheet>
   <link href=../../../css/misc.css rel=stylesheet>
   <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
@@ -17,7 +18,7 @@
 
 <body>
   <p-general>
-    <o-header menu-icon="true" namespace="header-" role="header">
+    <!--<o-header menu-icon="true" namespace="header-" role="header">
       <a-logo style="visibility: hidden;" namespace="header-logo-" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gr-logistik.com%2Fen%2Fmediathek%2Fgr-transport-logistik-gmbh-media-04.jpg&f=1&nofb=1" href="/"></a-logo>
       <m-navigation hover="false" namespace="navigation-" hit-area="false" focus-lost-close focus-lost-close-mobile set-active>
         <ul>
@@ -59,20 +60,125 @@
           </li>
         </ul>
       </m-navigation>
-    </o-header>
-    <logistik-o-body home>
+    </o-header>-->
+    <logistik-o-body>
       <h1>Hello World</h1>
+      <o-teaser-wrapper>
+        <m-teaser namespace="teaser" namespace-fallback>
+          <figure>
+            <a-picture defaultsource="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International"></a-picture>
+            <figcaption>
+              <h2>teaser titel</h2>
+              <p>Aus China, Indien oder Südamerika. Aus Italien, Deutschland oder Portugal. Auf dem See- oder Landweg. Wir transportieren die Güter der Migros-Gruppe termingerecht und kostengünstig auf der optimalsten Route vom Lieferanten bis ins Verteilzentrum. Mit dem Schiff, der Bahn, per LKW oder dem Flugzeug. Sendungsverfolgung (Track &amp; Trace) und Verzollung inklusive.</p>
+              <!--<sparx-a-call-for-ideas namespace="call-for-ideas-" position="absolute" position-mobile="static" spacing="20" aria-label="Verzollungen" class="hover">
+                <sparx-a-heading mode="false"><h4>Verzollungen</h4></sparx-a-heading>
+              </sparx-a-call-for-ideas>-->
+            </figcaption>
+          </figure>
+        </m-teaser>
+        <m-teaser namespace="teaser" namespace-fallback>
+          <figure>
+            <a-picture defaultsource="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International"></a-picture>
+            <figcaption>
+              <h2>teaser titel</h2>
+              <p>Aus China, Indien oder Südamerika. Aus Italien, Deutschland oder Portugal. Auf dem See- oder Landweg. Wir transportieren die Güter der Migros-Gruppe termingerecht und kostengünstig auf der optimalsten Route vom Lieferanten bis ins Verteilzentrum. Mit dem Schiff, der Bahn, per LKW oder dem Flugzeug. Sendungsverfolgung (Track &amp; Trace) und Verzollung inklusive.</p>
+              <!--<sparx-a-call-for-ideas namespace="call-for-ideas-" position="absolute" position-mobile="static" spacing="20" aria-label="Verzollungen" class="hover">
+                <sparx-a-heading mode="false"><h4>Verzollungen</h4></sparx-a-heading>
+              </sparx-a-call-for-ideas>-->
+            </figcaption>
+          </figure>
+        </m-teaser>
+        <m-teaser namespace="teaser" namespace-fallback>
+          <figure>
+            <a-picture defaultsource="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International"></a-picture>
+            <figcaption>
+              <h2>teaser titel</h2>
+              <p>Aus China, Indien oder Südamerika. Aus Italien, Deutschland oder Portugal. Auf dem See- oder Landweg. Wir transportieren die Güter der Migros-Gruppe termingerecht und kostengünstig auf der optimalsten Route vom Lieferanten bis ins Verteilzentrum. Mit dem Schiff, der Bahn, per LKW oder dem Flugzeug. Sendungsverfolgung (Track &amp; Trace) und Verzollung inklusive.</p>
+              <!--<sparx-a-call-for-ideas namespace="call-for-ideas-" position="absolute" position-mobile="static" spacing="20" aria-label="Verzollungen" class="hover">
+                <sparx-a-heading mode="false"><h4>Verzollungen</h4></sparx-a-heading>
+              </sparx-a-call-for-ideas>-->
+            </figcaption>
+          </figure>
+        </m-teaser>
+      </o-teaser-wrapper>
+      <o-teaser-wrapper>
+        <m-teaser namespace="teaser" namespace-fallback>
+          <figure>
+            <a-picture defaultSource="https://picsum.photos/900/770" alt="randomized image" sources='[{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "small" 
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "medium"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "large"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "extra-large"
+            }]'></a-picture>
+            <figcaption>
+              <h3>Teaser Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </figcaption>
+          </figure>
+        </m-teaser>
+        <m-teaser theme="light">
+          <figure>
+            <a-picture defaultSource="https://picsum.photos/900/770" alt="randomized image" sources='[{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "small" 
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "medium"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "large"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "extra-large"
+            }]'></a-picture>
+            <figcaption>
+              <h3>Teaser Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </figcaption>
+          </figure>
+        </m-teaser>
+        <m-teaser theme="light">
+          <figure>
+            <a-picture defaultSource="https://picsum.photos/900/770" alt="randomized image" sources='[{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "small" 
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "medium"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "large"
+            },{
+              "src": "https://picsum.photos/900/770",
+              "type": "image/jpg",
+              "size": "extra-large"
+            }]'></a-picture>
+            <figcaption>
+              <h3>Teaser Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </figcaption>
+          </figure>
+        </m-teaser>
+      </o-teaser-wrapper>
       <wc-a-button small>small</wc-a-button>
-      <p>Some Text</p>
-      <p>Some Text</p>
-      <p>Some Text</p>
-      <p>Some Text</p>
-      <sparx-a-call-for-ideas color=#282828 background-color=#84E3C5
-        position="static" position-mobile="static" spacing=20>
-        <sparx-a-heading mode=false>
-          <h4>Bringt die Welt in<br>die Schweiz</h4>
-        </sparx-a-heading>
-      </sparx-a-call-for-ideas>
     </logistik-o-body>
   </p-general>
   <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->

@@ -15,7 +15,8 @@
   },
   "standard": {
     "ignore": [
-      "/src/es/components/web-components-cms-template/"
+      "/src/es/components/web-components-cms-template/",
+      "/src/es/components/web-components/"
     ]
   }
 }

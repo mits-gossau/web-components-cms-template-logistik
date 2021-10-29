@@ -9,8 +9,8 @@
   --content-width-not-web-component-mobile: 95%;
   --content-width-not-web-component: 60%;
   --content-width: 95%;
-  --figcaption-padding: 1.5rem 0 0;
   --figcaption-padding-mobile: 1.5rem 0.5rem 0;
+  --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;
   --h5-font-size: 1.125rem;
   --h5-font-weight: 700;
@@ -18,15 +18,23 @@
   --h5-margin: 0;
   --header-height: auto;
   --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
+  --picture-text-wrapper-any-1-width: 65%;
+  --picture-text-wrapper-h1-margin: var(--teaser-h1-margin);
+  --picture-text-wrapper-margin-first-child-mobile: 0;
+  --picture-text-wrapper-margin-last-child: 0;
+  --picture-text-wrapper-margin-mobile: 0;
+  --picture-text-wrapper-margin: 0 1.94rem 0 0;
+  --picture-text-wrapper-padding-last-child-mobile: var(--figcaption-padding-mobile);
   --picture-width-mobile: var(--content-width-mobile);
   --picture-width: var(--content-width);
   --q-font-size-mobile: 1.333rem;
   --q-font-size: 1.272rem;
   --q-margin: 0 auto 0.227rem;
   --teaser-h1-margin: 0 0 1.25rem;
-  --teaser-wrapper-margin: 0 1.94rem 0 0;
+  --teaser-wrapper-margin-first-child-mobile: 0;
   --teaser-wrapper-margin-last-child: 0;
   --teaser-wrapper-margin-mobile: 0;
+  --teaser-wrapper-margin: 0 1.94rem 0 0;
   --title-rotation: -12deg;
   --video-margin: 0 auto;
 }

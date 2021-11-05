@@ -44,6 +44,8 @@
   --teaser-content-spacing: 0;
   --teaser-content-width: 100%;
   --teaser-h1-margin: 0 0 1.25rem;
+  --teaser-picture-width-mobile: 100%;
+  --teaser-picture-width: 100%;
   --teaser-wrapper-margin-first-child-mobile: 0;
   --teaser-wrapper-margin-last-child: 0;
   --teaser-wrapper-margin-mobile: 0;

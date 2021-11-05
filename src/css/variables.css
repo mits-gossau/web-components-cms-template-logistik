@@ -30,6 +30,12 @@
   --q-font-size-mobile: 1.333rem;
   --q-font-size: 1.272rem;
   --q-margin: 0 auto 0.227rem;
+  --teaser-btn-border-color-hover: var(--m-blue-800);
+  --teaser-btn-border-color: var(--m-blue-600);
+  --teaser-btn-button-color-hover: var(--m-blue-700);
+  --teaser-btn-button-color: var(--m-blue-500);
+  --teaser-content-spacing: 0;
+  --teaser-content-width: 100%;
   --teaser-h1-margin: 0 0 1.25rem;
   --teaser-wrapper-margin-first-child-mobile: 0;
   --teaser-wrapper-margin-last-child: 0;

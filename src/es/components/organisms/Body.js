@@ -30,6 +30,11 @@ export default class Body extends BaseBody {
         :host([home]) .spacer {
           height: var(--home-spacer-height-mobile, var(--home-spacer-height, 15vw));
         }
+        :host([home]) o-wrapper {
+          margin: 0;
+          --picture-text-wrapper-content-spacing-mobile: 0;
+          --teaser-wrapper-content-spacing-mobile: 0;
+        }
       }
     `
   }

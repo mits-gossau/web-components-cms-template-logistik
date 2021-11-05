@@ -23,12 +23,12 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host {
-
+      :host([home]) .spacer {
+        height: var(--home-spacer-height, 15vw);
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        :host {
-          
+        :host([home]) .spacer {
+          height: var(--home-spacer-height-mobile, var(--home-spacer-height, 15vw));
         }
       }
     `

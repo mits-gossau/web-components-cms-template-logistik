@@ -17,7 +17,11 @@
   --h5-line-height: 1.75rem;
   --h5-margin: 0;
   --header-height: auto;
+  --home-spacer-height-mobile: 0;
+  --home-spacer-height: 3.875rem;
   --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
+  --picture-margin: 0;
+  --picture-padding: 0;
   --picture-text-wrapper-any-1-width: 65%;
   --picture-text-wrapper-h1-margin: var(--teaser-h1-margin);
   --picture-text-wrapper-margin-first-child-mobile: 0;
@@ -25,6 +29,7 @@
   --picture-text-wrapper-margin-mobile: 0;
   --picture-text-wrapper-margin: 0 1.94rem 0 0;
   --picture-text-wrapper-padding-last-child-mobile: var(--figcaption-padding-mobile);
+  --picture-text-wrapper-padding: 0;
   --picture-width-mobile: var(--content-width-mobile);
   --picture-width: var(--content-width);
   --q-font-size-mobile: 1.333rem;
@@ -34,6 +39,8 @@
   --teaser-btn-border-color: var(--m-blue-600);
   --teaser-btn-button-color-hover: var(--m-blue-700);
   --teaser-btn-button-color: var(--m-blue-500);
+  --teaser-btn-margin-mobile: 0 0.5rem var(--content-spacing);
+  --teaser-btn-margin: 0 0 var(--content-spacing);
   --teaser-content-spacing: 0;
   --teaser-content-width: 100%;
   --teaser-h1-margin: 0 0 1.25rem;
@@ -41,6 +48,7 @@
   --teaser-wrapper-margin-last-child: 0;
   --teaser-wrapper-margin-mobile: 0;
   --teaser-wrapper-margin: 0 1.94rem 0 0;
+  --teaser-wrapper-padding: 0;
   --title-rotation: -12deg;
   --video-margin: 0 auto;
 }

@@ -6,13 +6,7 @@ Using web-components-cms-template Repository
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
 TODO:
-- hover effect
-- https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/kontakt/
+- note: mobile nur sticky header mobile nav (part with closing btn)
 
-Question to Marcel
-- Links underline?
-- --content-width: 60%; vs 52%
-
-Meeting
-- dino test new namespace fallback fix
-- all new wrapper
+General Points
+- Brückenseitenkontent

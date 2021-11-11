@@ -32,6 +32,7 @@
   --header-justify-content: flex-start;
   --header-order: 0;
   --header-padding: 1.5rem 0;
+  --header-position: static;
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
   --navigation-a-link-content-spacing: 0 max(0.6vw, 0.75rem);

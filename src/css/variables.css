@@ -16,7 +16,10 @@
   --h5-font-weight: 700;
   --h5-line-height: 1.75rem;
   --h5-margin: 0;
+  --header-border-bottom: 1px solid var(--m-gray-300);
+  --header-content-spacing: 0;
   --header-height: auto;
+  --header-padding: 1.5rem 0;
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
   --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */

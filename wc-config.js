@@ -187,6 +187,10 @@
       url: 'atoms/'
     },
     {
+      selector: 'logistik-m-',
+      url: 'molecules/'
+    },
+    {
       selector: 'logistik-o-',
       url: 'organisms/'
     }

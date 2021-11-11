@@ -8,5 +8,8 @@ Using web-components-cms-template Repository
 TODO:
 - note: mobile nur sticky header mobile nav (part with closing btn)
 
+Questions for Marcel:
+- Header "MGB" font-family?
+
 General Points
 - Brückenseitenkontent

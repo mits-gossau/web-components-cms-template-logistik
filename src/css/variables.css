@@ -16,12 +16,11 @@
   --h5-font-weight: 700;
   --h5-line-height: 1.75rem;
   --h5-margin: 0;
-  --header-a-align-self: baseline;
   --header-a-color-hover: var(--color-secondary);
   --header-a-color: var(--color);
   --header-a-font-size: var(--h4-font-size);
   --header-a-line-height: 2rem;
-  --header-a-padding: 0 max(4.5625rem, 3vw) 0 0;
+  --header-a-padding: 0 max(4.5625rem, 3vw) 1.4rem 0;
   --header-a-text-decoration-hover: none;
   --header-a-text-decoration: none;
   --header-a-text-transform: none;

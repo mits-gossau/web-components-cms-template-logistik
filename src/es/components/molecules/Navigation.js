@@ -32,13 +32,14 @@ export default class Navigation extends BaseNavigation {
       }
       :host > nav > ul > li {
         margin: var(--margin);
+        border-bottom: 1px solid transparent;
+        transition: all 0.1s ease;
       }
       :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
         --navigation-a-link-content-spacing: 0;
         --navigation-a-link-font-size: 1rem;
         --navigation-a-link-font-weight: normal;
         background-color: var(--background-color, white);
-        border-bottom: 1px solid transparent;
         display: none;
         position: absolute;
         left: 0;

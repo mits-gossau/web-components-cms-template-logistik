@@ -12,6 +12,38 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @type {CustomElementConstructor}
  */
 export default class Navigation extends BaseNavigation {
+  constructor (...args) {
+    super(...args)
+
+    this.clickListener = event => {
+      let section
+      if ((section = this.root.querySelector('li.open section'))) {
+        if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
+        this.css = /* css */`
+          :host > nav > ul > li.open > div.background {
+            top: ${section.getBoundingClientRect().bottom}px;
+          }
+        `
+      }
+    }
+    this.selfClickListener = event => {
+      if (this.hasAttribute('no-scroll')) document.body.classList.remove(this.getAttribute('no-scroll') || 'no-scroll')
+    }
+  }
+
+  connectedCallback () {
+    super.connectedCallback()
+    self.addEventListener('click', this.selfClickListener)
+    self.addEventListener('resize', this.clickListener)
+  }
+
+  disconnectedCallback () {
+    super.disconnectedCallback()
+    self.removeEventListener('click', this.selfClickListener)
+    self.removeEventListener('resize', this.clickListener)
+    this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
+  }
+
   /**
    * renders the logistik-m-navigation css
    *
@@ -35,6 +67,23 @@ export default class Navigation extends BaseNavigation {
         border-bottom: 1px solid transparent;
         transition: all 0.1s ease;
       }
+      :host > nav > ul li.open {
+        border-bottom: 1px solid var(--color-secondary);
+      }
+      :host > nav > ul > li > div.background {
+        display: none;
+        position: fixed;
+        background-color: var(--m-gray-500);
+        width: 100vw;
+        height: 100vw;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+      :host > nav > ul > li.open > div.background {
+        display: block;
+        opacity: 0.54;
+      }
       :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
         --navigation-a-link-content-spacing: 0;
         --navigation-a-link-font-size: 1rem;
@@ -47,9 +96,6 @@ export default class Navigation extends BaseNavigation {
         padding: 2.5rem 0;
         transition: all 0.2s ease;
         z-index: var(--li-ul-z-index, auto);
-      }
-      :host > nav > ul li.open {
-        border-bottom: 1px solid var(--color-secondary);
       }
       :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
         display: flex;
@@ -81,7 +127,9 @@ export default class Navigation extends BaseNavigation {
       Array.from(section.children).forEach(node => {
         if (!node.getAttribute('slot')) wrapper.root.appendChild(node)
       })
+      section.parentNode.prepend(this.getBackground())
       section.replaceWith(wrapper)
+      this.root.querySelectorAll('a-link').forEach(link => link.addEventListener('click', this.clickListener))
     }))
   }
 
@@ -107,5 +155,11 @@ export default class Navigation extends BaseNavigation {
         return element
       })
     ])
+  }
+
+  getBackground () {
+    const background = document.createElement('div')
+    background.classList.add('background')
+    return background
   }
 }

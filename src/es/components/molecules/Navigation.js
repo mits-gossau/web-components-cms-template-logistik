@@ -30,20 +30,15 @@ export default class Navigation extends BaseNavigation {
         `
       }
     }
-    this.selfClickListener = event => {
-      if (this.hasAttribute('no-scroll')) document.body.classList.remove(this.getAttribute('no-scroll') || 'no-scroll')
-    }
   }
 
   connectedCallback () {
     super.connectedCallback()
-    self.addEventListener('click', this.selfClickListener)
     self.addEventListener('resize', this.clickListener)
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
-    self.removeEventListener('click', this.selfClickListener)
     self.removeEventListener('resize', this.clickListener)
     this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
   }

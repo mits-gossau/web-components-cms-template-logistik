@@ -59,6 +59,7 @@ export default class Navigation extends BaseNavigation {
     this.setCss(bodyCss, undefined, '') // already received its namespace and for that gets set without any ''
     this.css = /* css */`
       :host > nav > ul {
+        background-color: var(--background-color);
         margin: 0;
       }
       :host > nav > ul > li {

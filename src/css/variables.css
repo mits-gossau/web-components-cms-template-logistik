@@ -49,7 +49,10 @@
   --header-height-mobile: 5rem;
   --header-height: auto;
   --header-justify-content: flex-start;
+  --header-logistik-m-navigation-height-mobile: calc(100vh - var(--header-logistik-m-navigation-top-mobile));
+  --header-logistik-m-navigation-height-open-mobile: var(--header-logistik-m-navigation-height-mobile);
   --header-logistik-m-navigation-top-mobile: calc(var(--header-height-mobile) + 1px);
+  --header-logistik-m-navigation-transition: none;
   --header-order: 0;
   --header-padding-mobile: 0 0 0;
   --header-padding: 1.5rem 0 0;

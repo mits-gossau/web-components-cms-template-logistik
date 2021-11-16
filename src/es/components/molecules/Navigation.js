@@ -19,7 +19,7 @@ export default class Navigation extends BaseNavigation {
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
-        this.css = /* css */`
+        this.style.textContent = /* css */`
           :host > nav > ul > li.open > div.background {
             top: ${section.getBoundingClientRect().bottom}px;
           }
@@ -71,6 +71,7 @@ export default class Navigation extends BaseNavigation {
         border-bottom: 1px solid var(--color-secondary);
       }
       :host > nav > ul > li > div.background {
+        cursor: auto;
         display: none;
         position: fixed;
         background-color: var(--m-gray-500);
@@ -89,6 +90,7 @@ export default class Navigation extends BaseNavigation {
         --navigation-a-link-font-size: 1rem;
         --navigation-a-link-font-weight: normal;
         background-color: var(--background-color, white);
+        cursor: auto;
         display: none;
         position: absolute;
         left: 0;
@@ -130,6 +132,7 @@ export default class Navigation extends BaseNavigation {
       section.parentNode.prepend(this.getBackground())
       section.replaceWith(wrapper)
       this.root.querySelectorAll('a-link').forEach(link => link.addEventListener('click', this.clickListener))
+      this.html = this.style
     }))
   }
 
@@ -161,5 +164,13 @@ export default class Navigation extends BaseNavigation {
     const background = document.createElement('div')
     background.classList.add('background')
     return background
+  }
+
+  get style () {
+    return this._style || (this._style = (() => {
+      const style = document.createElement('style')
+      style.setAttribute('protected', 'true')
+      return style
+    })())
   }
 }

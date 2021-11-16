@@ -2,6 +2,10 @@
 import BaseNavigation from '../web-components-cms-template/src/es/components/molecules/Navigation.js'
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
+/* global customElements */
+/* global self */
+/* global Wrapper */
+
 /**
  * Navigation hosts uls
  * Example at: /src/es/components/pages/Home.html

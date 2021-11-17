@@ -86,9 +86,9 @@ export default class Navigation extends BaseNavigation {
         opacity: 0.54;
       }
       :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
-        --navigation-a-link-content-spacing: 0;
-        --navigation-a-link-font-size: 1rem;
-        --navigation-a-link-font-weight: normal;
+        --a-link-content-spacing: 0;
+        --a-link-font-size: 1rem;
+        --a-link-font-weight: normal;
         background-color: var(--background-color, white);
         cursor: auto;
         display: none;
@@ -107,12 +107,36 @@ export default class Navigation extends BaseNavigation {
         padding-bottom: 0.5rem;
       }
       :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li:first-child, :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
-        --navigation-a-link-font-weight: bold;
-        --navigation-a-link-font-size: 1.25rem;
+        --a-link-font-weight: bold;
+        --a-link-font-size: 1.25rem;
         padding-bottom: 0.875rem;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        
+        :host {
+          --a-link-content-spacing-no-scroll: 0;
+          --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
+          --a-link-font-size-no-scroll-mobile: 1.1429rem;
+          --a-link-font-weight: normal;
+          --a-link-text-align-mobile: left;
+          --height: auto;
+          --li-padding: 1.1429rem 1.2143rem;
+          --margin: 0;
+          --min-height-mobile: 0;
+        }
+        :host > nav > ul > li{
+          box-sizing: border-box;
+          border-bottom: var(--header-border-bottom);
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        :host > nav > ul > li > div.background {
+          display: none !important;
+        }
+        :host > nav > ul li a-link {
+          display: flex;
+          align-items: center;
+        }
       }
     `
   }
@@ -123,7 +147,7 @@ export default class Navigation extends BaseNavigation {
    * @return {void}
    */
   renderHTML () {
-    super.renderHTML()
+    super.renderHTML(['left', 'right'], this.arrowClickListener)
     this.loadChildComponents().then(children => Array.from(this.root.querySelectorAll('section')).forEach(section => {
       const wrapper = new children[2][1]({ mode: 'false' })
       Array.from(section.children).forEach(node => {

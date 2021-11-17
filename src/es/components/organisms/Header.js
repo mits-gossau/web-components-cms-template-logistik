@@ -49,14 +49,14 @@ export default class Header extends BaseHeader {
     this.css = /* css */`
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host > header > ${this.getAttribute('m-navigation') || 'm-navigation'} {
-          animation: close .5s ease;
+          animation: close .5s ease-in;
           left: -100vw;
         }
         :host > header > ${this.getAttribute('m-navigation') || 'm-navigation'}.open {
           display: block;
         }
         :host > header.open > ${this.getAttribute('m-navigation') || 'm-navigation'} {
-          animation: open .5s ease;
+          animation: open .4s ease-out;
           left: 0;
         }
       }

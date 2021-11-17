@@ -63,6 +63,7 @@
   --margin-last-child: 0;
   --margin-mobile: 0;
   --margin: 0 1.94rem 0 0;
+  --navigation-a-link-color-no-scroll: var(--color);
   --navigation-a-link-content-spacing: 0;
   --navigation-a-link-font-size: var(--header-a-font-size);
   --navigation-a-link-font-weight: bold;

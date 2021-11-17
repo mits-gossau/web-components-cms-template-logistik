@@ -24,11 +24,20 @@ export default class Navigation extends BaseNavigation {
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
-        this.style.textContent = /* css */`
+        if (this.checkMedia('desktop')) this.style.textContent = /* css */`
           :host > nav > ul > li.open > div.background {
             top: ${section.getBoundingClientRect().bottom}px;
           }
         `
+      }
+      this.liClickListener(event)
+    }
+    this.liClickListener = event => {
+      if (event && event.target) {
+        this.root.querySelector('nav > ul:not(.language-switcher)').classList[event.target.parentNode && event.target.parentNode.classList.contains('open') ? 'add' : 'remove']('open')
+        if (!this.checkMedia('desktop')) Array.from(this.root.querySelectorAll('li.open')).forEach(link => {
+          if (link !== event.target.parentNode) link.classList.remove('open')
+        })
       }
     }
   }
@@ -43,6 +52,7 @@ export default class Navigation extends BaseNavigation {
     super.disconnectedCallback()
     self.removeEventListener('resize', this.clickListener)
     this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
+    this.root.querySelectorAll('nav > ul:not(.language-switcher) > li').forEach(link => link.removeEventListener('click', this.liClickListener))
   }
 
   /**
@@ -69,11 +79,11 @@ export default class Navigation extends BaseNavigation {
       }
       :host > nav > ul > li {
         margin: var(--margin);
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid transparent;
         transition: all 0.1s ease;
       }
       :host > nav > ul li.open {
-        border-bottom: 1px solid var(--color-secondary);
+        border-bottom: 2px solid var(--color-secondary);
       }
       :host > nav > ul > li > div.background {
         cursor: auto;
@@ -162,6 +172,9 @@ export default class Navigation extends BaseNavigation {
           border-bottom: var(--header-border-bottom);
           flex-direction: row-reverse;
         }
+        :host > nav > ul.open > li:not(.open), :host > nav > ul.open ~ ul.language-switcher {
+          display: none;
+        }
         :host > nav > ul > li > div.background {
           display: none !important;
         }
@@ -170,7 +183,7 @@ export default class Navigation extends BaseNavigation {
           align-items: center;
         }
         :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
-          margin-top: calc(4rem + 1px);
+          margin-top: calc(4rem + 2px);
           padding: 0 0 2.5rem 0;
           z-index: 100;
         }
@@ -193,16 +206,19 @@ export default class Navigation extends BaseNavigation {
    */
   renderHTML () {
     super.renderHTML(['left', 'right'])
-    this.loadChildComponents().then(children => Array.from(this.root.querySelectorAll('section')).forEach(section => {
-      const wrapper = new children[2][1]({ mode: 'false' })
-      Array.from(section.children).forEach(node => {
-        if (!node.getAttribute('slot')) wrapper.root.appendChild(node)
+    this.loadChildComponents().then(children => {
+      Array.from(this.root.querySelectorAll('section')).forEach(section => {
+        const wrapper = new children[2][1]({ mode: 'false' })
+        Array.from(section.children).forEach(node => {
+          if (!node.getAttribute('slot')) wrapper.root.appendChild(node)
+        })
+        section.parentNode.prepend(this.getBackground())
+        section.replaceWith(wrapper)
       })
-      section.parentNode.prepend(this.getBackground())
-      section.replaceWith(wrapper)
       this.root.querySelectorAll('a-link').forEach(link => link.addEventListener('click', this.clickListener))
+      this.root.querySelectorAll('nav > ul:not(.language-switcher) > li').forEach(link => link.addEventListener('click', this.liClickListener))
       this.html = this.style
-    }))
+    })
   }
 
   /**

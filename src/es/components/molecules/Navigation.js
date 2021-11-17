@@ -110,6 +110,9 @@ export default class Navigation extends BaseNavigation {
         position: absolute;
         left: 0;
         margin-top: 2rem;
+        overflow: auto;
+        box-sizing: border-box;
+        max-height: 80vh;
         padding: 2.5rem 0;
         transition: all 0.2s ease;
         z-index: var(--li-ul-z-index, auto);

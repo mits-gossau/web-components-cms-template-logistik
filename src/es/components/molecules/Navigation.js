@@ -20,12 +20,7 @@ export default class Navigation extends BaseNavigation {
     super(...args)
 
     this.clickListener = event => {
-      // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list
-      if (this.checkMedia('desktop')) {
-        this.setAttribute('focus-lost-close-mobile', '')
-      } else {
-        this.removeAttribute('focus-lost-close-mobile')
-      }
+      this.setFocusLostClickBehavior()
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
@@ -41,12 +36,7 @@ export default class Navigation extends BaseNavigation {
   connectedCallback () {
     super.connectedCallback()
     self.addEventListener('resize', this.clickListener)
-    // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list
-    if (this.checkMedia('desktop')) {
-      this.setAttribute('focus-lost-close-mobile', '')
-    } else {
-      this.removeAttribute('focus-lost-close-mobile')
-    }
+    this.setFocusLostClickBehavior()
   }
 
   disconnectedCallback () {
@@ -73,6 +63,9 @@ export default class Navigation extends BaseNavigation {
       :host > nav > ul {
         background-color: var(--background-color);
         margin: 0;
+      }
+      :host > nav > .language-switcher {
+        display: none;
       }
       :host > nav > ul > li {
         margin: var(--margin);
@@ -126,6 +119,7 @@ export default class Navigation extends BaseNavigation {
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
           --a-link-content-spacing-no-scroll: 1.1429rem 1.2143rem;
+          --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
           --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
           --a-link-font-size-no-scroll-mobile: 1.1429rem;
           --a-link-font-weight: normal;
@@ -135,12 +129,38 @@ export default class Navigation extends BaseNavigation {
           --margin: 0;
           --min-height-mobile: 0;
         }
+        :host > nav {
+          background-color: var(--background-color, black);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: calc(100vh - var(--header-logistik-m-navigation-top-mobile));
+        }
+        :host > nav > .language-switcher {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        :host > nav > .language-switcher > li {
+          border: 0;
+          width: auto;
+        }
+        :host > nav > .language-switcher > li > a-arrow{
+          display: none;
+        }
         :host > nav > ul > li{
+          align-items: center;
           box-sizing: border-box;
           border-bottom: var(--header-border-bottom);
           display: flex;
           justify-content: space-between;
           width: 100%;
+        }
+        :host > nav > ul li.open {
+          --navigation-a-link-content-spacing-no-scroll: var(--a-link-font-size-no-scroll-mobile) 1.2143rem var(--a-link-font-size-no-scroll-mobile) 0;
+          --navigation-a-link-font-size-no-scroll-mobile: 1.7143rem;
+          border-bottom: var(--header-border-bottom);
+          flex-direction: row-reverse;
         }
         :host > nav > ul > li > div.background {
           display: none !important;
@@ -149,6 +169,19 @@ export default class Navigation extends BaseNavigation {
           display: flex;
           align-items: center;
         }
+        :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
+          margin-top: calc(4rem + 1px);
+          padding: 0 0 2.5rem 0;
+          z-index: 100;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
+          animation: open .2s ease;
+          left: 0;
+        }
+      }
+      @keyframes open {
+        0% {left: -100vw}
+        100% {left: 0}
       }
     `
   }
@@ -159,7 +192,7 @@ export default class Navigation extends BaseNavigation {
    * @return {void}
    */
   renderHTML () {
-    super.renderHTML(['left', 'right'], this.arrowClickListener)
+    super.renderHTML(['left', 'right'])
     this.loadChildComponents().then(children => Array.from(this.root.querySelectorAll('section')).forEach(section => {
       const wrapper = new children[2][1]({ mode: 'false' })
       Array.from(section.children).forEach(node => {
@@ -200,6 +233,18 @@ export default class Navigation extends BaseNavigation {
     const background = document.createElement('div')
     background.classList.add('background')
     return background
+  }
+
+  setFocusLostClickBehavior() {
+    clearTimeout(this._focusLostClickBehaviorTimeout)
+    this._focusLostClickBehaviorTimeout = setTimeout(() => {
+      // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list
+      if (this.checkMedia('desktop')) {
+        this.setAttribute('focus-lost-close-mobile', '')
+      } else {
+        this.removeAttribute('focus-lost-close-mobile')
+      }
+    }, 50)
   }
 
   /**

@@ -134,8 +134,10 @@ export default class Navigation extends BaseNavigation {
           --a-link-content-spacing-no-scroll: 1.1429rem 1.2143rem;
           --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
           --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
+          --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
           --a-link-font-size-no-scroll-mobile: 1.1429rem;
           --a-link-font-weight: normal;
+          --a-link-second-level-font-size-mobile: 1.2857rem;
           --a-link-text-align-mobile: left;
           --height: auto;
           --li-padding: 0;
@@ -162,6 +164,9 @@ export default class Navigation extends BaseNavigation {
         :host > nav > .language-switcher > li > a-arrow{
           display: none;
         }
+        :host > nav > ul.open > li:not(.open), :host > nav > ul.open ~ ul.language-switcher {
+          display: none;
+        }
         :host > nav > ul > li{
           align-items: center;
           box-sizing: border-box;
@@ -171,13 +176,12 @@ export default class Navigation extends BaseNavigation {
           width: 100%;
         }
         :host > nav > ul li.open {
-          --navigation-a-link-content-spacing-no-scroll: var(--a-link-font-size-no-scroll-mobile) 1.2143rem var(--a-link-font-size-no-scroll-mobile) 0;
-          --navigation-a-link-font-size-no-scroll-mobile: 1.7143rem;
+          --a-link-content-spacing-no-scroll: var(--a-link-font-size-no-scroll-mobile) 1.2143rem var(--a-link-font-size-no-scroll-mobile) 0;
+          --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
+          --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
+          --a-link-font-size-no-scroll-mobile: 1.7143rem;
           border-bottom: var(--header-border-bottom);
           flex-direction: row-reverse;
-        }
-        :host > nav > ul.open > li:not(.open), :host > nav > ul.open ~ ul.language-switcher {
-          display: none;
         }
         :host > nav > ul > li > div.background {
           display: none !important;
@@ -187,13 +191,45 @@ export default class Navigation extends BaseNavigation {
           align-items: center;
         }
         :host > nav > ul li > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
-          margin-top: calc(4rem + 2px);
+          margin-top: calc(3rem + 1px);
+          max-height: unset;
           padding: 0 0 2.5rem 0;
           z-index: 100;
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
+          --a-link-content-spacing-no-scroll: 0.5rem 0.5rem 0.5rem calc(2rem + 50px);
+          --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
+          --a-link-font-size-mobile: 1.1429rem;
+          --a-link-second-level-font-size-mobile: var(--a-link-font-size-mobile);
           animation: open .2s ease;
           left: 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul {
+          border-bottom: var(--header-border-bottom);
+          padding: 0.8571rem 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li:first-child, :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
+          --a-link-content-spacing-no-scroll: 0.5rem 0.5rem 0.5rem 50px;
+          --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
+          --a-link-font-size-mobile: 1.2857rem;
+          --a-link-second-level-font-size-mobile: var(--a-link-font-size-mobile);
+          padding-bottom: 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li {
+          --line-height-mobile: 1.5em;
+          line-height: 0;
+          padding-bottom: 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
+          border-bottom: var(--header-border-bottom);
+          padding: 0.8571rem 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:first-child {
+          padding-top: 0;
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:last-child {
+          border-bottom: 0;
+          padding-bottom: 0;
         }
       }
       @keyframes open {

@@ -48,6 +48,9 @@ export default class Header extends BaseHeader {
     super.renderCSS()
     this.css = /* css */`
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host > header {
+          flex-wrap: nowrap;
+        }
         :host > header > ${this.getAttribute('m-navigation') || 'm-navigation'} {
           animation: close .4s ease-in;
           left: -100vw;

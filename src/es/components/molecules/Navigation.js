@@ -138,6 +138,7 @@ export default class Navigation extends BaseNavigation {
           --li-padding: 0;
           --margin: 0;
           --min-height-mobile: 0;
+          scrollbar-color: var(--color-secondary) var(--background-color);
         }
         :host > nav {
           background-color: var(--background-color, black);

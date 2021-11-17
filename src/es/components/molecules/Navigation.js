@@ -20,6 +20,12 @@ export default class Navigation extends BaseNavigation {
     super(...args)
 
     this.clickListener = event => {
+      // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list
+      if (this.checkMedia('desktop')) {
+        this.setAttribute('focus-lost-close-mobile', '')
+      } else {
+        this.removeAttribute('focus-lost-close-mobile')
+      }
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
@@ -35,6 +41,12 @@ export default class Navigation extends BaseNavigation {
   connectedCallback () {
     super.connectedCallback()
     self.addEventListener('resize', this.clickListener)
+    // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list
+    if (this.checkMedia('desktop')) {
+      this.setAttribute('focus-lost-close-mobile', '')
+    } else {
+      this.removeAttribute('focus-lost-close-mobile')
+    }
   }
 
   disconnectedCallback () {
@@ -113,13 +125,13 @@ export default class Navigation extends BaseNavigation {
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
-          --a-link-content-spacing-no-scroll: 0;
+          --a-link-content-spacing-no-scroll: 1.1429rem 1.2143rem;
           --a-link-font-size-mobile: var(--a-link-font-size-no-scroll-mobile);
           --a-link-font-size-no-scroll-mobile: 1.1429rem;
           --a-link-font-weight: normal;
           --a-link-text-align-mobile: left;
           --height: auto;
-          --li-padding: 1.1429rem 1.2143rem;
+          --li-padding: 0;
           --margin: 0;
           --min-height-mobile: 0;
         }
@@ -188,6 +200,20 @@ export default class Navigation extends BaseNavigation {
     const background = document.createElement('div')
     background.classList.add('background')
     return background
+  }
+
+  /**
+   *
+   *
+   * @param {'mobile' | 'desktop'} [media=this.getAttribute('media')]
+   * @returns {boolean}
+   * @memberof IntersectionScrollEffect
+   */
+  checkMedia (media = this.getAttribute('media')) {
+    // @ts-ignore ignoring self.Environment error
+    const breakpoint = this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'
+    const isMobile = self.matchMedia(`(max-width: ${breakpoint}`).matches
+    return (isMobile ? 'mobile' : 'desktop') === media
   }
 
   get style () {

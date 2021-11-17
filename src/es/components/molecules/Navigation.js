@@ -24,20 +24,24 @@ export default class Navigation extends BaseNavigation {
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
-        if (this.checkMedia('desktop')) this.style.textContent = /* css */`
+        if (this.checkMedia('desktop')) {
+          this.style.textContent = /* css */`
           :host > nav > ul > li.open > div.background {
             top: ${section.getBoundingClientRect().bottom}px;
           }
         `
+        }
       }
       this.liClickListener(event)
     }
     this.liClickListener = event => {
       if (event && event.target) {
         this.root.querySelector('nav > ul:not(.language-switcher)').classList[event.target.parentNode && event.target.parentNode.classList.contains('open') ? 'add' : 'remove']('open')
-        if (!this.checkMedia('desktop')) Array.from(this.root.querySelectorAll('li.open')).forEach(link => {
-          if (link !== event.target.parentNode) link.classList.remove('open')
-        })
+        if (!this.checkMedia('desktop')) {
+          Array.from(this.root.querySelectorAll('li.open')).forEach(link => {
+            if (link !== event.target.parentNode) link.classList.remove('open')
+          })
+        }
       }
     }
   }
@@ -291,7 +295,7 @@ export default class Navigation extends BaseNavigation {
     return background
   }
 
-  setFocusLostClickBehavior() {
+  setFocusLostClickBehavior () {
     clearTimeout(this._focusLostClickBehaviorTimeout)
     this._focusLostClickBehaviorTimeout = setTimeout(() => {
       // the checkMedia is used to hack the click behavior of BaseNavigation to remove on desktop all li.open when  clicked away or in an other menu point. This because we need to indicate the active menu point with a border under the list

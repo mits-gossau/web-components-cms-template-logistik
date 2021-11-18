@@ -156,6 +156,7 @@ export default class Navigation extends BaseNavigation {
           --a-link-font-weight: normal;
           --a-link-second-level-font-size-mobile: 1.2857rem;
           --a-link-text-align-mobile: left;
+          --color-hover: var(--color);
           --height: auto;
           --li-padding: 0;
           --margin: 0;
@@ -166,7 +167,7 @@ export default class Navigation extends BaseNavigation {
           background-color: var(--background-color, black);
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: flex-start; /* must be up, otherwise the iphone hides it behind the footer bar */
           min-height: calc(100vh - var(--header-logistik-m-navigation-top-mobile));
         }
         :host > nav > .language-switcher {
@@ -229,6 +230,9 @@ export default class Navigation extends BaseNavigation {
           --padding-first-child-mobile: var(--padding-mobile);
           --padding-last-child-mobile: var(--padding-mobile);
           border-bottom: var(--header-border-bottom);
+        }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul:last-child {
+          margin-bottom: 100px !important; /* must be up, otherwise the iphone hides it behind the footer bar */
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li:first-child, :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
           --a-link-content-spacing-no-scroll: 0.5rem 0.5rem 0.5rem 50px;
@@ -336,7 +340,7 @@ export default class Navigation extends BaseNavigation {
   checkMedia (media = this.getAttribute('media')) {
     // @ts-ignore ignoring self.Environment error
     const breakpoint = this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'
-    const isMobile = self.matchMedia(`(max-width: ${breakpoint}`).matches
+    const isMobile = self.matchMedia(`(max-width: ${breakpoint})`).matches
     return (isMobile ? 'mobile' : 'desktop') === media
   }
 

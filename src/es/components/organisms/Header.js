@@ -1,6 +1,7 @@
 // @ts-check
 import BaseHeader from '../web-components-cms-template/src/es/components/organisms/Header.js'
 
+/* global MutationObserver */
 /* global self */
 
 /**
@@ -23,23 +24,35 @@ export default class Header extends BaseHeader {
     this.clickAnimationListener = event => {
       if (this.header.classList.contains('open')) {
         this.mNavigation.classList.add('open')
-        if (this.hasAttribute('sticky')) this.classList.add('show')
       } else if (event && event.animationName === 'close') {
         this.mNavigation.classList.remove('open')
       }
     }
+    this.mutationCallbackTimeout = null
+    this.mutationCallback = mutationsList => {
+      clearTimeout(this.mutationCallbackTimeout)
+      this.mutationCallbackTimeout = setTimeout(() => {
+        // make sure that the sticky header is shown when the menu is open
+        if (this.header.classList.contains('open') && !this.classList.contains('show')) this.classList.add('show')
+      }, 50)
+    }
+    this.observer = new MutationObserver(this.mutationCallback)
   }
 
   connectedCallback () {
     super.connectedCallback()
     this.addEventListener('click', this.clickAnimationListener)
     this.mNavigation.addEventListener('animationend', this.clickAnimationListener)
+    self.addEventListener('resize', this.mutationCallback)
+    this.observer.observe(this.header, { attributes: true })
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
     this.removeEventListener('click', this.clickAnimationListener)
     this.mNavigation.removeEventListener('animationend', this.clickAnimationListener)
+    self.removeEventListener('resize', this.mutationCallback)
+    this.observer.disconnect()
   }
 
   /**

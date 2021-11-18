@@ -24,7 +24,7 @@ export default class Navigation extends BaseNavigation {
     this.clickListener = event => {
       this.setFocusLostClickBehavior()
       // header removes no-scroll at body on resize, which must be avoided if navigation is open
-      //console.log('changed', this.isDesktop === (this.isDesktop = this.checkMedia('desktop')));
+      // console.log('changed', this.isDesktop === (this.isDesktop = this.checkMedia('desktop')));
       if (this.hasAttribute('no-scroll') && this.isDesktop === (this.isDesktop = this.checkMedia('desktop')) && ((!this.isDesktop && this.classList.contains('open')) || (this.isDesktop && this.root.querySelector('li.open')))) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
       let section
       if ((section = this.root.querySelector('li.open section'))) {
@@ -123,7 +123,7 @@ export default class Navigation extends BaseNavigation {
         --a-link-font-weight: normal;
         background-color: var(--background-color, white);
         cursor: auto;
-        display: none;
+        display: none !important;
         position: absolute;
         left: 0;
         margin-top: 2rem;
@@ -135,7 +135,7 @@ export default class Navigation extends BaseNavigation {
         z-index: var(--li-ul-z-index, auto);
       }
       :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section {
-        display: flex;
+        display: flex !important;
       }
       :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li {
         list-style: var(--list-style, none);
@@ -225,8 +225,9 @@ export default class Navigation extends BaseNavigation {
           left: 0;
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul {
+          --padding-mobile: 0.8571rem 0;
+          --padding-first-child-mobile: var(--padding-mobile);
           border-bottom: var(--header-border-bottom);
-          padding: 0.8571rem 0;
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li:first-child, :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
           --a-link-content-spacing-no-scroll: 0.5rem 0.5rem 0.5rem 50px;
@@ -242,14 +243,10 @@ export default class Navigation extends BaseNavigation {
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
           border-bottom: var(--header-border-bottom);
-          padding: 0.8571rem 0;
-        }
-        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:first-child {
-          padding-top: 0;
+          padding: var(--padding-mobile);
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:last-child {
           border-bottom: 0;
-          padding-bottom: 0;
         }
       }
       @keyframes open {
@@ -267,8 +264,9 @@ export default class Navigation extends BaseNavigation {
   renderHTML () {
     super.renderHTML(['left', 'right'])
     this.loadChildComponents().then(children => {
-      Array.from(this.root.querySelectorAll('section')).forEach(section => {
+      Array.from(this.root.querySelectorAll('section')).forEach((section, i) => {
         const wrapper = new children[2][1]({ mode: 'false' })
+        wrapper.setAttribute('id', `nav-section-${i}`)
         Array.from(section.children).forEach(node => {
           if (!node.getAttribute('slot')) wrapper.root.appendChild(node)
         })

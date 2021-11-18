@@ -21,9 +21,10 @@ export default class Navigation extends BaseNavigation {
 
     this.clickListener = event => {
       this.setFocusLostClickBehavior()
+      // header removes no-scroll at body on resize, which must be avoided if navigation is open
+      if (this.hasAttribute('no-scroll') && (this.classList.contains('open') || this.root.querySelector('li.open'))) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
       let section
       if ((section = this.root.querySelector('li.open section'))) {
-        if (this.hasAttribute('no-scroll')) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
         if (this.checkMedia('desktop')) {
           this.style.textContent = /* css */`
           :host > nav > ul > li.open > div.background {
@@ -164,6 +165,9 @@ export default class Navigation extends BaseNavigation {
         :host > nav > .language-switcher > li {
           border: 0;
           width: auto;
+        }
+        :host > nav > ul > li > a-arrow{
+          padding-bottom: 2px;
         }
         :host > nav > .language-switcher > li > a-arrow{
           display: none;

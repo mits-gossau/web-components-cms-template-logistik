@@ -19,10 +19,13 @@ export default class Navigation extends BaseNavigation {
   constructor (...args) {
     super(...args)
 
+    this.isDesktop = this.checkMedia('desktop')
+    // desktop keep gray background in right position
     this.clickListener = event => {
       this.setFocusLostClickBehavior()
       // header removes no-scroll at body on resize, which must be avoided if navigation is open
-      if (this.hasAttribute('no-scroll') && (this.classList.contains('open') || this.root.querySelector('li.open'))) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
+      //console.log('changed', this.isDesktop === (this.isDesktop = this.checkMedia('desktop')));
+      if (this.hasAttribute('no-scroll') && this.isDesktop === (this.isDesktop = this.checkMedia('desktop')) && ((!this.isDesktop && this.classList.contains('open')) || (this.isDesktop && this.root.querySelector('li.open')))) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.checkMedia('desktop')) {
@@ -35,27 +38,36 @@ export default class Navigation extends BaseNavigation {
       }
       this.liClickListener(event)
     }
+    // on resize or click keep ul open in sync
+    // remove open class
     this.liClickListener = event => {
       if (event && event.target) {
         this.root.querySelector('nav > ul:not(.language-switcher)').classList[event.target.parentNode && event.target.parentNode.classList.contains('open') ? 'add' : 'remove']('open')
-        if (!this.checkMedia('desktop')) {
+        if (this.checkMedia('mobile')) {
           Array.from(this.root.querySelectorAll('li.open')).forEach(link => {
             if (link !== event.target.parentNode) link.classList.remove('open')
           })
         }
       }
     }
+    // correct the arrow direction when closing the menu on global or parent event
+    this.selfClickListener = event => Array.from(this.root.querySelectorAll('nav > ul:not(.language-switcher) > li > a-link')).forEach(aLink => {
+      const arrow = aLink.parentNode.querySelector('a-arrow')
+      if (arrow) arrow.setAttribute('direction', aLink.classList.contains('open') || aLink.parentNode.classList.contains('open') ? 'left' : 'right')
+    })
   }
 
   connectedCallback () {
     super.connectedCallback()
     self.addEventListener('resize', this.clickListener)
+    self.addEventListener('click', this.selfClickListener)
     this.setFocusLostClickBehavior()
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
     self.removeEventListener('resize', this.clickListener)
+    self.removeEventListener('click', this.selfClickListener)
     this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
     this.root.querySelectorAll('nav > ul:not(.language-switcher) > li').forEach(link => link.removeEventListener('click', this.liClickListener))
   }

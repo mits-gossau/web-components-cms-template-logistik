@@ -19,7 +19,7 @@
 
 <body>
   <p-general>
-    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation">
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
       <a href="/"><span style="font-weight: 800; color: var(--color-secondary);">MGB</span> Logistik Transport</a>
       <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
         <ul>
@@ -427,6 +427,70 @@
         </div>
       </o-wrapper>
     </logistik-o-body>
+    <o-footer theme="classics" namespace="footer-">
+      <div>
+        <a-logo class="hide-mobile" namespace="footer-engagement-logo-" src="https://www.migros-engagement.ch/dam/jcr:b1ff6b31-f8ba-4b68-91cb-132c8d781014/MIGROS-Engagement_EN.svg" href="https://migros-engagement.ch" target="_blank" lang="de">
+          <p>
+              Die Migros-Kulturprozent-Classics sind Teil des gesellschaftlichen Engagements der Migros-Gruppe:&nbsp;
+              <br />
+              <strong>
+                  <a href="https://migros-engagement.ch" target="_blank">migros-engagement.ch</a>
+              </strong>
+          </p>
+      </a-logo>
+      </div>      
+      <div class="footer-ul-wrapper">
+        <ul>
+          <li><p><a href="#">CLASSICS-Newsletter bestellen</a></p></li>
+          <li><p><a href="#">Programm Archiv</a></p></li>
+          <li>
+            <p>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">DE</a>
+              </a-link>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">FR</a>
+              </a-link>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">EN</a>
+              </a-link>
+            </p>
+          </li>
+          <br>
+          <li>
+            <p>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">Impressum</a>
+                <span>, </span>
+              </a-link>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">Datenschutz</a>
+                <span>, </span>
+              </a-link>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">Rechtliche Hinweise</a>
+                <span>, </span>
+              </a-link>
+              <a-link namespace="footer-" text-transform="uppercase">
+                <a href="#">Kontakt</a>
+              </a-link>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="logo-container">
+        <a-logo class="hide-desktop" namespace="footer-engagement-logo-" src="https://www.migros-engagement.ch/dam/jcr:b1ff6b31-f8ba-4b68-91cb-132c8d781014/MIGROS-Engagement_EN.svg" href="https://migros-engagement.ch" target="_blank" lang="de">
+          <p>
+              Die Migros-Kulturprozent-Classics sind Teil des gesellschaftlichen Engagements der Migros-Gruppe:&nbsp;
+              <br />
+              <strong>
+                  <a href="https://migros-engagement.ch" target="_blank">migros-engagement.ch</a>
+              </strong>
+          </p>
+        </a-logo>
+        <a-logo src=../../../img/migros_kulturprozent_classics_cyan.svg alt="Kulturprozent Classics Logo" href="#" namespace="footer-logo-"></a-logo>
+      </div>
+    </o-footer>
   </p-general>
   <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
   <script rel=preload type=module>

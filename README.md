@@ -5,9 +5,6 @@ Using web-components-cms-template Repository
 
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
-TODO:
-- note: mobile nur sticky header mobile nav (part with closing btn)
-
 Questions for Marcel:
 - Header "MGB" font-family?
 

@@ -12,6 +12,7 @@
   --figcaption-padding-mobile: 1.5rem 2.5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;
+  --footer-z-index: 0;
   --h5-font-size: 1.125rem;
   --h5-font-weight: 700;
   --h5-line-height: 1.75rem;
@@ -57,6 +58,7 @@
   --header-padding-mobile: 0 0 0;
   --header-padding: 1.5rem 0 0;
   --header-position: static;
+  --header-sticky-border-bottom: var(--header-border-bottom);
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
   --margin-first-child-mobile: 0;

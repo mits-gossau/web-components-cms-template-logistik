@@ -227,6 +227,7 @@ export default class Navigation extends BaseNavigation {
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul {
           --padding-mobile: 0.8571rem 0;
           --padding-first-child-mobile: var(--padding-mobile);
+          --padding-last-child-mobile: var(--padding-mobile);
           border-bottom: var(--header-border-bottom);
         }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li:first-child, :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold {
@@ -245,8 +246,12 @@ export default class Navigation extends BaseNavigation {
           border-bottom: var(--header-border-bottom);
           padding: var(--padding-mobile);
         }
+        :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:first-child {
+          padding-top: 0;
+        }
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:last-child {
           border-bottom: 0;
+          padding-bottom: 0;
         }
       }
       @keyframes open {

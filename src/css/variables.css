@@ -12,6 +12,8 @@
   --figcaption-padding-mobile: 1.5rem 2.5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;
+  --footer-border-top: var(--header-border-bottom);
+  --footer-color-hover: var(--color-secondary);
   --footer-z-index: 0;
   --h5-font-size: 1.125rem;
   --h5-font-weight: 700;

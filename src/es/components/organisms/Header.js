@@ -23,6 +23,7 @@ export default class Header extends BaseHeader {
     this.clickAnimationListener = event => {
       if (this.header.classList.contains('open')) {
         this.mNavigation.classList.add('open')
+        if (this.hasAttribute('sticky')) this.classList.add('show')
       } else if (event && event.animationName === 'close') {
         this.mNavigation.classList.remove('open')
       }

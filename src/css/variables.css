@@ -1,19 +1,20 @@
 /**
- * Variables naming rule: --{selector aka component aka namespace}-{css property}-{pseudo class or media query name} eg. --p-background-color-hover 
- * NOTE: Within the component don't use any name spacing eg. component header don't use --header-color just use --color the namespace can be added by the Shadow as an html attribute
- * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
- * - if a component holds other components you should share the attribute namespace with its children
- */
- html {
+* Variables naming rule: --{selector aka component aka namespace}-{css property}-{pseudo class or media query name} eg. --p-background-color-hover 
+* NOTE: Within the component don't use any name spacing eg. component header don't use --header-color just use --color the namespace can be added by the Shadow as an html attribute
+* - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
+* - if a component holds other components you should share the attribute namespace with its children
+*/
+html {
   --content-width-mobile: 100%;
-  --content-width-not-web-component-mobile: 95%;
+  --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: 60%;
   --content-width: 95%;
-  --figcaption-padding-mobile: 1.5rem 2.5% 0;
+  --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;
   --footer-border-top: var(--header-border-bottom);
   --footer-color-hover: var(--color-secondary);
+  --footer-padding: 1.5rem 0 0;
   --footer-z-index: 0;
   --h5-font-size: 1.125rem;
   --h5-font-weight: 700;
@@ -23,7 +24,7 @@
   --header-a-color: var(--color);
   --header-a-font-size: var(--h4-font-size);
   --header-a-line-height: 2rem;
-  --header-a-margin-mobile: 0 2.5% 0 0;
+  --header-a-margin-mobile: 0 5% 0 0;
   --header-a-margin: 0 max(4.5625rem, 3vw) 0 0;
   --header-a-menu-icon-align-self-mobile: baseline;
   --header-a-menu-icon-border-radius: 25%;
@@ -32,7 +33,7 @@
   --header-a-menu-icon-margin: 0;
   --header-a-menu-icon-one-translate: translateY(0.77em);
   --header-a-menu-icon-padding-open: var(--header-a-menu-icon-padding);
-  --header-a-menu-icon-padding: 1.7rem 2.5% 1.2rem;
+  --header-a-menu-icon-padding: 1.7rem 5% 1.2rem;
   --header-a-menu-icon-spacing: 6px;
   --header-a-menu-icon-two-translate: translateY(-0.77em);
   --header-a-menu-icon-width-open-mobile: var(--header-a-menu-icon-width);
@@ -64,6 +65,7 @@
   --header-sticky-border-bottom: var(--header-border-bottom);
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
+  --main-padding: 1.5rem 0 0;
   --margin-first-child-mobile: 0;
   --margin-last-child: 0;
   --margin-mobile: 0;
@@ -106,7 +108,7 @@
   --teaser-btn-border-color: var(--m-blue-600);
   --teaser-btn-button-color-hover: var(--m-blue-700);
   --teaser-btn-button-color: var(--m-blue-500);
-  --teaser-btn-margin-mobile: 0 0.5rem var(--content-spacing);
+  --teaser-btn-margin-mobile: 0 5% var(--content-spacing);
   --teaser-btn-margin: 0 0 var(--content-spacing);
   --teaser-content-spacing: 0;
   --teaser-content-width: 100%;

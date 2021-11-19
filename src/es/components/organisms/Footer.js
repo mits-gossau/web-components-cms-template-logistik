@@ -65,6 +65,9 @@ export default class Footer extends Shadow() {
       :host {
         border-top: var(--border-top, 0);
       }
+      :host > footer {
+        padding: var(--padding, 0);
+      }
       :host > footer > * {
         margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
         width: var(--content-width, 80%);
@@ -97,6 +100,9 @@ export default class Footer extends Shadow() {
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
           --font-size: var(--font-size-mobile);
+        }
+        :host > footer {
+          padding: var(--padding, var(--padding, 0));
         }
         :host > footer > * {
           margin: var(--content-spacing-mobile, 0) auto; /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */

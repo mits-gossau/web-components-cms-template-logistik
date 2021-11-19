@@ -111,6 +111,9 @@ export default class Footer extends Shadow() {
       }
     `
     this.wrapperStyle.textContent = /* css */`
+      :host > section > ul {
+        --footer-padding: 0;
+      }
       :host > section > ul > li {
         list-style: var(--list-style, none);
       }

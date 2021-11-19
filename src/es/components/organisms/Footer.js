@@ -72,7 +72,7 @@ export default class Footer extends Shadow() {
       :host > footer > a.logo {
         display: block;
       }
-      :host > footer > ul.end {
+      :host > footer > ul.language-switcher {
         --color: var(--background-color);
         --color-hover: var(--m-orange-300);
         --padding: 1.1429rem 1.2143rem;
@@ -86,10 +86,10 @@ export default class Footer extends Shadow() {
         margin-left: 0;
         width: 100%;
       }
-      :host > footer > ul.end:not(:first-child) {
+      :host > footer > ul.language-switcher:not(:first-child) {
         margin-top: 1px;
       }
-      :host > footer > ul.end > li {
+      :host > footer > ul.language-switcher > li {
         border: 0;
         list-style: var(--list-style, none);
         width: auto;
@@ -128,11 +128,11 @@ export default class Footer extends Shadow() {
       const wrapper = new children[1][1]()
       wrapper.root.appendChild(this.wrapperStyle)
       Array.from(this.root.children).forEach(node => {
-        if (node.tagName === 'UL' && !node.classList.contains('end')) wrapper.root.appendChild(node)
+        if (node.tagName === 'UL' && !node.classList.contains('language-switcher')) wrapper.root.appendChild(node)
       })
       this.footer.appendChild(this.logo)
       this.footer.appendChild(wrapper)
-      this.ends.forEach(end => this.footer.appendChild(end))
+      this.languageSwitchers.forEach(languageSwitcher => this.footer.appendChild(languageSwitcher))
       this.html = this.footer
     })
   }
@@ -191,8 +191,8 @@ export default class Footer extends Shadow() {
     })())
   }
 
-  get ends () {
-    return this.root.querySelectorAll('.end')
+  get languageSwitchers () {
+    return this.root.querySelectorAll('.language-switcher')
   }
 
   get logo () {

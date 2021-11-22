@@ -31,11 +31,11 @@ html {
   --header-a-menu-icon-height-open-mobile: var(--header-a-menu-icon-height);
   --header-a-menu-icon-height: 3px;
   --header-a-menu-icon-margin: 0;
-  --header-a-menu-icon-one-translate: translateY(0.77em);
+  --header-a-menu-icon-one-transform: rotate(-45deg) translateY(0.77em);
   --header-a-menu-icon-padding-open: var(--header-a-menu-icon-padding);
   --header-a-menu-icon-padding: 1.7rem 5% 1.2rem;
   --header-a-menu-icon-spacing: 6px;
-  --header-a-menu-icon-two-translate: translateY(-0.77em);
+  --header-a-menu-icon-two-transform: rotate(45deg) translateY(-0.77em);
   --header-a-menu-icon-width-open-mobile: var(--header-a-menu-icon-width);
   --header-a-menu-icon-width: 28px;
   --header-a-padding-mobile: 1.5rem 0 1.4rem 0;

@@ -10,3 +10,10 @@ Questions for Marcel:
 
 General Points
 - Brückenseitenkontent
+
+TODO:
+- Links mit Icon
+- emotion pic banner
+- Akkordeon
+- Suche
+- Formulare

@@ -23,12 +23,30 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host > main > * {
+      :host > main > *:not(style) {
         display: block;
+      }
+      :host > main > h1 {
+        --h1-margin: 1rem auto 1.143em;
+      }
+      :host > main > h2 {
+        --h2-margin: 1rem auto 1.143em;
+      }
+      :host > main > h3 {
+        --h3-margin: 1rem auto 1.143em;
+      }
+      :host > main > h4 {
+        --h4-margin: 1rem auto 1.143em;
       }
       :host > main > a-picture {
         --picture-img-max-height: 75vh;
         --picture-img-object-fit: contain;
+      }
+      :host > main ul {
+        list-style: disc;
+      }
+      :host > main img {
+        max-width: 100%;
       }
       :host([home]) .spacer {
         height: var(--home-spacer-height, 15vw);

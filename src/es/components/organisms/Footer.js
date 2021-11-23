@@ -1,9 +1,11 @@
 // @ts-check
+import Body from './Body.js'
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
 /* global self */
 /* global Link */
 /* global customElements */
+/* global Wrapper */
 
 /**
  * Footer is sticky and hosts uls
@@ -73,8 +75,29 @@ export default class Footer extends Shadow() {
         margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
         width: var(--content-width, 80%);
       }
-      :host > footer > a.logo {
+      :host > footer > div.logo {
+        margin: 0 auto;
+      }
+      :host > footer > div.logo > a {
+        align-self: var(--a-align-self, var(--align-self, auto));
+        color: var(--a-color, var(--color));
         display: block;
+        font-family: var(--a-font-family, var(--font-family));
+        font-weight: var(--a-font-weight, var(--font-weight, normal));
+        font-size: var(--a-font-size, var(--font-size));
+        padding: var(--a-padding, 0);
+        margin: var(--a-margin, 0);
+        line-height: var(--a-line-height, 0);
+        order: var(--order, 1);
+        text-decoration: var(--a-text-decoration, var(--text-decoration, none));
+        text-underline-offset: var(--a-text-underline-offset, unset);
+        text-transform: var(--a-text-transform, uppercase);
+        transition: var(--a-transition, all 0.2s ease);
+        white-space: var(--a-white-space, normal);
+      }
+      :host > footer > div.logo > a:hover {
+        color: var(--a-color-hover, var(--a-color-hover, var(--a-color, var(--color))));
+        text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
       }
       :host > footer > ul.language-switcher {
         --color: var(--background-color);
@@ -109,14 +132,35 @@ export default class Footer extends Shadow() {
           margin: var(--content-spacing-mobile, 0) auto; /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
           width: var(--content-width-not-web-component-mobile, 90%);
         }
+        :host > footer > div.logo > a {
+          padding-bottom: 0;
+        }
       }
     `
     this.wrapperStyle.textContent = /* css */`
+      :host {
+        padding: 0 !important;
+      }
       :host > section > ul {
         --footer-padding: 0;
       }
       :host > section > ul > li {
         list-style: var(--list-style, none);
+        padding-bottom: 0.5rem;
+      }
+      :host > section > ul > li:first-child, :host > section > ul > li.bold {
+        --${this.namespace || ''}font-weight: bold;
+        --${this.namespace || ''}font-size: 1.25rem;
+        padding-bottom: 0.875rem;
+      }
+      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host {
+          padding: 0 !important;
+        }
+        :host > section > ul > li:first-child, :host > section > ul > li.bold {
+          --${this.namespace || ''}font-size-mobile: 1.2857rem;
+          padding: 0.5rem 0;
+        }
       }
     `
   }
@@ -138,7 +182,7 @@ export default class Footer extends Shadow() {
       const wrapper = new children[1][1]()
       wrapper.root.appendChild(this.wrapperStyle)
       Array.from(this.root.children).forEach(node => {
-        if (node.tagName === 'UL' && !node.classList.contains('language-switcher')) wrapper.root.appendChild(node)
+        if (!node.getAttribute('slot') && node.tagName !== 'STYLE' && !node.classList.contains('language-switcher') && node !== this.logo) wrapper.root.appendChild(node)
       })
       this.footer.appendChild(this.logo)
       this.footer.appendChild(wrapper)
@@ -173,7 +217,7 @@ export default class Footer extends Shadow() {
       ),
       wrapperPromise.then(
         /** @returns {[string, any]} */
-        module => [this.getAttribute('o-footer-wrapper') || 'o-footer-wrapper', module.Wrapper(Shadow())]
+        module => [this.getAttribute('o-footer-wrapper') || 'o-footer-wrapper', module.Wrapper(Body)]
       )
     ]).then(elements => {
       elements.forEach(element => {

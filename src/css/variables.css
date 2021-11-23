@@ -5,6 +5,7 @@
 * - if a component holds other components you should share the attribute namespace with its children
 */
 html {
+  --btn-font-size: 1rem;
   --contacts-main-padding: 0;
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;
@@ -122,10 +123,10 @@ html {
   --q-font-size-mobile: 1.333rem;
   --q-font-size: 1.272rem;
   --q-margin: 0 auto 0.227rem;
-  --teaser-btn-border-color-hover: var(--m-blue-800);
-  --teaser-btn-border-color: var(--m-blue-600);
-  --teaser-btn-button-color-hover: var(--m-blue-700);
-  --teaser-btn-button-color: var(--m-blue-500);
+  --teaser-btn-button-color-active: var(--m-blue-900);
+  --teaser-btn-button-color-hover: var(--m-blue-800);
+  --teaser-btn-button-color: var(--m-blue-600);
+  --teaser-btn-font-size: var(--btn-font-size);
   --teaser-btn-margin-mobile: 0 5% var(--content-spacing);
   --teaser-btn-margin: 0 0 var(--content-spacing);
   --teaser-content-spacing: 0;

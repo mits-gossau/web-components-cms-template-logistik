@@ -42,6 +42,9 @@ export default class Body extends BaseBody {
         --picture-img-max-height: 75vh;
         --picture-img-object-fit: contain;
       }
+      :host > main > wc-a-button {
+        width: var(--content-width-not-web-component, 80%);
+      }
       :host > main ul {
         list-style: disc;
       }
@@ -59,6 +62,9 @@ export default class Body extends BaseBody {
           margin: 0;
           --picture-text-wrapper-content-spacing-mobile: 0;
           --teaser-wrapper-content-spacing-mobile: 0;
+        }
+        :host > main > wc-a-button {
+          width: var(--content-width-not-web-component-mobile, var(--content-width-not-web-component, var(--content-width-mobile, var(--content-width, 90%))));
         }
       }
     `

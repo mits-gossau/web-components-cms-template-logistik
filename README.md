@@ -12,8 +12,8 @@ General Points
 - Brückenseitenkontent
 
 TODO:
-- Links mit Icon
 - emotion pic banner
 - Akkordeon
+- Akkoredeon with Expandable PDF (https://www.logistiktransport.ch/de/allgemeine-informationen.htm)
 - Suche
 - Formulare

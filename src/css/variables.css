@@ -5,6 +5,7 @@
 * - if a component holds other components you should share the attribute namespace with its children
 */
 html {
+  --contacts-main-padding: 0;
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: 60%;
@@ -16,6 +17,10 @@ html {
   --footer-color-hover: var(--color-secondary);
   --footer-padding: 1.5rem 0 0;
   --footer-z-index: 0;
+  --h1-margin: 1rem auto 1.143em;
+  --h2-margin: 1rem auto 1.143em;
+  --h3-margin: 1rem auto 1.143em;
+  --h4-margin: 1rem auto 1.143em;
   --h5-font-size: 1.125rem;
   --h5-font-weight: 700;
   --h5-line-height: 1.75rem;
@@ -65,7 +70,7 @@ html {
   --header-sticky-border-bottom: var(--header-border-bottom);
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
-  --main-padding: 1.5rem 0 0;
+  --main-padding: 1.5rem 0 1.5rem;
   --margin-first-child-mobile: 0;
   --margin-last-child: 0;
   --margin-mobile: 0;
@@ -93,13 +98,16 @@ html {
   --picture-padding: 0;
   --picture-text-wrapper-any-1-width: 65%;
   --picture-text-wrapper-h1-margin: var(--teaser-h1-margin);
+  --picture-text-wrapper-main-padding: 0;
   --picture-text-wrapper-margin-first-child-mobile: 0;
   --picture-text-wrapper-margin-last-child: 0;
   --picture-text-wrapper-margin-mobile: 0;
   --picture-text-wrapper-margin: 0 1.94rem 0 0;
   --picture-text-wrapper-padding-last-child-mobile: var(--figcaption-padding-mobile);
   --picture-text-wrapper-padding: 0;
+  --picture-width-mobile: 100%;
   --picture-width-mobile: var(--content-width-mobile);
+  --picture-width: 100%;
   --picture-width: var(--content-width);
   --q-font-size-mobile: 1.333rem;
   --q-font-size: 1.272rem;
@@ -113,8 +121,9 @@ html {
   --teaser-content-spacing: 0;
   --teaser-content-width: 100%;
   --teaser-h1-margin: 0 0 1.25rem;
-  --teaser-picture-width-mobile: 100%;
-  --teaser-picture-width: 100%;
+  --teaser-picture-width-mobile: var(--picture-width-mobile);
+  --teaser-picture-width: var(--picture-width);
+  --teaser-wrapper-main-padding: 0;
   --teaser-wrapper-margin-first-child-mobile: 0;
   --teaser-wrapper-margin-last-child: 0;
   --teaser-wrapper-margin-mobile: 0;

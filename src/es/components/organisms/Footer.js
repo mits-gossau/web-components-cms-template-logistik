@@ -64,6 +64,7 @@ export default class Footer extends Shadow() {
     this.css = /* css */`
       :host {
         border-top: var(--border-top, 0);
+        margin: var(--margin, 0);
       }
       :host > footer {
         padding: var(--padding, 0);

@@ -23,6 +23,13 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
+      :host > main > * {
+        display: block;
+      }
+      :host > main > a-picture {
+        --picture-img-max-height: 75vh;
+        --picture-img-object-fit: contain;
+      }
       :host([home]) .spacer {
         height: var(--home-spacer-height, 15vw);
       }

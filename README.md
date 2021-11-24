@@ -15,5 +15,6 @@ TODO:
 - emotion pic banner
 - Akkordeon
 - Akkoredeon with Expandable PDF (https://www.logistiktransport.ch/de/allgemeine-informationen.htm) (link icons in accordeon)
+- footer sub nav aufklappbar
 - Suche
 - Formulare

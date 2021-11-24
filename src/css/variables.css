@@ -5,7 +5,11 @@
 * - if a component holds other components you should share the attribute namespace with its children
 */
 html {
+  --body-wrapper-main-padding: 0;
+  --body-wrapper-padding-last-child-mobile: 0 5%;
+  --body-wrapper-padding-mobile: 0 5% 1.7rem;
   --btn-font-size: 1rem;
+  --contacts-any-1-width: 50%;
   --contacts-main-padding: 0;
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;

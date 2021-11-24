@@ -5,12 +5,6 @@ Using web-components-cms-template Repository
 
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
-Questions for Marcel:
-- Header "MGB" font-family?
-
-General Points
-- Brückenseitenkontent
-
 TODO:
 - emotion pic banner
 - Akkordeon

@@ -6,7 +6,7 @@ Using web-components-cms-template Repository
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
 TODO:
-- emotion pic banner
+- mail-address defusion
 - Akkordeon
 - Akkoredeon with Expandable PDF (https://www.logistiktransport.ch/de/allgemeine-informationen.htm) (link icons in accordeon)
 - footer sub nav aufklappbar

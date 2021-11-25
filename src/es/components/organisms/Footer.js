@@ -104,14 +104,24 @@ export default class Footer extends Shadow() {
         --color-hover: var(--m-orange-300);
         --padding: 1.1429rem 1.2143rem;
         background-color: var(--color-secondary);
+        color: var(--color);
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         padding: 0;
         margin-right: 0;
         margin-bottom: 0;
         margin-left: 0;
         width: 100%;
+      }
+      :host > footer > ul.language-switcher > li {
+        align-items: center;
+        display: flex;
+      }
+      :host > footer > ul.language-switcher > li.copy {
+        padding: var(--footer-padding);
+        justify-self: flex-start;
       }
       :host > footer > ul.language-switcher:not(:first-child) {
         margin-top: 1px;

@@ -121,7 +121,8 @@ export default class Footer extends Shadow() {
       }
       :host > footer > ul.language-switcher > li.copy {
         padding: var(--footer-padding);
-        justify-self: flex-start;
+        position: absolute;
+        left: 0;
       }
       :host > footer > ul.language-switcher:not(:first-child) {
         margin-top: 1px;
@@ -144,6 +145,9 @@ export default class Footer extends Shadow() {
         }
         :host > footer > div.logo > a {
           padding-bottom: 0;
+        }
+        :host > footer > ul.language-switcher > li.copy {
+          position: static;
         }
       }
     `

@@ -40,19 +40,24 @@ export default class EmotionPictures extends Shadow() {
     this.css = /* css */`
       :host {
         display: grid !important;
-        margin: -1.5rem auto 1.5rem !important;
-        width: 100% !important;
+        margin: var(--margin, calc(-1.5rem - 1px) auto 1.5rem) !important;
+        width: var(--width, 100%) !important;
       }
       :host > * {
-        --img-max-height: 35vh;
+        --img-max-height: var(--max-height, 35vh);
         --picture-img-max-height: var(--img-max-height);
         grid-column: 1;
         grid-row: 1;
         opacity: 0;
-        transition: opacity 0.8s ease;
+        transition: var(--transition, opacity 3s ease);
       }
       :host > *.shown {
         opacity: 1;
+      }
+      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host {
+          margin: var(--margin-mobile, var(--margin, calc(-1.5rem + 1px) auto 1.5rem)) !important;
+        }
       }
     `
   }
@@ -70,7 +75,7 @@ export default class EmotionPictures extends Shadow() {
             this.root.childNodes[0].classList.add('shown')
           }
         }
-      }, Number(this.getAttribute('interval')) || 3000);
+      }, Number(this.getAttribute('interval')) || 6000);
     }
   }
 

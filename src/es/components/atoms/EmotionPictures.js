@@ -77,7 +77,7 @@ export default class EmotionPictures extends Shadow() {
             this.root.childNodes[0].classList.add('shown')
           }
         }
-      }, Number(this.getAttribute('interval')) || 6000);
+      }, Number(this.getAttribute('interval')) || 8000);
     }
   }
 

@@ -44,8 +44,6 @@ export default class EmotionPictures extends Shadow() {
         width: var(--width, 100%) !important;
       }
       :host > * {
-        --img-max-height: var(--max-height, 35vh);
-        --picture-img-max-height: var(--img-max-height);
         grid-column: 1;
         grid-row: 1;
         opacity: 0;
@@ -60,6 +58,10 @@ export default class EmotionPictures extends Shadow() {
         }
       }
     `
+    this.setCss(/* css */`:host > * {
+      --${this.getAttribute('namespace') || ''}img-max-height: var(--${this.getAttribute('namespace') || ''}max-height, 35vh);
+      --picture-img-max-height: var(--${this.getAttribute('namespace') || ''}img-max-height);
+    }`, undefined, '', false)
   }
 
   shuffle (start = true) {

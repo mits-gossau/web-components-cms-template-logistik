@@ -34,6 +34,12 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * }
  */
 export default class Footer extends Shadow() {
+  constructor (...args) {
+    super(...args)
+
+    this.hidden = true
+  }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
@@ -226,6 +232,7 @@ export default class Footer extends Shadow() {
       this.footer.appendChild(wrapper)
       this.languageSwitchers.forEach(languageSwitcher => this.footer.appendChild(languageSwitcher))
       this.html = this.footer
+      this.hidden = false
     })
   }
 

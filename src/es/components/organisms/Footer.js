@@ -155,6 +155,18 @@ export default class Footer extends Shadow() {
       :host {
         padding: 0 !important;
       }
+      :host > section h1 {
+        --h1-margin: 0 auto 0.875rem;
+      }
+      :host > section h2 {
+        --h2-margin: 0 auto 0.875rem;
+      }
+      :host > section h3 {
+        --h3-margin: 0 auto 0.875rem;
+      }
+      :host > section h4 {
+        --h4-margin: 0 auto 0.875rem;
+      }
       :host > section > ul {
         --footer-padding: 0;
       }
@@ -170,6 +182,18 @@ export default class Footer extends Shadow() {
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
           padding: 0 !important;
+        }
+        :host > section h1 {
+          --h1-margin: 0.5rem auto 0.5rem;
+        }
+        :host > section h2 {
+          --h2-margin: 0.5rem auto 0.5rem;
+        }
+        :host > section h3 {
+          --h3-margin: 0.5rem auto 0.5rem;
+        }
+        :host > section h4 {
+          --h4-margin: 0.5rem auto 0.5rem;
         }
         :host > section > ul > li:first-child, :host > section > ul > li.bold {
           --${this.namespace || ''}font-size-mobile: 1.2857rem;

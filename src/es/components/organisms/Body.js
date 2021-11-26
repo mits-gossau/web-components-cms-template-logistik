@@ -26,23 +26,23 @@ export default class Body extends BaseBody {
       :host > main > *:not(style) {
         display: block;
       }
-      :host > main > h1 {
+      :host > main h1 {
         --h1-margin: 1rem auto 1.143em;
       }
-      :host > main > h2 {
+      :host > main h2 {
         --h2-margin: 1rem auto 1.143em;
       }
-      :host > main > h3 {
+      :host > main h3 {
         --h3-margin: 1rem auto 1.143em;
       }
-      :host > main > h4 {
+      :host > main h4 {
         --h4-margin: 1rem auto 1.143em;
       }
-      :host > main > a-picture {
+      :host > main a-picture {
         --picture-img-max-height: 75vh;
         --picture-img-object-fit: contain;
       }
-      :host > main > wc-a-button {
+      :host > main wc-a-button {
         width: var(--content-width-not-web-component, 80%);
       }
       :host > main ul {
@@ -93,7 +93,7 @@ export default class Body extends BaseBody {
           --picture-text-wrapper-content-spacing-mobile: 0;
           --teaser-wrapper-content-spacing-mobile: 0;
         }
-        :host > main > wc-a-button {
+        :host > main wc-a-button {
           width: var(--content-width-not-web-component-mobile, var(--content-width-not-web-component, var(--content-width-mobile, var(--content-width, 90%))));
         }
       }

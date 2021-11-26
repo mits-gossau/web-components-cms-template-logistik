@@ -12,6 +12,12 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @type {CustomElementConstructor}
  */
 export default class EmotionPictures extends Shadow() {
+  constructor (...args) {
+    super(...args)
+
+    Array.from(this.root.children).forEach(node => node.setAttribute('loading', this.getAttribute('loading') || 'eager'))
+  }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shown) this.shuffle()

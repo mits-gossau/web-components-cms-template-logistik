@@ -13,7 +13,7 @@ html {
   --contacts-main-padding: 0;
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;
-  --content-width-not-web-component: 60%;
+  --content-width-not-web-component: var(--content-width);
   --content-width: 95%;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;

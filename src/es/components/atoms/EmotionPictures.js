@@ -2,7 +2,6 @@
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
 /* global self */
-/* global CustomEvent */
 
 /**
  * EmotionPictures
@@ -77,7 +76,7 @@ export default class EmotionPictures extends Shadow() {
             this.root.childNodes[0].classList.add('shown')
           }
         }
-      }, Number(this.getAttribute('interval')) || 8000);
+      }, Number(this.getAttribute('interval')) || 8000)
     }
   }
 

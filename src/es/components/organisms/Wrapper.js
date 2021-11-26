@@ -1,8 +1,6 @@
 // @ts-check
 import Body from './Body.js'
-import {Wrapper as BaseWrapper} from '../web-components-cms-template/src/es/components/organisms/Wrapper.js'
-
-/* global self */
+import { Wrapper as BaseWrapper } from '../web-components-cms-template/src/es/components/organisms/Wrapper.js'
 
 /**
  * As an organism, this component shall hold molecules and/or atoms

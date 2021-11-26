@@ -39,7 +39,7 @@ export default class EmotionPictures extends Shadow() {
     this.css = /* css */`
       :host {
         display: grid !important;
-        margin: var(--margin, calc(-1.5rem - 1px) auto 1.5rem) !important;
+        margin: var(--margin, -1.5rem auto 1.5rem) !important;
         width: var(--width, 100%) !important;
       }
       :host > * {

@@ -12,5 +12,5 @@ MVP TODO:
 - Formulare (17.12)
 
 Nice TODO:
-- fact bubble stuff
+- fact bubble stuff oder genrelles styling
 - footer sub nav aufklappbar (tbd), orange bar desktop only one

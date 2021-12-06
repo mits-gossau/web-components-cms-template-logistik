@@ -110,6 +110,8 @@ html {
   --p-text-align: justify;
   --padding: 0;
   --picture-img-width: auto;
+  --picture-logo-img-max-width: 115px;
+  --picture-logo-text-align: left;
   --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
   --picture-padding: 0;
   --picture-text-align: left;

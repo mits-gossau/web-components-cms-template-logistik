@@ -15,6 +15,7 @@ html {
   --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: var(--content-width);
   --content-width: 95%;
+  --details-content-width: 100%;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;

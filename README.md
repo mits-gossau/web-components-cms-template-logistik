@@ -8,7 +8,11 @@ Using web-components-cms-template Repository
 MVP TODO:
 - Suche (03.12)
 - Formulare (17.12)
+  https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/formularbestellung/
+  https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/adressanderungen/
+  https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/mtm-partnerschaft/anmeldung/
 
 Nice TODO:
 - fact bubble stuff oder genrelles styling
 - footer sub nav aufklappbar (tbd), orange bar desktop only one
+- details accordeon animation

@@ -183,6 +183,10 @@
       separateFolder: true
     },
     {
+      selector: 'wc-f-',
+      url: 'web-components/src/es/components/atoms/forms/'
+    },
+    {
       selector: 'logistik-a-',
       url: 'atoms/'
     },

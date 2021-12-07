@@ -113,7 +113,7 @@ html {
   --navigation-color-hover: var(--color-secondary);
   --navigation-color-open: var(--color);
   --navigation-flex-wrap: wrap;
-  --navigation-li-padding: 0 0 1.5rem;
+  --navigation-li-padding: 0 0 0.8rem;
   --navigation-margin: 0 max(0.6vw, 0.75rem);
   --navigation-padding: 0;
   --navigation-white-space: normal;
@@ -141,6 +141,9 @@ html {
   --q-font-size-mobile: 1.333rem;
   --q-font-size: 1.272rem;
   --q-margin: 0 auto 0.227rem;
+  --search-margin-bottom: 0;
+  --search-max-width-mobile: none;
+  --search-max-width: 15em;
   --teaser-btn-button-color-active: var(--m-blue-900);
   --teaser-btn-button-color-hover: var(--m-blue-800);
   --teaser-btn-button-color: var(--m-blue-600);

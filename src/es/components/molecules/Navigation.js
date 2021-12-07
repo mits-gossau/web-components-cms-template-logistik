@@ -146,6 +146,12 @@ export default class Navigation extends BaseNavigation {
         --a-link-font-size: 1.25rem;
         padding-bottom: 0.875rem;
       }
+      :host > nav > ul > li.search {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
           --a-link-content-spacing-no-scroll: 1.1429rem 1.2143rem;
@@ -256,6 +262,9 @@ export default class Navigation extends BaseNavigation {
         :host > nav > ul li.open > ${this.getAttribute('o-nav-wrapper') || 'o-nav-wrapper'} > section > ul > li.bold:last-child {
           border-bottom: 0;
           padding-bottom: 0;
+        }
+        :host > nav > ul > li.search > * {
+          width: 100%;
         }
       }
       @keyframes open {

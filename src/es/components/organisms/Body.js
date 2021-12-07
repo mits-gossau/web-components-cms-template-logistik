@@ -38,6 +38,9 @@ export default class Body extends BaseBody {
       :host > main h4 {
         --h4-margin: 1rem auto 1.143em;
       }
+      :host > main .bold {
+        font-weight: bold;
+      }
       :host > main a-picture {
         --picture-img-max-height: 75vh;
         --picture-img-object-fit: contain;

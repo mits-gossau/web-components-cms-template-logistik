@@ -15,7 +15,17 @@ html {
   --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: var(--content-width);
   --content-width: 95%;
+  --details-border-bottom: 2px solid var(--m-gray-100);
+  --details-border-color: var(--m-gray-100);
   --details-content-width: 100%;
+  --details-icon-display: flex;
+  --details-icon-justify-content: space-between;
+  --details-main-padding: 1em;
+  --details-summary-child-margin-open: 0 0 1em 0;
+  --details-summary-text-decoration-hover: var(--details-summary-text-decoration);
+  --details-summary-text-decoration: none;
+  --details-text-align: left;
+  --details-ul-margin: 0;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;

@@ -18,4 +18,36 @@ import Body  from '../organisms/Body.js'
 
  * }
  */
-export default class Details extends BaseDetails(Mutation(Body)) {}
+export default class Details extends BaseDetails(Mutation(Body)) {
+  constructor (...args) {
+    super(...args)
+
+    this.svgWidth = '1em';
+    this.svgHeight = '1em';
+    this.svgColor = 'var(--m-gray-400)'
+  }
+  /**
+   * renders the m-Details css
+   *
+   * @return {void}
+   */
+  renderCSS () {
+    this.css = /* css */` 
+      :host {
+        box-sizing: border-box;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      :host details summary.bold .icon {
+        font-weight: bold;
+      }
+      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host {
+          margin: 0 5% !important;
+          width: 90% !important;
+        }
+      }
+    `
+    super.renderCSS()
+  }
+}

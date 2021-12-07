@@ -6,8 +6,6 @@ Using web-components-cms-template Repository
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
 MVP TODO:
-- Akkordeon (03.12)
-- Akkoredeon with Expandable PDF (https://www.logistiktransport.ch/de/allgemeine-informationen.htm) (link icons in accordeon) (03.12)
 - Suche (03.12)
 - Formulare (17.12)
 

@@ -25,7 +25,7 @@ html {
   --details-summary-text-decoration-hover: var(--details-summary-text-decoration);
   --details-summary-text-decoration: none;
   --details-text-align: left;
-  --details-ul-margin: 0;
+  --details-ul-icons-margin: 0;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;

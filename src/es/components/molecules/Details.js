@@ -44,6 +44,9 @@ export default class Details extends BaseDetails(Mutation(Body)) {
       :host details summary.bold .icon {
         font-weight: bold;
       }
+      :host details summary ~ ul.icons, :host details[open] summary ~ ul.icons {
+        margin: var(--ul-icons-margin, 0 0 0 1em);
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
           margin: 0 5% !important;

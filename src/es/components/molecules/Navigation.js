@@ -151,6 +151,8 @@ export default class Navigation extends BaseNavigation {
         display: flex;
         justify-content: flex-end;
         margin-right: 0;
+        padding: var(--search-li-padding, var(--li-padding, 0 calc(var(--content-spacing, 40px) / 4)));
+        margin-top: -1.5rem;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
@@ -162,7 +164,6 @@ export default class Navigation extends BaseNavigation {
           --a-link-font-weight: normal;
           --a-link-second-level-font-size-mobile: 1.2857rem;
           --a-link-text-align-mobile: left;
-          --color-hover: var(--color);
           --height: auto;
           --li-padding: 0;
           --margin: 0;
@@ -265,6 +266,9 @@ export default class Navigation extends BaseNavigation {
         }
         :host > nav > ul > li.search > * {
           width: 100%;
+        }
+        :host > nav > ul > li.search {
+          margin-top: 0;
         }
       }
       @keyframes open {

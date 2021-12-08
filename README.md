@@ -6,7 +6,6 @@ Using web-components-cms-template Repository
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
 MVP TODO:
-- Suche (03.12)
 - Formulare (17.12)
   https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/formularbestellung/
   https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/adressanderungen/

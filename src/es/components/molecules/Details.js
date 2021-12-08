@@ -1,7 +1,9 @@
 // @ts-check
 import { Details as BaseDetails } from '../web-components-cms-template/src/es/components/molecules/Details.js'
 import { Mutation } from '../web-components-cms-template/src/es/components/prototypes/Mutation.js'
-import Body  from '../organisms/Body.js'
+import Body from '../organisms/Body.js'
+
+/* global self */
 
 /**
  * Details (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) aka. Bootstrap accordion
@@ -22,10 +24,11 @@ export default class Details extends BaseDetails(Mutation(Body)) {
   constructor (...args) {
     super(...args)
 
-    this.svgWidth = '1em';
-    this.svgHeight = '1em';
+    this.svgWidth = '1em'
+    this.svgHeight = '1em'
     this.svgColor = 'var(--m-gray-400)'
   }
+
   /**
    * renders the m-Details css
    *

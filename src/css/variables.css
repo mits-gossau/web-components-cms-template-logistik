@@ -113,7 +113,7 @@ html {
   --navigation-color-hover: var(--color-secondary);
   --navigation-color-open: var(--color);
   --navigation-flex-wrap: wrap;
-  --navigation-li-padding: 0 0 1.5rem;
+  --navigation-li-padding: 0 0 1.55rem;
   --navigation-margin: 0 max(0.6vw, 0.75rem);
   --navigation-padding: 0;
   --navigation-search-li-padding: 0;

@@ -103,7 +103,7 @@ export default class Form extends Shadow() {
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
-          width: var(--content-width-not-web-component-mobile, var(--content-width-not-web-component, 90%)) !important;
+          width: 100% !important;
         }
         input[type=text], textarea {
           font-size: var(--font-size-mobile);

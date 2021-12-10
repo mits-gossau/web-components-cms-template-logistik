@@ -1,5 +1,6 @@
 // @ts-check
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
+import Button from '../web-components/src/es/components/atoms/buttons/Button.js'
 
 /**
  * As a molecule, this component shall hold Atoms
@@ -38,11 +39,18 @@ export default class Form extends Shadow() {
    * @return {void}
    */
   renderCSS () {
+    if (!customElements.get('a-button')) customElements.define('a-button', Button)
+    const button = new Button({ namespace: 'btn-' })
+    button.renderCSS()
+    this.css = button.css.replace(/\sbutton/g, ' input[type=submit]').replace(/\s#label/g, ' input[type=submit]')
     this.css = /* css */`
+      legend {
+        font-weight: bold;
+      }
       input, textarea {
         caret-color: var(--color-secondary);
       }
-      input[type=text], textarea {
+      input[type=text], textarea, input[type=checkbox] {
         box-sizing: border-box;
         border-radius: 8px;
         border: 1px solid var(--m-gray-400);
@@ -56,10 +64,10 @@ export default class Form extends Shadow() {
         color: var(--m-gray-600);
         opacity: 1;
       }
-      input[type=text]:hover, textarea:hover {
+      input[type=text]:hover, textarea:hover, input[type=checkbox]:hover {
         border-color: var(--m-gray-600);
       }
-      input[type=text]:focus, textarea:focus {
+      input[type=text]:focus, textarea:focus, input[type=checkbox]:focus {
         border-color: var(--color-secondary);
       }
       .umbraco-forms-indicator {
@@ -75,6 +83,23 @@ export default class Form extends Shadow() {
       }
       fieldset {
         border: 0;
+      }
+      .checkbox {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .help-block {
+        font-style: italic;
+      }
+      .checkbox > label, .checkbox > .help-block {
+        padding-right: var(--content-spacing);
+        flex-grow: 1;
+      }
+      input[type=checkbox] {
+        border-radius: 8px;
+        height: 1.5em;
+        width: 1.5em;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {

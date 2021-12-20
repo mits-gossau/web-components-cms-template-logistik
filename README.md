@@ -13,6 +13,7 @@ MVP TODO:
   https://logistiktransport-testadmin.service.migros.cloud/mtm/login-fur-migros-betriebe/
 - Tabellenstyle
   https://logistiktransport-testadmin.service.migros.cloud/national/dieseltreibstoffzuschlag/
+  https://logistiktransport-testadmin.service.migros.cloud/mtm/interner-bereich-fur-migros-betriebe/
 
 Nice TODO:
 - fact bubble stuff oder genrelles styling

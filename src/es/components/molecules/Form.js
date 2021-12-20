@@ -52,7 +52,7 @@ export default class Form extends Shadow() {
       input, textarea {
         caret-color: var(--color-secondary);
       }
-      input[type=text], textarea, input[type=checkbox] {
+      input[type=text], input[type=password], textarea, input[type=checkbox] {
         box-sizing: border-box;
         border-radius: 8px;
         border: 1px solid var(--m-gray-400);
@@ -62,14 +62,14 @@ export default class Form extends Shadow() {
         outline: none;
         width: 100%;
       }
-      input[type=text]::placeholder, textarea::placeholder {
+      input[type=text]::placeholder, input[type=password]::placeholder, textarea::placeholder {
         color: var(--m-gray-600);
         opacity: 1;
       }
-      input[type=text]:hover, textarea:hover, input[type=checkbox]:hover {
+      input[type=text]:hover, input[type=password]:hover, textarea:hover, input[type=checkbox]:hover {
         border-color: var(--m-gray-600);
       }
-      input[type=text]:focus, textarea:focus, input[type=checkbox]:focus {
+      input[type=text]:focus, input[type=password]:focus, textarea:focus, input[type=checkbox]:focus {
         border-color: var(--color-secondary);
       }
       .umbraco-forms-indicator {
@@ -107,7 +107,7 @@ export default class Form extends Shadow() {
         :host {
           width: 100% !important;
         }
-        input[type=text], textarea {
+        input[type=text], input[type=password], textarea {
           font-size: var(--font-size-mobile);
         }
       }

@@ -44,6 +44,7 @@ html {
   --footer-border-top: var(--header-border-bottom);
   --footer-color-hover: var(--color-secondary);
   --footer-margin: 0;
+  --footer-min-height: auto;
   --footer-padding: 1.5rem 0 0;
   --footer-white-space: var(--navigation-white-space);
   --footer-word-break: var(--navigation-word-break);

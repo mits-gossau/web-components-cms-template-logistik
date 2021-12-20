@@ -6,10 +6,13 @@ Using web-components-cms-template Repository
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
 MVP TODO:
-- Formulare (17.12)
+- Formulare (17.12) passwortfeld
   https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/formularbestellung/
   https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/adressanderungen/
   https://logistiktransport-testadmin.service.migros.cloud/tauschgerate/mtm-partnerschaft/anmeldung/
+  https://logistiktransport-testadmin.service.migros.cloud/mtm/login-fur-migros-betriebe/
+- Tabellenstyle
+  https://logistiktransport-testadmin.service.migros.cloud/national/dieseltreibstoffzuschlag/
 
 Nice TODO:
 - fact bubble stuff oder genrelles styling

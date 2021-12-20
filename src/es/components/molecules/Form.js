@@ -40,7 +40,7 @@ export default class Form extends Shadow() {
    */
   renderCSS () {
     /** @type {any} */
-    const ButtonConstructor = class extends Button{}
+    const ButtonConstructor = class extends Button{} // otherwise the browser complains that this constructor was already defined
     if (!customElements.get('a-button')) customElements.define('a-button', ButtonConstructor)
     const button = new ButtonConstructor({ namespace: 'btn-' })
     button.renderCSS()

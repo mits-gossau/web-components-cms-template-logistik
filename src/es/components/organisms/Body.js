@@ -38,7 +38,7 @@ export default class Body extends BaseBody {
       :host > main h4 {
         --h4-margin: 1rem auto 1.143em;
       }
-      :host > main .bold {
+      :host > main .bold, :host > main strong {
         font-weight: bold;
       }
       :host > main a-picture {

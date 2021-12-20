@@ -39,8 +39,10 @@ export default class Form extends Shadow() {
    * @return {void}
    */
   renderCSS () {
-    if (!customElements.get('a-button')) customElements.define('a-button', Button)
-    const button = new Button({ namespace: 'btn-' })
+    /** @type {any} */
+    const ButtonConstructor = class extends Button{}
+    if (!customElements.get('a-button')) customElements.define('a-button', ButtonConstructor)
+    const button = new ButtonConstructor({ namespace: 'btn-' })
     button.renderCSS()
     this.css = button.css.replace(/\sbutton/g, ' input[type=submit]').replace(/\s#label/g, ' input[type=submit]')
     this.css = /* css */`

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Anmeldung Step2</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://logistiktransport-testadmin.service.migros.cloud//media/otkaw3gu/m_logistik_transport_rgb_de.jpg?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132845733778600000" href="/"> </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="#">International</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a href="/Aktuelles">Aktuelles</a>
+                </li>
+                <li class=bold>
+                  <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a href="/Kontakt">Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">National</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">National - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">National - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">National - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">National - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">National - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">National - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">National - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">National - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">National - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">National - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">National - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">National - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">National - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">National - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">National - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">National - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">National - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">National - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">National - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">National - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">National - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">National - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">National - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">National - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">National - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Tauschgeräte</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Tauschgeräte - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Tauschgeräte - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Tauschgeräte - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Tauschgeräte - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Tauschgeräte - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Tauschgeräte - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Tauschgeräte - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Tauschgeräte - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Tauschgeräte - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Tauschgeräte - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Tauschgeräte - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Tauschgeräte - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Tauschgeräte - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Tauschgeräte - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Tauschgeräte - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Tauschgeräte - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Tauschgeräte - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Tauschgeräte - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Tauschgeräte - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Tauschgeräte - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Tauschgeräte - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Tauschgeräte - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Tauschgeräte - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Tauschgeräte - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Tauschgeräte - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Über uns</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Über unsDienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Über unsOffertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Über unsStrassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Über unsBahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Über unsKombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Über unsGekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht </a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Über unsSammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Über unsExpress Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Über unsMigros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Über unsVerzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Über unsZolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Über unsElektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Über unsFreihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Über unsInstruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Über unsTrack & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Über unsVerteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Über unsVerteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Über unsShipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Über unsContainertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Über unsIncoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Über unsSeefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Über unsAktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Über unsOft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Über unsKontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class=search><wc-f-input inputid="inputSearch" placeholder="Suchen..." search="Home.html?q=" namespace=search-></wc-f-input></li>
+        </ul>
+        <ul class=language-switcher>
+          <li><a href=#>DE</a></li>
+          <li><a href=#>FR</a></li>
+          <li><a href=#>EN</a></li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <article><div>
+        <div>
+          <p>Benötigen Sie neue Lieferscheine oder Palettenbons? Bestellen Sie diese Dokumente einfach und bequem gleich hier.</p>
+          <p>* Felder zwingend ausfüllen</p>
+          <logistik-m-form>
+          <div id="umbraco_form_292164b355044b79a13720848a063447" class="umbraco-forms-form formularbestellung umbraco-forms-">
+            
+            <!-- form -->
+            <form action="/mtm/mtm-partnerschaft/anmeldung/" enctype="multipart/form-data" method="post"><input name="__RequestVerificationToken" type="hidden" value="waEJLjY74f4aHDWS44IVXkV4VirOp_y_5eqtqXf0OYYBX6T0gRSb-2MUCqCwLGGZRNNAr8eDTz8Mal2PYEl9BcWgpumSDBHE_C1EZTNlj501" /><input data-val="true" data-val-required="Das Feld "FormId" ist erforderlich." name="FormId" type="hidden" value="2f847daa-5ccb-4cda-b10a-4353f651fd8c" /><input name="FormName" type="hidden" value="Anmeldung als MTM-Partner" /><input data-val="true" data-val-required="Das Feld "RecordId" ist erforderlich." name="RecordId" type="hidden" value="00000000-0000-0000-0000-000000000000" /><input name="PreviousClicked" type="hidden" value="" /><input name="Theme" type="hidden" value="" />                <input type="hidden" name="FormStep" value="1" />
+              <input type="hidden" name="RecordState" value="Q0RBQkM2RTc2RDkxQ0UwQzk2MEJGRkY1MzQ5REQ4NjdBNzVBREM5NkQzNkQ3NERDODUyQjE0QzNEMjdDQjBDQjc5RjZGRjIzNzc5MjAyMDlDNTZENjcxNzQwOTNFREMwQzIxODMwNEQwNjg3MkYyNzE5MzAxNjJDQUM1Q0ZFRDY2Njg5MEQ1NkU3NTBFNjY3RTdGMjA3N0U4NDdCNDc2OTYzRThCRjFENjI4RTVEQjVDOTk2NEQzODVDMDhBOEQ0QkQzM0EwQkNCMDgyNjdFOTdEMjUxRUVDRjA4RkU3RTU2Qzc3N0ZCQkE4NzBBQkU2MjA0MTFFNjVGRTY4OURBRDk4MTY4Q0E2QTFERUJFQUJDNEM0OTEyMzk0QjMzM0Q4QTU1QjhCREQyRkY5QUI2QkU3Q0UwNjkwOTE5NDAzN0ZDRUFFODJDMDREN0Y4QzA1NDFCNDZCNkVEMThENjc1QjFERUY5RTgzODg4RTQwNzJEMTRFOTM4MjlDQzVBQTM0REU2QkNERjI4QUZDQUVEMEMyMURGNjA3MjdDMUJDRDAxRTQ5QTEyQjQ5M0Q5QUM0OTYxNjQyOUU4QUIwQTRCRUJGMTY0NzUwNEQxODc1NzNFNEFCNTg0NkM4NEEwOEZDNkI4NDlGQzg4MDY1OUIxMDJFQzcxRTYwRjU1NjdCNjAyNkZFQ0FEQkZGMkEzQzBDMDEzNEFCRDExNzYyQkE3REFEQjVCNzVCRDkyRTc0ODVEQUJGNDExQTE3NTRBRjNFQ0QwMTFBNzAzNEJGOUEwMzlCMDlCM0RBQ0I4MDg2OTU1NTdCMUNBMjY3QUNDMDExQzg0MkY2RTBGNkYxMzZERDc2MjQ0NERCQjA1NzdGMEMzQkVCMzZBRjEwQkQwQkM5RjJGQjE5Rjk1N0YwMTkyOERBRTJDRDUwRUFGNjIwRDk2MzQ0NUQ4M0EwNzI5OUFBRTJBQTMxRUJCRTlENDdCOEM5ODlBQkZCMTlCOEVCNDUxRkQ2MEQzRkFCOUY5MjBDNTdENkU5MDkyQUYwNkQzMEJGMkNBNDg5NDM3NjU1RTA2REQyOUFGOUM0RDA0NkU0NTVCMkEwRkY0RkFGOTA1NzI3QTQwMTgxQUY5QTVBNkVFNzY5Q0MyNDJGMTU0RkY4QjI5NDE3QUNCM0U5NUMzM0FERDQ1QzBFRDA3NkUyRTc0NjZDQTc0MDFGNjc3RTRGNjkyNkQ0RTBENkVFMjIzNjI5MjVFNjk4N0Q1QzdGNzU5OEJCQjE0MDQ0Q0IzOTFDQTAwMTk2M0Q1QkRGRTQ1QTA5OTdGNjIxREVBRTdDODIwMzcyREM4MThGN0JCMUZFNjNCMDIzRTI1RUY1OUI5NDZCQzNFOUNENTcxODY3NTExOUNEMTJBMkZBRDRFRTBENTU1NTUwRjAzMTQyNjQ2RTQ5RjZFMDZDRjYzMDdBMDU5QUVBQ0I3RjEzQUEwMEZDOUYwMDAwNUNDREYzMzhDMTMwMTQ0MzBDOTNFNThGQ0RFQjhEN0ZBMjQ5MzlCMTJGQ0ZBMDgxMDUxOTc0NTM2QUJGMDA4OTI0QkQ5OEExNzFGQkRGNkVDNzRBODE3MzM2OEM2REFBOTBBMjU0NkJDMTg4MEFDQzg2QzI5QzMzQjVFMzY5QkM3OUZCQjlGNjZDOTNDMkNEQjMxMzQ3NDVBRDRCNDlEQjRGQzUxQUYzQThDQzlDNDU5RjVCQUJCOTI2ODRCMEVGNjg5RTJCNEYzQzYzRUJFNzZERUNBM0NDQTczNkVENUREMDBERTQyNzNDRENDNDRCMDQ1NThFOUU0NTdERTlENDNGMTE2RTg4MTFCOEIxQzQ3MTE2RTEwMUEwMkYxM0FGQjIzNDc5OUU0RTg5QjM0NzQ3QTcwQUJEOURFQUM2QTA3RjNGMjlFQkEwOEM4RTg4RTg1NzZEMDEyN0FBQ0FFNzY3MDcyM0EwMEJCNDI1N0MzRDkzMDIyMEFGQ0Y3NkFGMkM3RjM2QTM2MzhDN0Q4MDcwOUQ0MTMxQkIzMDI2RUE5MDYwNkY3OEFBODI0MzA5MjczMjYyMDU3RDMyQzM1RDk4MTkzNjdBRjEyOTZENDYzNDMwOUQ5Mzk1RUM1ODk5RkRFOERBNjc1RUU3M0RGQzY1OUQ4QkEwOTNGMjNBMkFGRDFFRkZGMDlCN0UyMjk2NUM5RjA0QjcxQjQzRDU1OEQ0ODY0MzA0MjI1RTg1ODNDRDJFRkU5RjJFMkIyRDcyMEFDOUZFRjAzRjBDMjEwRkJERDI2MTRCMDUyNkRDMzg5RjgyQTU2MTBCRUJBRTlEM0U5NzREMzFERTExOTc5MEYwRDE2NUQ0QkJFQzYxOUQ5MjBFMjc1QTVCODY1NTJGQUIwRjRCN0NCQkE1QTBDQzI1NDJDNzE5QUMxNEZBMjFFMTM1ODA3NTRENUExOTA4OEVFRTQxNjY5QkI2NEZFMTM1MTk0MzhERjREOUVGNDM1MTJEMDkwQTczMkY0MUUzQjdBMjFBQkIxMjE3MjZCQzJDRjAxNTA3QUQ5RkIxMjFGQzg4Nzk3QkY0OUY4RUUzMEY2OTJGNzJGQTFBNkVGRTgyMjVFQzVGNjY3MzQ3QzY3NDJFQkFDNjg5RkIwQjNERjgxMkNCRjY0M0FDM0Y3RkZEODIwNjNFREVGQ0U2OTlCRERBN0U4ODU0QjRCQkI0MUFGMjYxNTY4ODA5NDc3Nzc0RTRDREYzMTEzOENFRUZDNkU4ODYzODM3M0IwN0I5NkE1RURDOEJFNjAyQUJCQ0Y0NzQzQTlEM0U3RDNCRUNCMEQ3NkM3QTQ5Q0IzOTExQTcyMTJCRTMzREIzMjcxRjUxNDExMEVERkJBQ0Q5OEEyNTUxMzgxRjM1NTI5NDBBNzkwNzQzQTQ0OA0KRjY5QzEzODg5RTU5RUJDNUYzQkFGRkU5MUJGNTVBQUVENEIwMDI0QUM4RDZFRDlEMjZCRTI0MUE2QjRBMDI2OURCRTY5NjJCNjU3ODIxRjNFODMzRkQzMTAwMTkxOUZDNUVEMEE2RkQ1NTZDRTY4MjAyOTg0MTI1OUNBRkE5MjI3NUVDQUUyQzg1Q0Q2RThEQzgyQzY3RkVBQ0Y4OTcyNTE3MEYwQkUzMjNFMEUwNDZBNEIxMjc4Rjc2MUMzNkRFNzMxOUFCNjM3N0Q3NzBGREQ0Mzc3MzU3MDhCNTAwMjExMEYxRDkzNDIyNkRGQzY2MDI1MDA0MzIxRjMyQTdFM0ZFNTIzRkRERjA5MTM5MkE4MjY2Nzg5QjNGRkIyNkNDNTg2RjVDMTA2QzhGQURFQzUyNUU1NDUzOEVGOEZDODNDNTA2NTFDQ0RGMkExQjI3NUE5RDI2QTRGODhBRTIzQjI2NTMxODFENjJCMzY3QThFQTNCRTY2ODg4NDYxNkE3RThFRkYyNTM3MTRGRUM2MEY1MTA1NDE1QjE4QTM2MDBBMDYyM0IwOENCMjY1MzI5M0MwNUI5NDZDOTE3NERCRkM3OTk2MUZERjNBQTIzNEQwMTM2QkRCNEJBN0M2QzAxOTlDQUI2MUExN0FCNzRFMzM5MEQ1RUIyOEZEMTBGNzNDRkFENUU4MDIxMDcxM0Y0QkY0RDJGMjlERjI3OERDNjFCRDEzMUZDQ0YwMTIyQzM4N0M2REVBMzlFOTA3NDJEMEYyODNENjU3MzlBQzg3NjIzMUYwNEFENTY0NkEwMkFDQjBBQzBEQkE1QjMyRDMzNDVEQ0MwMzcxREUwMkZBOUE5QjEyMkEyOEY0QzIxMzAxQ0M3N0E0NDRERUQ1Q0U0MjZCNDNBNzYwMTlFNzA4MkVBRDNEMDE0MTkyQjM0Rjk0MzhGQkFDNkE0QzZGMzFBNUNEQjVFOTE1RkNGMzdDMTlBRTA4MUNGQ0M0OTgzNTc3ODZCNzI2MDBBQUQ0QTQ2MTMwQzI0RjVEQTlCNDRGQ0NGODU4MDM1OTEzMTgwNTExODBFMTg3RUMyRThGN0M3OEI1NUEwMUQxRUJGQUU4OTFBQjEzNzkwQUM1RTI2OTdEMTZDOEI1MzFCRDMzOUExMEY5QzhDQUEzMzFCNkFCMjQxNzY3MTFCMTJDQTJBOTEzMTc2QjU2RTgwMTE4NDY4QUU4RDNDNzgwOUY4QUIzNUYzMkMxRDVCMUEzQzdFMTRDMTlBNzc5MzY1MTBGMUUyMDhBMDdCNTU1NTdCOUEzM0Y5NTc1Q0JEQThBODZDMjlCMjA1M0YzNUQ0NEI0Mzc3OEEwNTg3NzhDRDgwQ0Q4MEFGMkQyNTBDMDA3RTQ3MDQ0RDlFQzBGNzQ4RjVCMjMyMDMzRTFEOEFFQzEzREU2QzhFNENBRDkyMzAwMjExRTlGRjc0NjQwNEYxOTg2ODE0MDA5NTVCQ0ExQzcwMTFCQjY4QzE2NjM1Q0Q3NjlCREQ5RDk3QkQ4NDMxMTY2ODgxODZFRTQyQzUyNTBBNjhENDBFNEFFQjg5M0Q5MkVCNDRGMjZCMkVFODc3QzBFODY5MURGRUZBNDlGM0RDQ0VBNUYyQTk5MEI2MEYxRkFCRjhFQTk2NkE4NDBBMDM0MzU5RjcwRTQ1NUVERUI0RTc4MkJCQURGMUVCMDcxNzE2MzM0NTQxNUVDNjNCNzVBQTdCRDM3MUE2NDJCNTVENUY1OUNDOUYwRDhCQ0I2RUREMTdFNDgyMEM1QkY1NEJCOTBFQzdBMDRBMDRDMThDRTZEQTQ3RkRFNTIxMUE2QUIxM0RGMEM3RjM5MkFDNTgyMjVFRDIyQzAxNzVFM0UwMDVFMDk4RTM2QUY2MjE2MjVCMjc4MUQzRkEwNDM3NUQxN0I3Nzk4QkI3RkU0NTYxMTM0OUNDQ0UwOUYzNjM5NEY0RjQ5NjVENUQ0NTVEMjMxRTMzMkMxQzEwNTFCQjNBREU0MTVCRUU5QjA4QTAwMjEwRkNCRDVCQzRBN0JCQzYyQjBFRDRDNDY0NzkyNUUxMTkwNzRCODYwQTlDOUIyMzEwMDNFNTlDMzVDRkZCMkFEQzZCRUNENDJCQTAxMzhFQkRCQjBBRDA0NjExNUMxQzY2OEFEMTFCQzc3QkQyNjlBQ0EwMTA2MENBN0NEOUQ2NTg1MzA1RjFENEMwRkFDMDhGMzUzMkJGQ0I2RkMwODM3QUMyOEVERDkwOTA3MDk5MUQ5N0NCMkE2OTk0RTYzNEI4RTkxOEUwNTc0RDU4QUY5RkM4RDdFRTkwNDdDQzQ0Q0E4MjhCMzc0MDQwQTYwMzQxMUFBOTkwNjRCQzJENEI1REIyM0E4Qzg0NTZDMzg3OURCM0I4QkIxMDAwMjAwMjBGQUE1NDc2QTk5OEY3QTAxRjQwRTg5MjdFQjM2MUMwODRDRTQ4OUY1Q0Y2M0JBREFCMTQ4Q0U0OTJGMTNGM0I3MTg3MTM5MzFEOTc4QTcxNzYwRjgyQkVBRkU3RDAxRDlBODkzNDk2MUZFODhGQzZGMzhFRkJDQTM1RTA0RTVFQ0EwQUZDMDIyRjdGRUZCRTZENDY1MTE4Q0NCQ0JGQTBGNEQxQ0M3NENERUY5OUQ5NDcwN0E0MTc1OEY5RjI0QzkyOTNFNDVERDQwQjIwMEUxMDVBNEVBMERBQjI4RkFEMDczQTM4RDNBRDUzMTREMzNDRTg2MzIyRTk1NDFDOTYxQUIxREUyOTA2MDZERjAyQTgxQkJEODRBMzg4OTUwOTAzRkU5NDRGQzMxQ0JFQkExNkZEMDk4REZGMkYzOTQ2NzE1ODg0NTFEMTEyNzJCQUUzNDkxQjA4NTZDNEZBQkVGQzlFMzM0NjY5QTUzRDJFQjAzQQ0KNkIwNDg2ODkyOTIyRTFEQzY4NjM0MDM4QzBEMTNBQUIxQzZDNjNEMDYzQ0QwQ0QyQzIwMUZFRjAyNzlERTY5MjY2MDJBQUIxRkY0MjI3QkRBOEM2REYzQzY5Mjk0QTNGNEFCRkFERDU1NzM0Mzc3NDk4MDk1MEI3QUM4QkUzOTY0NUNBNUVBNzFGODA5NzM2Rjc2MTY2Q0UyQkY2NTg4NTdEOEUzMjU4MDVENDU4MUUzRkRDMUVENTU0MTBGQUNDNTE5NTk1MkIzNDRCODIxMUI0MkVEREFEMzA0N0Y2NjI1M0VFQzU4RjRBMkYwMjVERUMyNkE0QjM3QUQ1RUU0QzY1NzREMzMwNENDQzU0OUFCQTM3QjVGMUM1M0M4RUE3MEJDMjgxOEMyNTMxMEEwQTY0RTIzMDlBMTk5MjlCRkE2MkVEQkU2MkQ0QzQyNTIwNzlFRkZFMkMzMEU0QTNDNzEzOThGMjIwMDI0MjA4NjhFMjhBN0ZFN0U5MkNCOTJFOUI5RkJEQTE0NjIwQ0U0OTdCRjAzMkJBNjA3QjNDMEE0ODZCQUY0NjY0RTZCNTExOUVENkFCNTgwRTYwOTZDN0I4Q0NBMTMwNzIzODRBRTRFNEQ2QUFBNTAzMjdDMTQ5NzMyNjg2QUE2NTAyNUQyMDAzN0IzMDQ0QkVBODdFNzFEQjNBRkQ1MTk1MUQ3QzFGMTAxNzY0RjkzNTEwREIwN0JENDREMjczQzMxMDA2MUMyMjhFQzYxRjY4MTMwRjE0QjA1OEI1NDM4REIyREJCQjVDRDk5NTUxQkVCOUQwM0E2NDRDMzBFQUMzQjBEOENEMzAwMjE2MTZCREM1NUY1OUI0NEMyODg2NDNEQzUwMEMzQUVDMTJFQTQ2NTcyMDY3NzkyOUNEQUVGMkIwQ0Y0MzM0Q0M0RTY1M0E1QTJERDZCMkRDN0Q1N0UwMkE1NUJFQkI3MjY0RTQxODA0RTlBOEFGNENEQjdEODgyM0U0M0FDNUNFMjI0NEQ2NDVCMzUxNEJEOEY5REFDQzBBODU0NkQ5NkM1QTM0QzRFM0Y1MEI5OTZGRjUxMjUwRDA0Q0M0MjMyMDM0QzJBOEMxQTYzNTBCQTYxN0IwRDg4QzNBOUY3NDMzNTgxMkI5MjlCRENFODQwRTM0QzBDQzY3NjU5QUNEREY1NjJDQjM3QzlGQTY0RjY2NjI5MEMwMjkzMjQ1RUM1REM1RThEQkNBNzFERjVCNUU3NTg0NUZEQzBFQjE4OTVGRkI5QTBFMEU3NTBERjY5NTg2NDg4OTVBN0NCMzIxMDBEMDQ3NzZENURBMkQ3QjJCNEIzNzQzOTU0NTAwREI2MTgzMDc1MDAzRDJCMDcxMDA1Qzc5ODcyODM2MDdGNjM0MkVDNjFGNDY3OEE1RERDRTM4QjQ3RTg4OTJEMEVFQUZENDM5QzdEQTg1OTUyRTFFMjMxRjI0NzcwNDBDOTUwMTVGMTcxRUE1MUExNUVERkYwODI4REEwNzJDREQ0MUVCNzcyN0I0OTRDNURBQTNEQ0UyM0Q4MkM3RjIyQzg3MjMyNzk0MUNCQTg0RjgzODRBMkU5MTA5Q0ZGOTA2MDE0MjE0NzdBNUUwMDcxQjFEMkNBNEY3MTgyRDlCNjA1NDJGMDMzNTlEM0NEQzUzOTc4OTExMTY2NTZERkU4OEFFODhDMTI5M0UzNzMxOTczNjdGQTMwNDREN0E0QTMwNzM4MzNEMEI1N0RGODFDMDg5RDYxQzY1RTFCOThCQzMwMTY5NUVFNjA5RTc3MkU4MDYwRUIzRDA2NDMyOEM2NDUwNzZEQ0MzMjNCOTZBREZGQ0U4QUM4OTIzNDI1N0VGMjQ1Q0U3Qjc1MzEyMEY3MDFBNkM0N0ZGNDU2NEJCNDBDQ0ZGREQ5Qjk4M0NDMjc0NzlBMzk1NUNEMDVDQjI3RTAyMkY1Mjg3MEM3NjNGNTc5RTk0NzIwMjgyQ0VFQTQ5NDlBQzBCRERGMUFDNDZEOUZDREQzQzUyQkE0RTUxN0ExMjk5NkJCMTBFMDczQjAyNDgzQjRBQTNENDVGQTE2MzIwMDMyQUJFODBEQjRGMDFFOEQ1MDg4NjZDRDMxQzA2M0M5OEIzNUJFMUQ1QTA4QzBGQjVGRDJFNzU5QTBDNTFBNTQyN0MxQzkxNUYxOUE5MkRDM0RBNTlCN0U0QkIwM0U0Q0U1NTg0MjE2NUY0RTMxRTQwMzYyNzg2QTdFQzhFOTFEOUNGNEVFNUZFRUJFQzcyRTU1MjI5NEY2MzU3RDcxQUYxMUY0QkNBQzQzRDZDMzI2MTUyMjFBMkJGRkUxNDcwMkQxQ0I3QURDMzgxRjhBRkU0QzU1NEIwNUMzMUUxNDJFOUEyRUM1RDAxRjU0QTA3NzBBQjAxRkUyMTA3OTQ1NTEwMDc2MkMzQjcyRkU5QzhCOUM2ODk4NjY0MURDQzg3RTBCOTY2ODZBMzE0RTA5NDlDREE4MTRBQjg2Mjc0OEREQzUzNzA5MjMyNEYzMDcyQjNCNUE1NTYxOEU0Njg2REQzOUFBN0JFNzQ3OEMyQTQ5ODBDM0U3RUU4REI1ODk2RTk5OTBBMUNFMkFDMzYzMkIwOTIwNzhFRjc3MEIwRjI0ODc0NUNCQkVCQUVFRUE4OUVBOTIzNDdCRTVDQUQwQzgxNDdERjZENDYzOUQzNTZCN0Q4QTk4NEEyNzlBQzA4OEU5MDUwMjRERUJDNkNERURBMjhDMjdBMUNFMTgzNDEzRjU1QUQyMTQwRDVCQzA4OTAyNDlGQ0E5QjA2OTIwRUQ0REY5QUM0QkZCOEIyNDA2Q0NCNUY2RUJCQzk0MzMyMTdBMDU4RDlFNzUzNTRCQTlCQURDOTUyMTk5N0Y3QTEwMkVGNThBREZGMThEQw0KQ0E5QzQ3RjIxQjRGMTEzRThCQjgzMTIyOTE2QkY5MjZCMTI4QjBBRkY2NkM4MzAzNEUwQzQ4QkZGOTk3OTIzRDU2NUU5QjNGOURCM0U4REZBQjFEQTAwMzExNDA3MDQ5MzAzMUQxMTU2QjU0M0M5M0RENEFFMTg4NDVGMzMwRUU4QjU5NjlBRTk4QkM0NDJEQjlFOTM2QUNDQjVBRTE3RjA3Nzg4MzYwMjIxNkY1MjkzRUQ5OTVBQkNENDBGRTM3QjcwQzdCMTdEMDUwMkJEMDZGREYzQjhDNTcwQkZGOEExNTg1OEEyOEI1QkZDQjIyMDAxNjhFQjg0RDJFNjFFRDQ3NTMxQ0Q4QTk1QkRDQkUzOUZFODExQjJEMDM1RTFDRDY5MjlCMjNEMkQ5OTA1ODIwM0I2NTNCODc5MjAwMDM0RDY5QUU1N0IyQ0ZFQjZBNzE5OTRFNjA3MTk3RDNEMEE0NTlFMUQ2OTlEM0I3MjRFMDcyRUQ2MTI0RDUxQjQwQTUwRDI5OTE4MkFGNjlFNTVBNzZBNjIyMjRCQ0I5QjM2RDgxNkZBMEE2NEIzMkVDNUVENTYwMzE5QjY0NDk3QzdGNTNCOUQwQ0FGMjYwNEY4NDVGNjFDMDZFMjk5RjA4MUUyNkFEQzg2QjFEQzE2MDFDRkJENDM3NDdFMUVDMDY5NTQ2ODdFNjA1MEQ5ODE4QTZCODZEOUY2NUE1NzhBOUJCNzIzM0E3MEMyRTg4MzRCREZDMDkyM0FBNjI0OTc2QzZFRjA4NzQxOUMzNjg1MTc1QTYzMURCRURDOTZGQjY5MEY1MkRCMzkzNkY1MTAxMUM1MDBDMjczM0RDRTk0NDZBNzA3OTIxQ0Q1QzA3RTVBQzJBQzUyMkRCRUJBNzJBRkFCQTRBQjg4REVBQzJCMzRCNkU5RDZEMzgwRjcwQjQ0QTc2MzkzRkVCNjYyRTg0MDAwQ0FDQUQ3QjM4MDA0M0IxNEY5MDdERUUxODI3NzMxREM3QUFCODJGMkNCNTk3N0NGQUE2QTlDOTJGOTk3MjM5MEM3MjRDNzk1OTVFNTEyQkEyREUwMTc3NzFFNTU5RURCMzE5OUUwNTEyMzlBRDA3M0RENTIwREREQzk3NzA3NDIxRDE4QTFGNDQ1QUQ5QjNGRTc2NzBCMTlDNkJFNDUwOEVBRENCQjcwN0M0Nzk5QUUyQzkzN0UwMzY5RDI3N0M1QjAxOTQ4MjQ5N0E3ODBERjY0QzRENUQzMEJBMjdBQTc2NEFGMzlGRDVEQkMyMUIzN0FDNzk2Qzk3OUFCQzczOEM5RTAwQTE1MUYyMzcxQ0FFRTk2QzlGMTBFMkMxRDc0NTc4OTY5MjA1QjVCOTMzOUJBQUNCRkIxRTYwMzI1NEYyMDMyQ0U0N0JENERDMEMyQzY2NUJFQzAwMTc5RERFOEZCRUI3MENCMURFNjI1QUFDRDUyQ0QwMUQwODMzNEE1OTNGRThGODQxRUU0RUFEN0Q4NjA2RjI5NEVCNzM1MDlFQkY5MDZEQjU0MjZGM0UzMkIwMTdFQ0E5OEZFRkQxREI5Q0U2N0M2RjE1MDgwODIyNTQ4RDk2OTdGMTI0NDZFOTE2RjZCMDVGREE2Nw==" />
+
+
+
+
+
+<div class="umbraco-forms-page">
+
+
+
+
+      <h4 class="umbraco-forms-caption form-caption steps__title" style="color: #fff; background-color: #ff6600;padding:10px;">
+          <span class="step__counter">Seite 2 von</span> 4
+      </h4>
+
+
+
+
+
+      <h4 class="umbraco-forms-caption">Auswahl Tauschgeräte</h4>
+
+
+  <!-- set initial for spacing elements-->
+  <logistik-o-wrapper-without-shadow any-1-width="initial">
+
+          <fieldset class="umbraco-forms-fieldset" id="2f1ff519-5039-4a3b-ee82-e787ba4a959e">
+
+                  <legend>2. Auswahl der Tauschgeräte-Typen</legend>
+
+
+                  <div class="umbraco-forms-container col-md-12">
+
+                          <div class=" umbraco-forms-field formsmtmpartnertypes titleanddescription" >
+
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+<div id="30a99391-e6d7-47ec-a8ae-a8d781cf1c00" data-umb="30a99391-e6d7-47ec-a8ae-a8d781cf1c00" class="">
+          <p>Markieren Sie die gewünschten Tauschgeräte; falls Sie unsicher sind, welche Tauschgerätetypen Sie benötigen, wenden Sie sich bitte an Ihre zuständige Marketing- oder Logistikstelle.</p>
+</div>
+
+
+<span class="field-validation-valid" data-valmsg-for="30a99391-e6d7-47ec-a8ae-a8d781cf1c00" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+
+
+          </fieldset>
+          <fieldset class="umbraco-forms-fieldset" id="1990dc33-872e-449c-f6f8-8803ccd967e7">
+
+                  <legend>2.1 Paletten</legend>
+
+
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsmtmpartnereurreusablepallet checkboxlistwithimage alternating" >
+
+                                      <label for="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843" class="umbraco-forms-label">
+                                          EUR-Tauschpalette                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843" data-umb="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843">
+
+  
+      <input type="checkbox" name="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843" id="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843_0" data-umb="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843_0" value="800 x 1200 mm<br>0101.300"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/hk2lary2/eur-tauschpalette.jpg" />
+      <label for="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843_0">800 x 1200 mm<br>0101.300</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="ef45a0f4-e8e8-4f43-bb6e-a0b5fd5f9843" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsmtmpartnerplastichalfpallet checkboxlistwithimage" >
+
+                                      <label for="830f79cd-8ff8-48d8-895a-312e5f7c656a" class="umbraco-forms-label">
+                                          Kunststoff-Halbpalette 1/2KN-Pal                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="830f79cd-8ff8-48d8-895a-312e5f7c656a" data-umb="830f79cd-8ff8-48d8-895a-312e5f7c656a">
+
+  
+      <input type="checkbox" name="830f79cd-8ff8-48d8-895a-312e5f7c656a" id="830f79cd-8ff8-48d8-895a-312e5f7c656a_0" data-umb="830f79cd-8ff8-48d8-895a-312e5f7c656a_0" value="800 x 600 mm<br>0101.175"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/aold30xi/kunststoff-halbpalette_1-2kn-pal.jpg" />
+      <label for="830f79cd-8ff8-48d8-895a-312e5f7c656a_0">800 x 600 mm<br>0101.175</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="830f79cd-8ff8-48d8-895a-312e5f7c656a" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsmtmpartner2mpallet checkboxlistwithimage alternating" >
+
+                                      <label for="48278fcb-e470-4d88-ae18-581e513cd353" class="umbraco-forms-label">
+                                          2-m-Palette                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="48278fcb-e470-4d88-ae18-581e513cd353" data-umb="48278fcb-e470-4d88-ae18-581e513cd353">
+
+  
+      <input type="checkbox" name="48278fcb-e470-4d88-ae18-581e513cd353" id="48278fcb-e470-4d88-ae18-581e513cd353_0" data-umb="48278fcb-e470-4d88-ae18-581e513cd353_0" value="800 x 2000 mm<br>0101.305"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/vn5ifpad/2-m-palette.jpg" />
+      <label for="48278fcb-e470-4d88-ae18-581e513cd353_0">800 x 2000 mm<br>0101.305</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="48278fcb-e470-4d88-ae18-581e513cd353" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsmtmpartnerplasticpallet checkboxlistwithimage" >
+
+                                      <label for="e472a48e-cea1-4dbe-fc05-0f5f55dbb049" class="umbraco-forms-label">
+                                          Kunststoffpalette Typ P1-01                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="e472a48e-cea1-4dbe-fc05-0f5f55dbb049" data-umb="e472a48e-cea1-4dbe-fc05-0f5f55dbb049">
+
+  
+      <input type="checkbox" name="e472a48e-cea1-4dbe-fc05-0f5f55dbb049" id="e472a48e-cea1-4dbe-fc05-0f5f55dbb049_0" data-umb="e472a48e-cea1-4dbe-fc05-0f5f55dbb049_0" value="800 x 1200 mm<br>0101.171"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/w0ynd2t3/kunststoffpalette_typ_p1-01.jpg" />
+      <label for="e472a48e-cea1-4dbe-fc05-0f5f55dbb049_0">800 x 1200 mm<br>0101.171</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="e472a48e-cea1-4dbe-fc05-0f5f55dbb049" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+
+
+          </fieldset>
+          <fieldset class="umbraco-forms-fieldset" id="2ea3dbb4-ee68-4bf1-b5f1-527e0cd1658d">
+
+                  <legend>2.2 MTM-Kunststoffbehälter</legend>
+
+
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsmtmpartnerplasticcontainers titleanddescription alternating" >
+
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+<div id="7868adb7-5ac3-48c9-d264-e0823a25617b" data-umb="7868adb7-5ac3-48c9-d264-e0823a25617b" class="">
+          <p>Waschvertrag (optional) für Kunststoffbehälter und Kunststoffpaletten</p>
+</div>
+
+
+<span class="field-validation-valid" data-valmsg-for="7868adb7-5ac3-48c9-d264-e0823a25617b" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosan checkboxlistwithimage" >
+
+                                      <label for="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4" class="umbraco-forms-label">
+                                          Migros-A/N                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4" data-umb="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4">
+
+  
+      <input type="checkbox" name="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4" id="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4_0" data-umb="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4_0" value="400 x 300 x 133 mm<br>0101.309"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/ahvguvpp/migros-a-n.jpg" />
+      <label for="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4_0">400 x 300 x 133 mm<br>0101.309</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="6bbbe3e8-87dc-47c5-d4fe-fc28df907fd4" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migroscn checkboxlistwithimage alternating" >
+
+                                      <label for="6a8367ca-a47b-4df0-a0a6-7017ea9129bd" class="umbraco-forms-label">
+                                          Migros-C/N                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="6a8367ca-a47b-4df0-a0a6-7017ea9129bd" data-umb="6a8367ca-a47b-4df0-a0a6-7017ea9129bd">
+
+  
+      <input type="checkbox" name="6a8367ca-a47b-4df0-a0a6-7017ea9129bd" id="6a8367ca-a47b-4df0-a0a6-7017ea9129bd_0" data-umb="6a8367ca-a47b-4df0-a0a6-7017ea9129bd_0" value="600 x 400 x 266 mm<br>0101.308"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/1w0osihg/migros-c-n.jpg" />
+      <label for="6a8367ca-a47b-4df0-a0a6-7017ea9129bd_0">600 x 400 x 266 mm<br>0101.308</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="6a8367ca-a47b-4df0-a0a6-7017ea9129bd" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosh checkboxlistwithimage" >
+
+                                      <label for="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec" class="umbraco-forms-label">
+                                          Migros-H                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec" data-umb="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec">
+
+  
+      <input type="checkbox" name="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec" id="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec_0" data-umb="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec_0" value="600 x 400 x 100 mm<br>0101.317"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/idonyzbv/migros-h.jpg" />
+      <label for="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec_0">600 x 400 x 100 mm<br>0101.317</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="2a3ceadd-3898-48b0-e1db-f32a6ecc69ec" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosen checkboxlistwithimage alternating" >
+
+                                      <label for="8277e1ac-d192-4bc3-a7bd-1f64d66a917b" class="umbraco-forms-label">
+                                          Migros-EN                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="8277e1ac-d192-4bc3-a7bd-1f64d66a917b" data-umb="8277e1ac-d192-4bc3-a7bd-1f64d66a917b">
+
+  
+      <input type="checkbox" name="8277e1ac-d192-4bc3-a7bd-1f64d66a917b" id="8277e1ac-d192-4bc3-a7bd-1f64d66a917b_0" data-umb="8277e1ac-d192-4bc3-a7bd-1f64d66a917b_0" value="600 x 400 x 88 mm<br>0101.381"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/krpontxg/migros-en.jpg" />
+      <label for="8277e1ac-d192-4bc3-a7bd-1f64d66a917b_0">600 x 400 x 88 mm<br>0101.381</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="8277e1ac-d192-4bc3-a7bd-1f64d66a917b" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsmtmpartnerrequireplastic singlechoice" >
+
+                                      <label for="58b88e2f-f3db-4267-dd28-c1157cde303c" class="umbraco-forms-label">
+                                          Wir benötigen für unsere Produkte gewaschene Tauschgeräte (gebührenpflichtig)                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                        
+
+ 
+<div class="  radiobuttonlist" id="58b88e2f-f3db-4267-dd28-c1157cde303c" data-umb="58b88e2f-f3db-4267-dd28-c1157cde303c">
+  <input type="radio" name="58b88e2f-f3db-4267-dd28-c1157cde303c" id="58b88e2f-f3db-4267-dd28-c1157cde303c_0" data-umb="58b88e2f-f3db-4267-dd28-c1157cde303c_0" value="Ja" 
+       />
+  <label for="58b88e2f-f3db-4267-dd28-c1157cde303c_0">Ja</label>
+  <br />
+  <input type="radio" name="58b88e2f-f3db-4267-dd28-c1157cde303c" id="58b88e2f-f3db-4267-dd28-c1157cde303c_1" data-umb="58b88e2f-f3db-4267-dd28-c1157cde303c_1" value="Nein" 
+       />
+  <label for="58b88e2f-f3db-4267-dd28-c1157cde303c_1">Nein</label>
+  <br />
+</div>
+
+<span class="field-validation-valid" data-valmsg-for="58b88e2f-f3db-4267-dd28-c1157cde303c" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosbn checkboxlistwithimage alternating" >
+
+                                      <label for="3f939d4d-6cc2-4376-ad49-bb8bab574db9" class="umbraco-forms-label">
+                                          Migros-B/N                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="3f939d4d-6cc2-4376-ad49-bb8bab574db9" data-umb="3f939d4d-6cc2-4376-ad49-bb8bab574db9">
+
+  
+      <input type="checkbox" name="3f939d4d-6cc2-4376-ad49-bb8bab574db9" id="3f939d4d-6cc2-4376-ad49-bb8bab574db9_0" data-umb="3f939d4d-6cc2-4376-ad49-bb8bab574db9_0" value="600 x 400 x 133 mm<br>0101.307"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/oxkgaebd/migros-b-n.jpg" />
+      <label for="3f939d4d-6cc2-4376-ad49-bb8bab574db9_0">600 x 400 x 133 mm<br>0101.307</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="3f939d4d-6cc2-4376-ad49-bb8bab574db9" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosdn checkboxlistwithimage" >
+
+                                      <label for="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa" class="umbraco-forms-label">
+                                          Migros-DN                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa" data-umb="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa">
+
+  
+      <input type="checkbox" name="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa" id="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa_0" data-umb="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa_0" value="600 x 400 x 400 mm<br>0101.314"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/5xehr2l3/migros-dn.jpg" />
+      <label for="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa_0">600 x 400 x 400 mm<br>0101.314</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="5207d7f0-ad1b-4d4b-cd15-3a237f05aefa" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field migrosu checkboxlistwithimage alternating" >
+
+                                      <label for="5f313cbd-2a4d-4d6d-e203-34de7073d869" class="umbraco-forms-label">
+                                          Migros-U                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+
+
+<span class="checkboxlist" style="display:flex" id="5f313cbd-2a4d-4d6d-e203-34de7073d869" data-umb="5f313cbd-2a4d-4d6d-e203-34de7073d869">
+
+  
+      <input type="checkbox" name="5f313cbd-2a4d-4d6d-e203-34de7073d869" id="5f313cbd-2a4d-4d6d-e203-34de7073d869_0" data-umb="5f313cbd-2a4d-4d6d-e203-34de7073d869_0" value="600 x 400 x 200 mm<br>0101.319"
+                             />
+          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/s15no2tv/migros-u.jpg" />
+      <label for="5f313cbd-2a4d-4d6d-e203-34de7073d869_0">600 x 400 x 200 mm<br>0101.319</label>
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="5f313cbd-2a4d-4d6d-e203-34de7073d869" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+
+
+          </fieldset>
+
+  </logistik-o-wrapper-without-shadow>
+
+  <div style="display: none" aria-hidden="true">
+      <input type="text" name="2f847daa5ccb4cdab10a4353f651fd8c" />
+  </div>
+
+
+  <div class="umbraco-forms-navigation row-fluid">
+
+      <div class="col-md-12">
+                  <input class="btn prev cancel"
+                         type="submit"
+                         value="Previous"
+                         name="__prev" />
+                  <input type="submit"
+                         class="btn next"
+                         value="Next"
+                         name="__next" />
+      </div>
+  </div>
+</div>
+
+
+  
+<input name="ufprt" type="hidden" value="B4026EF05021916E9B43B2387CEE4C939A17DCCCC8997E8256840835AA99A6DF80D9C74DE29C43428525CBFDA7CFC75D7ABCADFDB2F130DEDE58A0ABD50681E534219A5CE87FB98163ABF44AA838F83E980D2DF47BB37B793EA2DE91EC9EE0F8DC4A95309BE807CEA7382BB9CB8CBC7BA6E8AD59AE5B8EA133E4484B8C9EE7D0BBAEC137D737F08840D2423EC19CE64E" /></form>
+            <!-- /form -->
+                            
+                            
+                            
+                            
+                            
+                            <script type="application/javascript">
+                              if (typeof umbracoFormsCollection === 'undefined') var umbracoFormsCollection = [];
+                              umbracoFormsCollection.push("%7B%22formId%22:%22292164b355044b79a13720848a063447%22,%22fieldSetConditions%22:%7B%7D,%22fieldConditions%22:%7B%7D,%22recordValues%22:%7B%7D%7D");
+                            </script>
+                            
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/promise-polyfill/dist/polyfill.min.js' defer='defer' type='application/javascript' ></script>
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/aspnet-validation/dist/aspnet-validation.min.js' defer='defer' type='application/javascript' ></script>
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/Themes/Default/umbracoforms.js' defer='defer' type='application/javascript' ></script>
+                            <!--<link rel='stylesheet' href='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/Themes/Default/style.css' />-->   </div>
+                          </logistik-m-form>
+                          </div>
+                        </div></article>
+                        
+                        
+                      </logistik-o-body>
+                      <logistik-o-footer namespace="footer-" namespace-fallback>
+                        <div class="logo"><a href="/"><span style="font-weight: 800; color: var(--color-secondary);">MGB</span> Logistik Transport</a></div>
+                        <ul>
+                          <li>
+                            <a href="/Dienstleistungen">Dienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Offertenanfrage">Offertenanfrage</a>
+                          </li>
+                          <li>
+                            <a href="/Strassentransporte">Strassentransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Bahntransporte">Bahntransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                          </li>
+                          <li>
+                            <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht">Seefracht</a>
+                          </li>
+                          <li>
+                            <a href="/Sammelkontainer">Sammelkontainer</a>
+                          </li>
+                          <li>
+                            <a href="/Express Sendungen">Express Sendungen</a>
+                          </li>
+                          <li>
+                            <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Verzollung">Verzollung</a>
+                          </li>
+                          <li>
+                            <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                          </li>
+                          <li>
+                            <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Instruktionen">Instruktionen</a>
+                          </li>
+                          <li>
+                            <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                          </li>
+                          <li>
+                            <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                          </li>
+                          <li>
+                            <a href="/Incoterms">Incoterms</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li class=bold>
+                            <a href="/Aktuelles">Aktuelles</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Kontakt">Kontakt</a>
+                          </li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li><a href=#>DE</a></li>
+                          <li><a href=#>FR</a></li>
+                          <li><a href=#>EN</a></li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li class=copy>© 2021 Logistik Transport</li>
+                          <li><a href=#>AGB</a></li>
+                          <li><a href=#>Datenschutz</a></li>
+                          <li><a href=#>Impressum</a></li>
+                        </ul>
+                        <div>
+                          <h3>Hello TextEditor</h3>
+                          <a href=/bahhh/baahhh.pdf>Dienstleistungen</a>
+                          <p>Lorem ipsum dolor sit amet consectetur <a href=#>adipisicing elit.</a> Eos a facere explicabo voluptatum pariatur. Quas illo magni ipsum quibusdam dolorum porro, minima recusandae, maiores aliquid asperiores expedita autem, modi obcaecati?</p>
+                          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International" />
+                        </div>
+                      </logistik-o-footer>
+                    </p-general>
+                    <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+                    <script rel=preload type=module>
+                      self.Environment = {
+                        mobileBreakpoint: '767px'
+                      }
+                    </script>
+                  </body>
+                  </html>
+                  

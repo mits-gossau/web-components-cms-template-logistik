@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Anmeldung Step1</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://logistiktransport-testadmin.service.migros.cloud//media/otkaw3gu/m_logistik_transport_rgb_de.jpg?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132845733778600000" href="/"> </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="#">International</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a href="/Aktuelles">Aktuelles</a>
+                </li>
+                <li class=bold>
+                  <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a href="/Kontakt">Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">National</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">National - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">National - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">National - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">National - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">National - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">National - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">National - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">National - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">National - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">National - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">National - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">National - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">National - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">National - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">National - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">National - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">National - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">National - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">National - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">National - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">National - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">National - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">National - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">National - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">National - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Tauschgeräte</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Tauschgeräte - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Tauschgeräte - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Tauschgeräte - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Tauschgeräte - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Tauschgeräte - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Tauschgeräte - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Tauschgeräte - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Tauschgeräte - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Tauschgeräte - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Tauschgeräte - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Tauschgeräte - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Tauschgeräte - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Tauschgeräte - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Tauschgeräte - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Tauschgeräte - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Tauschgeräte - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Tauschgeräte - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Tauschgeräte - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Tauschgeräte - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Tauschgeräte - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Tauschgeräte - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Tauschgeräte - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Tauschgeräte - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Tauschgeräte - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Tauschgeräte - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Über uns</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Über unsDienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Über unsOffertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Über unsStrassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Über unsBahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Über unsKombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Über unsGekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht </a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Über unsSammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Über unsExpress Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Über unsMigros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Über unsVerzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Über unsZolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Über unsElektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Über unsFreihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Über unsInstruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Über unsTrack & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Über unsVerteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Über unsVerteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Über unsShipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Über unsContainertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Über unsIncoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Über unsSeefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Über unsAktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Über unsOft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Über unsKontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class=search><wc-f-input inputid="inputSearch" placeholder="Suchen..." search="Home.html?q=" namespace=search-></wc-f-input></li>
+        </ul>
+        <ul class=language-switcher>
+          <li><a href=#>DE</a></li>
+          <li><a href=#>FR</a></li>
+          <li><a href=#>EN</a></li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <article><div>
+        <div>
+          <p>Benötigen Sie neue Lieferscheine oder Palettenbons? Bestellen Sie diese Dokumente einfach und bequem gleich hier.</p>
+          <p>* Felder zwingend ausfüllen</p>
+          <logistik-m-form>
+          <div id="umbraco_form_292164b355044b79a13720848a063447" class="umbraco-forms-form formularbestellung umbraco-forms-">
+            
+            <!-- form -->
+            <form action="/mtm/mtm-partnerschaft/anmeldung/" enctype="multipart/form-data" method="post"><input name="__RequestVerificationToken" type="hidden" value="gi7-ZdTtZgZc16WAgqPEw273ky1YNVCH9YyyGuh4wBCJ-U_tDqcDGE3SXfhM-xOsOoSO0jAHeJkBRh7lP_XrdW6pU6NFAskn3NqW5kBzllU1" /><input data-val="true" data-val-required="Das Feld "FormId" ist erforderlich." name="FormId" type="hidden" value="2f847daa-5ccb-4cda-b10a-4353f651fd8c" /><input name="FormName" type="hidden" value="Anmeldung als MTM-Partner" /><input data-val="true" data-val-required="Das Feld "RecordId" ist erforderlich." name="RecordId" type="hidden" value="00000000-0000-0000-0000-000000000000" /><input name="PreviousClicked" type="hidden" value="" /><input name="Theme" type="hidden" value="" />                <input type="hidden" name="FormStep" value="0" />
+              <input type="hidden" name="RecordState" value="ODBBMDY0M0Q2QkZEMDNCMkQ3NDI4QzFCRTMyMEQ5RDY0QTAzQ0IzQTk3QzJGOTNDQzhCMTQ4QUM5RUQ3MTczRTk3MjhFNjJCNUFGMkY2MTkxMzM1NjJBOTBFMEM1ODRDQjI0NjQ1QUVGNTM2OEI0RjNFNEQ1QTE1RUQ3MDNCMTVCQTFBMjNFOTRCQkJBMjA2QTFBNUMzRDAxRkQzMUJEOUFEMzM1QUJBRERCRDQwNDk3MUVGRDg4RkFBOTUyRTY5RUI2NjYzNDAwQUVBMkVDOTBDNUVCMTRBODZCNzA0M0ZBQTI3QjlBOTVEODg4NkUwRTJBM0IyMUE4QzE3RjA5RkRBNTQ0NTVBNUYyODQ4NUFCQkNCMjkzRTJCQTQ3MTk3NjkzMjYzMTFEN0NGOEI2MUYzMjczMTcxNjM0MURDRTVDQUJCOUEwMzg2NDM0NTI4MDA1RDBCNTBBNjZGN0EwNkY0MkQyM0Q4QzdERjJENkZGMUIyRTNFQzgyNUFFOTNDOUE5NERDRjJFODdENDEyQUI4MjEyNDQzQjcyM0ZBQzY2NzZDREQ0NjY0RjY1RkVBQjcyQTRGNjYzRTBCMURFMkFENDU0RjE3OUZFMDgxMzA3NUQwOEM4MkZCMDlEMUM0N0Y0NjVGNTJEMThEQTg5RUJBOUQxQTk4RTE4RTRCQ0MwQTVBNzQxMTRFNDlBMTUxNDEyRTQ1QjBEMzhGQkE4MzU4QkQ1MDE0MzczQTc4NzU5NUEwRUEzRjVEOEIzMjM4NjQxQ0FBMjEyRUVFMzJBOENBMjA4MzVFRDExRDYwNkE5MEZEQzJGNjc3REFEODFBOEU4NjBFQ0FDQzczNDAxMzY1Mzg3RkI4NzdGRUE4NkM1ODQ5MkRFRjI0NTI2RDY5NjY2OUJGMjMzNDQ4RUVEQ0I5Q0QyMDE5RDFFOUU2RTI5OUUwRDYzRUI4MkM5MDQxRjQwOUM4REIxMTY1N0Y0RkVFNjRDQTlCNDM3NEUxQkQxRTEyNjA1NDNBQkMwM0Y5ODM4RjE3ODQ4RTgxREIxNTJEQzQwODgwNjI1Qzg2OUVDNDM3MTAxNTY2OTc5QjY5MDJBMzREMzYwQjYxODQ2QTI5N0E1RjBDRTA3RDc0MjVFQjM3MEY1M0I3MTg4MkIzMEI0Q0I3QTNDRkVCNTEyMUQyMTNCRDQ1ODU5RDNDQzlDQjEwRjk3QTdDNzA4NEMzMTMwMjRDNDM0N0Q3QkM4OUM4M0EzNkU2QUUzMjkwMjgyRTczRkY4OEYxRjUzMDJDODI4Mzk4NkY0Qzc2NUZGOTM5MzBCMDJCN0VENDdDRkVGRjhGQjBGNEQ1REI4ODQ0OEJCNzRBOEFCM0MwOUU5MjRCRkE2MTlERjg4NjUyOTcxNzE4MjJFQzNDQkM2RUMzRjk2N0ZGMTA3ODU4QkZCMUE0NEE4MzY5REYwQTQ5MkU5MzU4MUE4NjBFMEU4RTNCRjQ5RjUwNEI1QUI0Qzc0QUJFMTFEOEFBNDQ1MUU5ODU1RTcwMjExODBGQ0IxNUQ5NzVDMTk4NUJCNTBGQ0Y0QjFGQjZEODVFNjJFMUE1NjZDOTZGQTAyNzBBMEI3QjE1NTZBNkFFQ0QzMzVDMUUzM0NGQzg5NEU3RTY4QUYzMDk5Njg3RjdENTM2MzJCMUU2MjlDQjlFNDI4QUE2OUYxODg1RjhBRkM1RjVENUU4MUE1QzcwNjM2MDU5MTQzQTI5MTk2ODM5MDU3MjAwNUQwMzU2MkVDNjFBOEQzNkM5NTY4ODVEQTMxN0I0MkJBQTRGMUI2NThCQkQ5NDg3OUQ5NkZDNEExNzhEOTUzMDdGM0NCRDVFMzk3RjgxMkFGQUY0OURFQkQzMTlFQjREMDFDNDYzQUM5RkY3Q0ZCNDNDREU3QkZCQjJFQjA3Q0M1MzE1MjU3MTU5RUM5QUUzNzI2MTVGQUVDMzU1NjYyRDMyODdBMDIzMTg2QkJFRTg2NTE2QjVGN0M0Njg2NkJGODMyNzk5RTg5QTVFQzExRUJGRjg0QjU0RDY2Qjg5OTE0NjBGNTQ1ODY1NUJEMThEMjZEQzdFRDNCMEIwNjFDMUY0RThCQjhCNkEwMjdBMUJFODU2N0U4NTdBMkIwMENDQUI3OTA4MEJBNTVCMzhFQzY3Mjg4NjlBQzlFMDEyOEQ2RDAzOTc3MDdFRkIzMEUxM0Y3MThFODhGRDc3RDVFMkI3OTAwMzVCN0NCMEFBNzFERjg0RUY0OTRCNTUyOEVGMTc5RkIwNDgyN0FDQTM0MzU3NEFCQUE5NzNDNkRFOTlBMTU1QjQyMTNGM0E0QjBDMjJGQTU4NTNFMDdDM0JGMzE1Rjg3NDYxMjY0MjVDMzY3NDVCNkFFQURFNTg3RUVBRTA5QzFBRkZCMDZGRTIzRTlBOUYyRDVFRjQwREIzREYzRjBEMTI4MUMxNDlDNkRGOEU5QjQ3OEFENUYxMUQ4QUZEQjA4ODgwNTM2Q0ExRDU3MkVBMUYwRjYwNEFENDdBMEUxRjFFMTlCQjJGMTBCOUM4OTE5MjU1ODk2NkM2QjlBRUI2OEJCMEZFMzFFMjYzNzEyNDcyQURBRTBENkE3MTI5NUY4OEZBNjQzRDVBQUU0NjQ4MEVFQTJBN0M4OTQ3NTU3MTRDRDU4RjBEOTc3RTU3OTA5N0JFQTcwRUFFQkM5NzcyQTFCODQ4RUY1NTY3M0Y4RkREQjIyMERFODkyQTkyODJBQzlBQTUxNzc5QjE3N0VDQ0U0N0Q3NENEMTQxMzgwQTlGODE1NzI0RjBFRTIyMEVDNUUzMzc0RkRFQ0QwRTMxMkJEREVEODgxNDg1MEVERDVDMDM3RjlFQTVDRDI0RkUwRjc5MEQ0NkUwMUI0NDU1MTgzQTdCQUUyMjBBMzQ4MQ0KMUVCNUQ5RTBGRjVFMEIyMkVBNTJBNEM2QkY0NTY0RkI0REVCMUVENjE2MEY2QjVBNTkzMkYxMEI4ODI4QkUwMDBBNDEzNzBFMjBCQjI4NUU2MDRBRjhBRjJFMzA5NjExMUIyNDZBMjNCNEE4NTNFMzZCQjFBNDg2OEJERjAzMzk4Qjg0REVCMzM5REE2NTk4OUUzODE3QzBEMkI5NzI4Qzc4Njk5OUFDNTlEREI4MTA0QkIyMDVDNTIxOUE0QzEwOTc3RUQ3MzY2MDM4QTlFOUMzMDE3MkM3QzVDNDNGOTJCMjE3MzAzNzVBOTIyNTUxMDMxMDE4RkRCOEM5NThFMjdFMTBERjkyOTcxQkJEMDQwNTM5RjBCQTQzOTQ1ODI2NjRENzFDRkFEMUFGNkEwREI0MTk4MTRGM0E5MkMzRjdBQUQ3QjBFRTczRThBNTg2MkVEMkUwRjI1QkE1QTJCMTMzRTdGMDhEOEE0NDM3ODk1ODY4MUFGQ0I5RTlFRTY4NzZEQzcxRUNERDdFNkQwNzU2Nzg0NzkzNzczMDNGN0Q1OUUyNDJFNDc4MUUyM0RBRDg5NDE4NEFEMDNGMjlFMUFCNEIwNjYyRDdCMkY1RTY2REMwNkUyNzRENkNGOEIwNTQyMzNDQUY3NDBERjVDMTdDNURGNzc5RDdBN0NDRjc5QUE5QzUzQTZDOUM0MThCQTY5NjZFNjcwOUI5RjI4N0YzODkyRjRCM0Q3NkMxMDJDNjVGREFBRDQxQjA0MzI5MDRDMkI1QjcyOUFFMEI0RTNFOTUzRDRCMUU4NDZDNDY3Q0JENjlCOEUwNzIxODk2MzlFNjUyQkI5NDA5NEMzMUUyQzc4MTE4MjAzNjA2NTFDNkI4NDJGODFGNkM1RjAyNjhDRjE1QjA4MEY3RDZERDNFRDMyNjk5OTQ0NzNBOEZBMTRFODM4NEYzOTE1NDFCQUYzQjhCMEMyMDEzOUQyQTI3RjFENzVGM0ZGOUZCM0E3M0FFOTY1QzAzRDcwODI4NEIyQzcxNUMyN0I0NDEzQ0M5QUE0OEZGMUZDMTcwMjFCQTM3N0UyMTBGNUQ2NDY2OTk4Qzc5OEQ0MjgzMjkwODZBQ0I4MjkwNUI2NDBCMzdCOUEyM0IxNDBERDRFNDJFREYyNEVCMzI1RDU1N0QxMzhBODA1OEU2MEFCMUQ5RDRERjVENjZEQzI1NTkxN0U0Qjg4MTFCQkJGQ0JGNTAxNTlBMUI4MTA5MEIxMUQ2MDREOTlGRDEwNjVGQzUxMEMzNDJBRDMwNEZCODcwM0RGN0VGMDVBRENCRjdDMTU4QkJGQzZGRTk1RDIwOTkwOTdDOTBFMDFDQTAxOUQwQkI4NzBEM0FGNThCQ0MyNkYzNzBGNkM2RjFGQzQxNUI2MjUyNUFCNkQ4NzNFQ0RDQ0UyMDA1QzBCMTcxNDU3REUzRTIzQzBDNzc0N0VENTc3RjA5NDIxQjBBMTg1MjUwNUFERTQ3NzczREE1MTZFNDI0MEE3QTVDN0I0Njc0NUQ0MDRDRDBEM0NBNjhEQTM5RjAzQUJEQTVFNzhCOTA0OUZFNjJFRTgxQzM0QkE5MTM0NUVDOENBQUVBOUQwQ0Q1NTNGNzUxOEQzN0FBREFEQ0QwNUU2MUY0N0VBODExNDRBNUMwNTNDNzc4NTlDMjAzN0E2N0E5MjUwMUVDQTBCODdFRUFGNzY0NDgxMDQ1RERDOUI3NjlDNTVBMzhBRTJDQkYwQzg1MjA3RTBDMUQzQkM5NThGRUFGN0MyRTJBNDBCNDE0NzUxMzM2NEU1M0YxMjBGQzU2Mzk0Njc0QkQ2MUUwNjk2Mjk5QzcwNDlDNTU1M0RBQTJGMEE2NUQ5NjlEOEI2NUI2NDVEQ0NFMjNDQjBGMDg2NTIzREEwMjA2RTNENEY1MTRGRUQ3NjkxMUJBNUQwMDdBQUE1QUI2MzcyRThERDAyN0NBMTA2MTlCNjI1MkYzQjVFMjFEQzA0RDM3NDhBODNBNUJDRDA3QjI1ODY4NUIzM0FGRTY3MzBFM0Y1NEIxQjAwNkUxQjNEMjMwRkVDQUY2OUYxRjUxOTk0OUE5NUYxQTFBNDYxNzg5MUFFRkQ5MjRCOUU0NzJBQjYyMDlFMENCQzFCOEQ1QzEzM0ZGNkZGNTZGRDczRkE2RUExODVFNzdCODFENEYyQjA5NDFEQzAzNjVFOUVFNzlBRjQxMDM2RDY3Nzc3NzE5N0U1MDM1MjY2N0ZDODFBNkFERjU4QThFMUY3NjU1REQzMUU3MzEyRUM2QjQ5MzZCRDdDQ0M3MENBNDQ3QkU4MEIzQTJFNzI4RDkyMkFENzM5MDZCMjREOEIxNTNEODhFNzdCNEY0OUU2RTBENjcwNDcxNzQ2RjU0NDkxMTM5QzIzQTdENTk0NjVGNDVFQzdCOEFBOTJGNEY5OURFMjkyMDE2QTkyQTFGNkRBRkMyODY0QTc1MzU5MEFFQ0YxNERDQkE1MkUwNDAyRTIwQUQ4NkE2MkVBRjU0ODZCNjAyMjU0OTVDNkY5RDNCOTdBRkEzNDYzMkZDMkJFM0UyNjMyRDlBN0E5ODRBQTc3NDAxRjU1NDExMTlBOTY5ODA5MTgyNUMwMjZDMzY5REIzN0VDQUJBM0I2QjFERkJEQTEzNjUzQ0E2REYzOTEwQjk0REFGRkE0QzI5Q0YyMDJFNkMxN0RCOENFQzY4Q0JDQkVBMzY1NDA5OThEODE0RjgyM0JDRTExMEQxQjczMzdCOUY2MEFBNzkyQTdFNUQ4M0IxNTQyRjg5QjkwNjIxMTMxQjJGRDE4NzcyMzM1NjAyOTQ3NDVDRjA0MTI4ODFBODQxODE4NjBGQTE5QUIwMzNERjJCMzJBMjIxRTUxRTIxRkEyNzhFNzlDNg0KODcyQTRBQjhFMTMwMkU4QTE1RTg5MzlEQjYwODcwN0IwQ0RGMTcyMTZDMDlENEUyQ0QzMzhEOUE2MzY1NzVCMjc3OENFQzYwMzY2ODVFNzU4QTA0NDI4QzU2NEE5Q0IxMDQ1OTBGQzk1REQ4RUE2OTgwM0YyNDMzMUI2M0Q4MkI5MzE2M0FFN0NBM0UyQjA5Q0UyQjZCMTY3MjRCODY0NTc1NDFENTREMzhEOTk1NzkxODdFNUYyQjIxMUU4NzI3QUY5NDMxMzc1QkIzMTVBRUEzOTA3RTIzOUE0NjEwMDMyMzAyQTA0NzVGQUZFMTZENDgwRDBERUQwRjVDNjJGRkJFREZGNjg2QTE0MUI0NjYwREYwMTQ4NzJERTdGN0VEQzREM0I0QzZDNTFGREMzRUUzMEM3NEFFNDdFMTQzN0Y3NUVFMURBNzJBQ0VDMTgwRDRBODUyRUU3RUU4QkY5QTFFQTRGN0M1M0M5RjhBMUZBMzQwNDNDQ0NFMzdFOEMxRkUzMjhBOUZBNjc0NUU1NjA4NjdEMjI5NzQ5OUYzNjRENkMxNkE2MkQ5RDRCNTlBMTNEMDExRTgzODA3MTA5OTdGOTJENkU3MEZENUQ3NzM3MDY4MzNDNUQzNDZEOEU3REM0M0E2QkU4QTFEODAyQTBGRDY5N0M5RDZFODY2NkY3QkZEMjg1RjgzMEJGRDZFODE3REY2MjhCOEY2Qjg3MDdENUVCNTZCMEY3QUY2Qzk4OEZCQzFBM0RBREM2QzI4OTgwN0EzNzNFMTUwQUREMUUxNDRFNTAxMTA5RDdFOUJCNjRDNTM1N0M0MzhEMTA2MkZCM0U0RUFEMDU0MUY4RTQwRDRCNDA3OUFGRTcyRUMwM0M4M0NBNUU4ODgxRTY4ODcyMzgwRUExRTc0Njk0NTdFQjlFMDE2MTA2MDRBRUQ0N0YyMjI0MjBFMjk1QzE3RTA4M0YwNzY2QUQ3MzA4QzUzQjlDNTZCRDE2RENDNzRGQkQwMjJCQjlFRDBDRUNGMUJBN0UxQTEwOUJBNDEzOTYxNTcyMURBNzYwOEU2NDVDM0JGRDY1OTE0RjY1MDY5RkYzQTEyMzdDOTVGOTE3MDIwMkIzOURGOEY1RDc0RDRCMjg2MDA4MDIwQjExQzQyRjIyNTM0MkJCQkQ2RDVENUFBNzA1OEVCQTQ2NzkxRUYzQUU3NTY5NjE4RkUxRTQ2QTJGMDI3Q0E2OUU1OEFEN0Y0NjE3ODRCQTg4REU0MDlCMDdCQzZEMzM4NTg5RjYzODUwQTNFNjBERkIxRkUxMTQ5MTEwMEI3OUVBQjdERkMxOENGRTlDNTRBRjdDMDM4MDc0MTRDMjYzMTM5RUU5NkUwN0VEMzNGNzJEMEE5QzAyNjc1QkM0MzI2QThCM0I0N0UxNDcwRjFFQUE5Q0IxRjRBNzVENDk5MjIxOTBGRTZEQzE0RTVCMjgwMDFCOUI0MUY1NDFCNUMyOUVCQTU2N0EwOEYxQUVBRjMzNzlBNjkzQ0Y0NjM5RDEyNzQxMDQ2MzJGNkE0NzNFRUZBRTY4OTZEOTc0OTBGODZDMjYyNEU1RkVBNDYzMUE1MzY2OUVEMTg4MzgwRUI3QTFBMzU2MkJDNUFFOTE4MjBEOThEQTVFQkNBRDQ1MDRGNkIxNUQyNjU0NjQyN0ZEMTZEMTc1RUJEQkQxRDc5Njg5MDM4MjFDNDFDNjBGN0Y2RjA1OUQzNTc0MkQxREJBQTUwMUMzMzczQjFFNzY2NDNBNTc0MjY2Njc0MEJGQzE0RTdEQTE2QkY0MUY0NjMxRDE3RThGRjAzQjg3MDg5QjJEQUVGNjdCRjJBNzc1MDRFMUQzQUM4NjkwM0EwN0NGREVFRUYyRTIyNTY1QURGM0VGMUU2QThBRjZCMjc2NUM2QzA2RkY4NTI0QjUxRjY2MkI0RjM5QTVENzNGQ0IzQTk2RUI3QzE2REM4MTVEM0RCMUFEOUU0OUE0ODQ1ODNGQ0Q1M0FDMzg5Qzk1Q0I1NTY1MDcwNEU4OUVERjc5MTZBNEQ0OTAyMzQ4MTg2NzUyQTEyM0Q3MzgxNzVFNkZFRTVBRDlDMTZFQ0U1QzEwNjM2RjIwRjJBMTNBMkU5NkZGMTQ0MEY5NUQxQzQ0MEM4MEJGRDdDMkFGQzNDQzAyODQ4QzFCRDlFOEQ5NDk2MkU1MUU3QTIyOEJDRjhDNUQ1MDc5RUIzMzJEN0U2MEE0QzY5MDVDRTlFQTgzOEVGNThGNjdBQTgyMTU1NjNDNzNCOEVDNzI5RTY2NTVEQkI5Rjk4ODkxM0Y4NkM3OTQxM0NBOEIzREY5QUQ3MTc4N0ZDMUFFM0NENzJFRjA3QTY1MzEwMjBDOTMyRUVFMjI1MDdDNzA2NUMzNEE3RTE5RTc0ODU1MjRBMzlCMDI3QjA3NzkxMDMwRkM3MUQ1NzI1ODAyRkMzQkZDMjM2OUExQzZBOEM0OUFCNDMzMjkyN0MwM0U1QTY5OUFCNDQyNzk5QkUyQTZBRDBGQkM1MjgwNTIxQTNEODUzQ0Q2RTM4OEE3RUY5QjM2RTQ0QjdBNDE5RUMzQUVDRDkxODVBRUY3Mzk3OTczNTQ2N0EyODcxNUFGRjUxOUZGNzAyRkFFRjdCNjU1RkQ5MEU0NzRDOURDRkIzN0UzNDIxMkI2NUFDOTAyNkU3NTlBQjQwODUxQkJERjU4NEExQ0YwNjY4MDhDMEYyMkE3NEFGOUZGQjlGOUM4RjhGNTcyNzU5QTUzMzZCMzkyMDY4OUQwRTk1RjAxOUFBMUNDM0E2RUUzODQzOTkwMzMyQzFCREJEREQxOTBFQzQ1NUIwRjNBNDdCOEFFNDNERUMyQTY5QTY1RTRDRDVEQUNGNkJCNkU0NzRGMTg5QzJGRjhDNjRFRQ0KNUZBMUM5QzlGNEQzMTQzQjAzOTBCRkRFQjYzNTE3N0U1Nzc1M0JERjMzNTA0QjU5OURFQ0YxMDk3RUFDODNENDAxMzc4QzAzMjZBRjZGQjVEQ0E1NEYyM0IzQ0U2Q0I3QjU3NTEwOTc1REEzRURDMTAyMDcxOUQ1NjdDMTZCM0M0QjZFNUQ3NDg0RjQ0MUYyNDhDMzI3QkU2OUI3NzE3QzdBMDc2MkU5RUE0RTRBM0RDQjE5MzYxMTkwNDFGNDcxMDgzM0JGNTc4OTM5NzU1MEU2MzE4Q0RCQTJFQjZEMkRENkY4OTkyQzhBMTlCODU3MDkyNDhGOEYxRkYzMjg4RjcxODRFQTI3M0Y2RDI1NTc4MDhEODMxRDcyODE3REIzMDhGNENFNjBDMkYyMTU1QTg0NDg0NUQ4MzNEN0I3MUEzNkU2RDNBNDc1NEFDMUI2QThCRTFENThBMDUyQzNDRkJFN0JFMjhERjVGNkMzQTY5RTRFMkMxQTFFODZDQTU2QjlDNzQ3RTQyRTMwNzQ3NEM3OTA5OTY0NjZFMjZFODVDRDNBRDlBNzUxNTFDRjQ3Mjc5RjM4NTgzQjhGQ0NFNDRDQkJDREI0Mzg2RDUwQzZEN0RCOTQxMkI4RjBFQkFFRDg3QTlDOTA4QTlCODgzREI3NjEwNjYwRjFBQzJEMjEzMTRGRTJBM0E4MkM4MkY1NTYzRTk1QkFFMDU1OTFFODczRTFFMTgxOEE5MEQ5QjE1REFFMDA2MkQ0MUVFQTYwRkJBNUQyMUJBRkNDREI3OTE3OTA1NjU3NUNCMUVDRjgxRkE1NTMyMDk3MDIxMzY5OTBGODNCOTI4MzJGQzNDOThDNzExMUZENDhFOTlGNTAwMTREM0ZFNTEyOTYyQUMzMEYzODIxQjQ0Q0FGMTFBN0U0REU2ODYxRTlGODFGMDc1MUYzQjVBRjMzMjIyNTEzQTBGMzE5MTU2NUNDMTU5NjQ3NDg3QTc4RjA3OUMwNUNDOTAxRjc1Q0Q1MDUxNUVBNzc2RUMyRjRDMzMzNkZCMUMxRjU0OEUzQUY3MkVGMDIxRjI5QjE4N0QyOEQ5RkNBMzFBMDA2OTM0REI2ODE0QTlDN0VEQThGNjI4QjZBMzNCMzFCNDFDRDYwOTg5MTZENDlBQUVBRTlEMDA2MUNFNjU1RUU4MDVFQThDNzhCQ0VGOUY4MjUwMUZGODQ1NTc1RTg5MTdCNkM0MkQyQ0M3RjhGMDFDNjExQUFGN0RDQTQwMTRDRTcxNjVBOUJCQTRE" />
+
+
+
+
+
+<div class="umbraco-forms-page">
+
+
+
+
+      <h4 class="umbraco-forms-caption form-caption steps__title">
+          <span class="step__counter">Seite 1 von</span> 4
+      </h4>
+
+
+
+
+
+      <h4 class="umbraco-forms-caption">Anmeldung als MTM-Partner</h4>
+
+
+  <!-- set initial for spacing elements-->
+  <logistik-o-wrapper-without-shadow any-1-width="initial">
+
+          <fieldset class="umbraco-forms-fieldset" id="f5913bab-cb7b-4671-a068-cd8edd07f6a3">
+
+                  <legend>Daten</legend>
+
+
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsmtmpartnermwst shortanswer mandatory" >
+
+                                      <label for="37a91a3c-8410-4b53-ec45-05cfc3cbb850" class="umbraco-forms-label">
+                                          Mehrwertsteuernummer                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="37a91a3c-8410-4b53-ec45-05cfc3cbb850" id="37a91a3c-8410-4b53-ec45-05cfc3cbb850" data-umb="37a91a3c-8410-4b53-ec45-05cfc3cbb850" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for Mehrwertsteuernummer"   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="37a91a3c-8410-4b53-ec45-05cfc3cbb850" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangestreetnumber shortanswer mandatory alternating" >
+
+                                      <label for="3d9998e1-2341-4b72-9cd6-c5f40ccc6629" class="umbraco-forms-label">
+                                          Strasse, Nr.                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="3d9998e1-2341-4b72-9cd6-c5f40ccc6629" id="3d9998e1-2341-4b72-9cd6-c5f40ccc6629" data-umb="3d9998e1-2341-4b72-9cd6-c5f40ccc6629" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for Strasse, Nr."   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="3d9998e1-2341-4b72-9cd6-c5f40ccc6629" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangecountry dropdown mandatory" >
+
+                                      <label for="4c307698-4b41-421b-a480-d76ebc99befc" class="umbraco-forms-label">
+                                          Land                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<select class=""
+      name="4c307698-4b41-421b-a480-d76ebc99befc"
+      id="4c307698-4b41-421b-a480-d76ebc99befc"
+      data-umb="4c307698-4b41-421b-a480-d76ebc99befc"
+                        data-val="true" data-val-required="Please provide a value for Land"  >
+      <option value=""></option>
+          <option value="Schweiz" >Schweiz</option>
+      <option value="Deutschland" >Deutschland</option>
+      <option value="Österreich" >Österreich</option>
+      <option value="Fürstentum Liechtenstein" >Fürstentum Liechtenstein</option>
+      <option value="Italien" >Italien</option>
+      <option value="Frankreich" >Frankreich</option>
+</select>
+
+
+<span class="field-validation-valid" data-valmsg-for="4c307698-4b41-421b-a480-d76ebc99befc" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangecontactperson shortanswer mandatory alternating" >
+
+                                      <label for="b7b22bf5-2d02-491a-b7cc-174dafca7873" class="umbraco-forms-label">
+                                          Kontaktperson                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="b7b22bf5-2d02-491a-b7cc-174dafca7873" id="b7b22bf5-2d02-491a-b7cc-174dafca7873" data-umb="b7b22bf5-2d02-491a-b7cc-174dafca7873" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for Kontaktperson"   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="b7b22bf5-2d02-491a-b7cc-174dafca7873" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangephone shortanswer mandatory" >
+
+                                      <label for="531b3679-0a87-4922-a5dc-bfde5e80b9ac" class="umbraco-forms-label">
+                                          Telefon                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="531b3679-0a87-4922-a5dc-bfde5e80b9ac" id="531b3679-0a87-4922-a5dc-bfde5e80b9ac" data-umb="531b3679-0a87-4922-a5dc-bfde5e80b9ac" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for Telefon"   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="531b3679-0a87-4922-a5dc-bfde5e80b9ac" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangeemail shortanswer mandatory alternating" >
+
+                                      <label for="c9df99a8-b1ea-40ca-da16-23ed06c3a435" class="umbraco-forms-label">
+                                          E-Mail-Adresse                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="c9df99a8-b1ea-40ca-da16-23ed06c3a435" id="c9df99a8-b1ea-40ca-da16-23ed06c3a435" data-umb="c9df99a8-b1ea-40ca-da16-23ed06c3a435" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for E-Mail-Adresse"   
+data-val-regex="Bitte geben Sie eine korrekte E-Mail-Adresse ein" data-val-regex-pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"    />
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="c9df99a8-b1ea-40ca-da16-23ed06c3a435" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+                  <div class="umbraco-forms-container col-md-6">
+
+                          <div class=" umbraco-forms-field formsadresschangecompany shortanswer mandatory" >
+
+                                      <label for="49419671-9988-4ce6-bb1d-74f45c4aba03" class="umbraco-forms-label">
+                                          Name / Firma                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="49419671-9988-4ce6-bb1d-74f45c4aba03" id="49419671-9988-4ce6-bb1d-74f45c4aba03" data-umb="49419671-9988-4ce6-bb1d-74f45c4aba03" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for Name / Firma"   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="49419671-9988-4ce6-bb1d-74f45c4aba03" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangezipcity shortanswer mandatory alternating" >
+
+                                      <label for="67849d59-f4e0-40bf-8b4c-9586dabd1ab5" class="umbraco-forms-label">
+                                          PLZ, Ort                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="67849d59-f4e0-40bf-8b4c-9586dabd1ab5" id="67849d59-f4e0-40bf-8b4c-9586dabd1ab5" data-umb="67849d59-f4e0-40bf-8b4c-9586dabd1ab5" class="text" value="" maxlength="255"
+     
+
+data-val="true"   
+data-val-required="Please provide a value for PLZ, Ort"   
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="67849d59-f4e0-40bf-8b4c-9586dabd1ab5" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangelanguage singlechoice mandatory" >
+
+                                      <label for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" class="umbraco-forms-label">
+                                          Korrespondenzsprache                                                 <span class="umbraco-forms-indicator">*</span>
+                                      </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                        
+
+ 
+<div class="  radiobuttonlist" id="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" data-umb="33aba1f7-4752-45ff-9645-bd9bfaefd4e5">
+  <input type="radio" name="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" id="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_0" data-umb="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_0" value="DE" 
+  data-val="true" data-val-required="Please provide a value for Korrespondenzsprache" data-rule-required="true" data-msg-required="Please provide a value for Korrespondenzsprache"     />
+  <label for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_0">DE</label>
+  <br />
+  <input type="radio" name="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" id="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_1" data-umb="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_1" value="FR" 
+  data-val="true" data-val-required="Please provide a value for Korrespondenzsprache" data-rule-required="true" data-msg-required="Please provide a value for Korrespondenzsprache"     />
+  <label for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_1">FR</label>
+  <br />
+  <input type="radio" name="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" id="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_2" data-umb="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_2" value="IT" 
+  data-val="true" data-val-required="Please provide a value for Korrespondenzsprache" data-rule-required="true" data-msg-required="Please provide a value for Korrespondenzsprache"     />
+  <label for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_2">IT</label>
+  <br />
+  <input type="radio" name="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" id="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_3" data-umb="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_3" value="EN" 
+  data-val="true" data-val-required="Please provide a value for Korrespondenzsprache" data-rule-required="true" data-msg-required="Please provide a value for Korrespondenzsprache"     />
+  <label for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5_3">EN</label>
+  <br />
+</div>
+
+<span class="field-validation-valid" data-valmsg-for="33aba1f7-4752-45ff-9645-bd9bfaefd4e5" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangedepartment shortanswer alternating" >
+
+                                      <label for="f3b09287-722d-4b11-953f-a0a2b1c6348f" class="umbraco-forms-label">
+                                          Abteilung / Bereich                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="f3b09287-722d-4b11-953f-a0a2b1c6348f" id="f3b09287-722d-4b11-953f-a0a2b1c6348f" data-umb="f3b09287-722d-4b11-953f-a0a2b1c6348f" class="text" value="" maxlength="255"
+     
+
+
+
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="f3b09287-722d-4b11-953f-a0a2b1c6348f" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsadresschangefax shortanswer" >
+
+                                      <label for="2ff07335-ce32-4c4a-81a4-dda6bbe45d57" class="umbraco-forms-label">
+                                          Fax                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+<input type="text" name="2ff07335-ce32-4c4a-81a4-dda6bbe45d57" id="2ff07335-ce32-4c4a-81a4-dda6bbe45d57" data-umb="2ff07335-ce32-4c4a-81a4-dda6bbe45d57" class="text" value="" maxlength="255"
+     
+
+
+
+/>
+
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="2ff07335-ce32-4c4a-81a4-dda6bbe45d57" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+                          <div class=" umbraco-forms-field formsmtmpartnertransportation multiplechoice alternating" >
+
+                                      <label for="888ac86c-63f0-466e-9a0e-459590ef5fe3" class="umbraco-forms-label">
+                                          Mögliche Transportmittel
+Rücknahme leere Tauschgeräte                                         </label>
+                                  <div class="umbraco-forms-field-wrapper">
+
+                                      
+
+        
+<span class="checkbox" id="888ac86c-63f0-466e-9a0e-459590ef5fe3" data-umb="888ac86c-63f0-466e-9a0e-459590ef5fe3">
+      <input type="checkbox"
+             class=""
+             name="888ac86c-63f0-466e-9a0e-459590ef5fe3" id="888ac86c-63f0-466e-9a0e-459590ef5fe3_0" data-umb="888ac86c-63f0-466e-9a0e-459590ef5fe3_0" value="Strasse"
+                             />
+      <label for="888ac86c-63f0-466e-9a0e-459590ef5fe3_0">Strasse</label>
+      <br />
+      <input type="checkbox"
+             class=""
+             name="888ac86c-63f0-466e-9a0e-459590ef5fe3" id="888ac86c-63f0-466e-9a0e-459590ef5fe3_1" data-umb="888ac86c-63f0-466e-9a0e-459590ef5fe3_1" value="Bahn"
+                             />
+      <label for="888ac86c-63f0-466e-9a0e-459590ef5fe3_1">Bahn</label>
+      <br />
+</span>
+
+<span class="field-validation-valid" data-valmsg-for="888ac86c-63f0-466e-9a0e-459590ef5fe3" data-valmsg-replace="true"></span>
+                                  </div>
+
+
+
+
+                          </div>
+
+                  </div>
+
+
+          </fieldset>
+
+  </logistik-o-wrapper-without-shadow>
+
+  <div style="display: none" aria-hidden="true">
+      <input type="text" name="2f847daa5ccb4cdab10a4353f651fd8c" />
+  </div>
+
+
+  <div class="umbraco-forms-navigation row-fluid">
+
+      <div class="col-md-12">
+                  <input type="submit"
+                         class="btn next"
+                         value="Next"
+                         name="__next" />
+      </div>
+  </div>
+</div>
+
+
+  
+<input name="ufprt" type="hidden" value="DC528C8D8C00D1F6B513A4EB79B287420C0AC8AF67298D26E48604D941A881E947B2016F0524E10489964F681BA8BB427D87C439303BD2096F16828F933BD6EA1B514825614C0978203AB37980F08B6EDA36092ECDAE1BB3B41C25EF2FC6C2FB1C35831018DA688794112E08CD23277C5DCBB55661CAC4846B3777643C8DB34AAF054D554624D8AC558AF2D3AD0C5E7D" /></form>
+            <!-- /form -->
+                            
+                            
+                            
+                            
+                            
+                            <script type="application/javascript">
+                              if (typeof umbracoFormsCollection === 'undefined') var umbracoFormsCollection = [];
+                              umbracoFormsCollection.push("%7B%22formId%22:%22292164b355044b79a13720848a063447%22,%22fieldSetConditions%22:%7B%7D,%22fieldConditions%22:%7B%7D,%22recordValues%22:%7B%7D%7D");
+                            </script>
+                            
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/promise-polyfill/dist/polyfill.min.js' defer='defer' type='application/javascript' ></script>
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/aspnet-validation/dist/aspnet-validation.min.js' defer='defer' type='application/javascript' ></script>
+                            <script type='application/javascript' src='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/Themes/Default/umbracoforms.js' defer='defer' type='application/javascript' ></script>
+                            <!--<link rel='stylesheet' href='https://logistiktransport-testadmin.service.migros.cloud/App_Plugins/UmbracoForms/Assets/Themes/Default/style.css' />-->   </div>
+                          </logistik-m-form>
+                          </div>
+                        </div></article>
+                        
+                        
+                      </logistik-o-body>
+                      <logistik-o-footer namespace="footer-" namespace-fallback>
+                        <div class="logo"><a href="/"><span style="font-weight: 800; color: var(--color-secondary);">MGB</span> Logistik Transport</a></div>
+                        <ul>
+                          <li>
+                            <a href="/Dienstleistungen">Dienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Offertenanfrage">Offertenanfrage</a>
+                          </li>
+                          <li>
+                            <a href="/Strassentransporte">Strassentransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Bahntransporte">Bahntransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                          </li>
+                          <li>
+                            <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht">Seefracht</a>
+                          </li>
+                          <li>
+                            <a href="/Sammelkontainer">Sammelkontainer</a>
+                          </li>
+                          <li>
+                            <a href="/Express Sendungen">Express Sendungen</a>
+                          </li>
+                          <li>
+                            <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Verzollung">Verzollung</a>
+                          </li>
+                          <li>
+                            <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                          </li>
+                          <li>
+                            <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Instruktionen">Instruktionen</a>
+                          </li>
+                          <li>
+                            <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                          </li>
+                          <li>
+                            <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                          </li>
+                          <li>
+                            <a href="/Incoterms">Incoterms</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li class=bold>
+                            <a href="/Aktuelles">Aktuelles</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Kontakt">Kontakt</a>
+                          </li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li><a href=#>DE</a></li>
+                          <li><a href=#>FR</a></li>
+                          <li><a href=#>EN</a></li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li class=copy>© 2021 Logistik Transport</li>
+                          <li><a href=#>AGB</a></li>
+                          <li><a href=#>Datenschutz</a></li>
+                          <li><a href=#>Impressum</a></li>
+                        </ul>
+                        <div>
+                          <h3>Hello TextEditor</h3>
+                          <a href=/bahhh/baahhh.pdf>Dienstleistungen</a>
+                          <p>Lorem ipsum dolor sit amet consectetur <a href=#>adipisicing elit.</a> Eos a facere explicabo voluptatum pariatur. Quas illo magni ipsum quibusdam dolorum porro, minima recusandae, maiores aliquid asperiores expedita autem, modi obcaecati?</p>
+                          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International" />
+                        </div>
+                      </logistik-o-footer>
+                    </p-general>
+                    <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+                    <script rel=preload type=module>
+                      self.Environment = {
+                        mobileBreakpoint: '767px'
+                      }
+                    </script>
+                  </body>
+                  </html>
+                  

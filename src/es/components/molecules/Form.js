@@ -52,7 +52,8 @@ export default class Form extends Shadow() {
       input, textarea {
         caret-color: var(--color-secondary);
       }
-      input[type=text], input[type=password], textarea, input[type=checkbox] {
+      input[type=text], input[type=password], textarea, input[type=checkbox], select {
+        background-color: transparent;
         box-sizing: border-box;
         border-radius: 8px;
         border: 1px solid var(--m-gray-400);
@@ -86,22 +87,33 @@ export default class Form extends Shadow() {
       fieldset {
         border: 0;
       }
-      .checkbox {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-      }
       .help-block {
         font-style: italic;
       }
+      .checkbox > label {
+        vertical-align: super;
+      }
       .checkbox > label, .checkbox > .help-block {
-        padding-right: var(--content-spacing);
-        flex-grow: 1;
+        padding-left: var(--content-spacing);
       }
       input[type=checkbox] {
         border-radius: 8px;
         height: 1.5em;
         width: 1.5em;
+      }
+      *.steps__title {
+        color: var(--background-color) !important;
+        background-color: var(--color-secondary) !important;
+        padding: 10px !important;
+      }
+      .checkboxlist {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .checkboxlist img {
+        padding: 0 var(--content-spacing);
+        max-width: 30vw !important;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {

@@ -69,7 +69,13 @@ export default class Header extends BaseHeader {
       :host > header > ${this.getAttribute('m-navigation') || 'm-navigation'} {
         flex-grow: 1;
       }
+      :host > header > *:first-child {
+        align-self: baseline;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host {
+          --header-logo-justify-content: flex-end;
+        }
         :host([sticky]) {
           position: sticky;
         }
@@ -86,6 +92,10 @@ export default class Header extends BaseHeader {
         :host > header.open > ${this.getAttribute('m-navigation') || 'm-navigation'} {
           animation: open .3s ease-out;
           left: 0;
+        }
+        :host > header > *:first-child {
+          align-self: center;
+          padding: var(--a-menu-icon-padding);
         }
       }
       @keyframes open {

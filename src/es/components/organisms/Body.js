@@ -101,6 +101,9 @@ export default class Body extends BaseBody {
       :host([home]) .spacer {
         height: var(--home-spacer-height, 15vw);
       }
+      :host > main wc-a-button ~ wc-a-button {
+        padding-top: var(--content-spacing);
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host([home]) .spacer {
           height: var(--home-spacer-height-mobile, var(--home-spacer-height, 15vw));
@@ -112,6 +115,9 @@ export default class Body extends BaseBody {
         }
         :host > main wc-a-button {
           width: var(--content-width-not-web-component-mobile, var(--content-width-not-web-component, var(--content-width-mobile, var(--content-width, 90%))));
+        }
+        :host > main wc-a-button ~ wc-a-button {
+          padding-top: var(--content-spacing-mobile, var(--content-spacing));
         }
       }
     `

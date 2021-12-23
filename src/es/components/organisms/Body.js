@@ -55,6 +55,15 @@ export default class Body extends BaseBody {
         list-style: none;
         padding: 0;
       }
+      :host > main table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+      :host > main table:not([border=0]) td {
+        border: 1px solid var(--color);
+      }
       :host > main a > h1, :host > main a > h2, :host > main a > h3, :host > main a > h4, :host > main a > h5, :host > main a > h6 {
         color: var(--a-color, var(--color-secondary, var(--color, pink)));
         text-decoration: var(--a-text-decoration, var(--text-decoration, none));

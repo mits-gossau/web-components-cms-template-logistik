@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Table</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://logistiktransport-testadmin.service.migros.cloud//media/otkaw3gu/m_logistik_transport_rgb_de.jpg?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132845733778600000" href="/"> </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="#">International</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a href="/Aktuelles">Aktuelles</a>
+                </li>
+                <li class=bold>
+                  <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a href="/Kontakt">Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">National</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">National - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">National - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">National - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">National - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">National - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">National - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">National - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">National - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">National - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">National - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">National - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">National - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">National - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">National - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">National - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">National - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">National - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">National - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">National - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">National - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">National - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">National - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">National - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">National - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">National - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Tauschgeräte</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Tauschgeräte - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Tauschgeräte - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Tauschgeräte - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Tauschgeräte - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Tauschgeräte - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Tauschgeräte - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Tauschgeräte - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Tauschgeräte - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Tauschgeräte - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Tauschgeräte - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Tauschgeräte - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Tauschgeräte - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Tauschgeräte - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Tauschgeräte - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Tauschgeräte - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Tauschgeräte - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Tauschgeräte - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Tauschgeräte - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Tauschgeräte - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Tauschgeräte - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Tauschgeräte - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Tauschgeräte - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Tauschgeräte - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Tauschgeräte - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Tauschgeräte - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Über uns</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Über unsDienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Über unsOffertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Über unsStrassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Über unsBahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Über unsKombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Über unsGekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht </a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Über unsSammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Über unsExpress Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Über unsMigros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Über unsVerzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Über unsZolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Über unsElektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Über unsFreihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Über unsInstruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Über unsTrack & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Über unsVerteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Über unsVerteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Über unsShipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Über unsContainertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Über unsIncoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Über unsSeefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Über unsAktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Über unsOft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Über unsKontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class=search><wc-f-input inputid="inputSearch" placeholder="Suchen..." search="Home.html?q=" namespace=search-></wc-f-input></li>
+        </ul>
+        <ul class=language-switcher>
+          <li><a href=#>DE</a></li>
+          <li><a href=#>FR</a></li>
+          <li><a href=#>EN</a></li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body>
+
+
+
+
+
+
+
+
+
+      <logistik-a-emotion-pictures namespace="emotion-">
+      
+          
+      <a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132832825260930000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'extra-large','type':'image/webp'}]" alt="National Lastwagennacht" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/txgjqmbm/_dsc3610.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132844953307430000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/txgjqmbm/_dsc3610.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953307430000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/txgjqmbm/_dsc3610.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953307430000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/txgjqmbm/_dsc3610.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953307430000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/txgjqmbm/_dsc3610.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953307430000','size':'extra-large','type':'image/webp'}]" alt="National Lastwage parkiert" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/54batfcl/_dsc7797-2.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132844953705800000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/54batfcl/_dsc7797-2.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953705800000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/54batfcl/_dsc7797-2.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953705800000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/54batfcl/_dsc7797-2.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953705800000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/54batfcl/_dsc7797-2.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953705800000','size':'extra-large','type':'image/webp'}]" alt="National Lastwagen unterwegs" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/exnjlkt2/2-sicht-verteilzentrum-neuendorf-mvn.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132844953817900000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/exnjlkt2/2-sicht-verteilzentrum-neuendorf-mvn.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953817900000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/exnjlkt2/2-sicht-verteilzentrum-neuendorf-mvn.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953817900000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/exnjlkt2/2-sicht-verteilzentrum-neuendorf-mvn.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953817900000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/exnjlkt2/2-sicht-verteilzentrum-neuendorf-mvn.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132844953817900000','size':'extra-large','type':'image/webp'}]" alt="2 Sicht Verteilzentrum Neuendorf MVN" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/ub5pq52x/3-sicht-verteilzentrum-suhr-mvs.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013005030000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ub5pq52x/3-sicht-verteilzentrum-suhr-mvs.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013005030000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ub5pq52x/3-sicht-verteilzentrum-suhr-mvs.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013005030000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ub5pq52x/3-sicht-verteilzentrum-suhr-mvs.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013005030000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ub5pq52x/3-sicht-verteilzentrum-suhr-mvs.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013005030000','size':'extra-large','type':'image/webp'}]" alt="3 Sicht Verteilzentrum Suhr MVS" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/2h4dakew/2015_04_15-20goldau_tkeller1710094.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013141930000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/2h4dakew/2015_04_15-20goldau_tkeller1710094.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013141930000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/2h4dakew/2015_04_15-20goldau_tkeller1710094.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013141930000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/2h4dakew/2015_04_15-20goldau_tkeller1710094.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013141930000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/2h4dakew/2015_04_15-20goldau_tkeller1710094.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013141930000','size':'extra-large','type':'image/webp'}]" alt="2015 04 15%20Goldau Tkeller1710094" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/x3gjkiuc/che_060815_mgblt_27.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013429230000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/x3gjkiuc/che_060815_mgblt_27.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013429230000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/x3gjkiuc/che_060815_mgblt_27.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013429230000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/x3gjkiuc/che_060815_mgblt_27.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013429230000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/x3gjkiuc/che_060815_mgblt_27.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013429230000','size':'extra-large','type':'image/webp'}]" alt="CHE 060815 MGBLT 27" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/5uybswsd/che_140815_mgblt_22.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013684200000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/5uybswsd/che_140815_mgblt_22.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013684200000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/5uybswsd/che_140815_mgblt_22.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013684200000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/5uybswsd/che_140815_mgblt_22.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013684200000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/5uybswsd/che_140815_mgblt_22.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013684200000','size':'extra-large','type':'image/webp'}]" alt="CHE 140815 MGBLT 22" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/a4ukjvu0/img_5139.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013715130000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/a4ukjvu0/img_5139.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013715130000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/a4ukjvu0/img_5139.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013715130000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/a4ukjvu0/img_5139.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013715130000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/a4ukjvu0/img_5139.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013715130000','size':'extra-large','type':'image/webp'}]" alt="IMG 5139" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/ccpp2uif/lkw-klimafreundlich.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013753370000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ccpp2uif/lkw-klimafreundlich.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013753370000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ccpp2uif/lkw-klimafreundlich.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013753370000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ccpp2uif/lkw-klimafreundlich.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013753370000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/ccpp2uif/lkw-klimafreundlich.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013753370000','size':'extra-large','type':'image/webp'}]" alt="LKW Klimafreundlich" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/tymnfskv/master-01963541.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845013802730000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/tymnfskv/master-01963541.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013802730000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/tymnfskv/master-01963541.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013802730000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/tymnfskv/master-01963541.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013802730000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/tymnfskv/master-01963541.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845013802730000','size':'extra-large','type':'image/webp'}]" alt="Master 01963541" ></a-picture><a-picture  namespace="picture-" defaultSource="https://logistiktransport-testadmin.service.migros.cloud/media/agahklys/master-01963567.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132845014131170000" sources="[{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/agahklys/master-01963567.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845014131170000','size':'small','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/agahklys/master-01963567.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845014131170000','size':'medium','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/agahklys/master-01963567.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845014131170000','size':'large','type':'image/webp'},{'src':'https://logistiktransport-testadmin.service.migros.cloud/media/agahklys/master-01963567.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132845014131170000','size':'extra-large','type':'image/webp'}]" alt="Master 01963567" ></a-picture>    
+      
+      </logistik-a-emotion-pictures>
+      
+      
+      
+              <logistik-o-wrapper namespace="body-wrapper-" namespace-fallback any-1-width="70%">
+      
+                  
+      
+                  <div>
+      
+      
+      
+      <h1 id="">Diesel fuel surcharge</h1><article><p>Since 2008 FMC Logistics Transport has been granting its transport partners a diesel fuel surcharge in addition to the agreed transport rates. This surcharge is indexed and is based on the changes in the fuel market. The resulting increases or reductions in costs are credited or charged on a one-to-one Basis to the customer by FMC Logistics Transport one to one.</p>
+      <p><strong>Basis</strong><br />The amount of the surcharge or discount is based on the current diesel prices at the fuel pump of ASTAG.</p></article>
+      <wc-a-button namespace="btn-" outline
+                   href="https://logistiktransport-testadmin.service.migros.cloud/media/q0ihjnem/2021_treibstoffzuschlag-e.pdf"
+                   
+                   target="_blank">
+          Current diesel fuel surcharge
+      </wc-a-button>
+      
+      
+      <logistik-m-details icon-image namespace="details-" namespace-fallback>
+          <details >
+              <summary>
+                  CALCULATION EXAMPLE
+              </summary>
+              <p>
+                  <p>The fuel surcharge/discount is recalculatet every month according to the following principle:</p>
+      <table border="1" height="228" style="border-collapse: collapse; width: 769px;">
+      <tbody>
+      <tr valign="middle">
+      <td style="width: 230px;">
+      <p>Monthly average CHF/liter of diesel</p>
+      </td>
+      <td style="width: 83px;"> </td>
+      <td style="width: 114px; text-align: center;">≤ 1.57</td>
+      <td style="width: 114px; text-align: center;">1.67</td>
+      <td style="width: 114px; text-align: center;">≥ 1.77</td>
+      <td style="width: 114px; text-align: center;">≥ 1.87</td>
+      </tr>
+      <tr valign="middle">
+      <td style="width: 230px;">
+      <p>Fuel surcharge/discount in the following month in percent</p>
+      </td>
+      <td style="width: 83px;"> </td>
+      <td style="width: 114px; text-align: center;">-1</td>
+      <td style="width: 114px; text-align: center;">0</td>
+      <td style="width: 114px; text-align: center;">1</td>
+      <td style="width: 114px; text-align: center;">2</td>
+      </tr>
+      </tbody>
+      </table>
+              </p>
+          </details>
+      </logistik-m-details>
+      
+      <logistik-m-details icon-image namespace="details-" namespace-fallback>
+          <details >
+              <summary>
+                  ARCHIVE
+              </summary>
+              <p>
+                  <table border="1" width="435" height="997">
+      <tbody>
+      <tr>
+      <td style="width: 62px;">Year</td>
+      <td style="width: 111px; text-align: center;"><strong>MIGROS</strong></td>
+      <td style="width: 82px; text-align: center;">ASTAG</td>
+      <td style="width: 75px; text-align: center;">EV/UP</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">1998</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;"> </td>
+      <td style="width: 75px; text-align: center;">1.20</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">1999</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;"> </td>
+      <td style="width: 75px; text-align: center;">1.24</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2000</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;"> </td>
+      <td style="width: 75px; text-align: center;">1.44</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2001</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;"> </td>
+      <td style="width: 75px; text-align: center;">1.40</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2002</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;">1.35</td>
+      <td style="width: 75px; text-align: center;">1.35</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2003</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;">1.37</td>
+      <td style="width: 75px; text-align: center;">1.36</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2004</td>
+      <td style="width: 111px; text-align: center;"><strong> </strong></td>
+      <td style="width: 82px; text-align: center;">1.46</td>
+      <td style="width: 75px; text-align: center;"> 1.45</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2005</td>
+      <td style="width: 111px; text-align: center;"><strong>1.56</strong></td>
+      <td style="width: 82px; text-align: center;">1.66</td>
+      <td style="width: 75px; text-align: center;">1.64</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2006</td>
+      <td style="width: 111px; text-align: center;"><strong>1.66</strong></td>
+      <td style="width: 82px; text-align: center;">1.74</td>
+      <td style="width: 75px; text-align: center;">1.74</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2007</td>
+      <td style="width: 111px; text-align: center;"><strong>1.67</strong></td>
+      <td style="width: 82px; text-align: center;">1.76</td>
+      <td style="width: 75px; text-align: center;">1.76</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2008</td>
+      <td style="width: 111px; text-align: center;"><strong>1.95</strong></td>
+      <td style="width: 82px; text-align: center;">2.03</td>
+      <td style="width: 75px; text-align: center;">2.03</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2009</td>
+      <td style="width: 111px; text-align: center;"><strong>1.52</strong></td>
+      <td style="width: 82px; text-align: center;">1.58</td>
+      <td style="width: 75px; text-align: center;">1.60</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2010</td>
+      <td style="width: 111px; text-align: center;"><strong>1.63</strong></td>
+      <td style="width: 82px; text-align: center;">1.70</td>
+      <td style="width: 75px; text-align: center;">1.72</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2011</td>
+      <td style="width: 111px; text-align: center;"><strong>1.76</strong></td>
+      <td style="width: 82px; text-align: center;">1.85</td>
+      <td style="width: 75px; text-align: center;">1.86</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2012</td>
+      <td style="width: 111px; text-align: center;"><strong>1.83</strong></td>
+      <td style="width: 82px; text-align: center;">1.92</td>
+      <td style="width: 75px; text-align: center;">1.93</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2013</td>
+      <td style="width: 111px; text-align: center;"><strong>1.80</strong></td>
+      <td style="width: 82px; text-align: center;">1.88</td>
+      <td style="width: 75px; text-align: center;">1.89</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2014</td>
+      <td style="width: 111px; text-align: center;"><strong>1.75</strong></td>
+      <td style="width: 82px; text-align: center;">1.80</td>
+      <td style="width: 75px; text-align: center;">1.82</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2015</td>
+      <td style="width: 111px; text-align: center;"><strong>1.48</strong></td>
+      <td style="width: 82px; text-align: center;">1.54</td>
+      <td style="width: 75px; text-align: center;">1.50</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2016</td>
+      <td style="width: 111px; text-align: center;"><strong>1.36</strong></td>
+      <td style="width: 82px; text-align: center;">1.43</td>
+      <td style="width: 75px; text-align: center;">1.45</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2017</td>
+      <td style="width: 111px; text-align: center;"><strong>1.46</strong></td>
+      <td style="width: 82px; text-align: center;">1.55</td>
+      <td style="width: 75px; text-align: center;">1.58</td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2018</td>
+      <td style="width: 111px; text-align: center;"><strong>1.62</strong></td>
+      <td style="width: 82px; text-align: center;">1.70</td>
+      <td style="width: 75px; text-align: center;">
+      <p> </p>
+      </td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2019</td>
+      <td style="width: 111px; text-align: center;"><strong>1.65</strong></td>
+      <td style="width: 82px; text-align: center;">1.73 </td>
+      <td style="width: 75px; text-align: center;"> </td>
+      </tr>
+      <tr>
+      <td style="width: 62px;">2020</td>
+      <td style="width: 111px; text-align: center;"><strong>1.47</strong></td>
+      <td style="width: 82px; text-align: center;">1.55</td>
+      <td style="width: 75px; text-align: center;"> </td>
+      </tr>
+      </tbody>
+      </table>
+              </p>
+          </details>
+      </logistik-m-details>
+      
+                  </div>
+      
+                  <div>
+      
+      <h2 id="">Contact us</h2><article><p style="text-align: left;">If you want to find out more about the diesel fuel surcharge, please do not hesitate to contact us:</p>
+      <table border="0">
+      <tbody>
+      <tr>
+      <td>Phone:</td>
+      <td> </td>
+      <td>+41 44 277 38 80</td>
+      </tr>
+      <tr>
+      <td>E-Mail:</td>
+      <td> </td>
+      <td><a href="mailto:vv-national@mgb.ch">vv-national@mgb.ch</a></td>
+      </tr>
+      </tbody>
+      </table>
+      <p style="text-align: left;"><img src="https://logistiktransport-testadmin.service.migros.cloud/media/r2xhwi3o/logo_migrol.jpg?width=250&height=29" alt="" width="250" height="29"></p>
+      <p style="text-align: left;"><strong>Migrol card: Special offer for LT transport partners</strong></p>
+      <p style="text-align: left;">As a transport partner of FMC Logistics Transport, Migrol is making a special offer to you: use the Migrol card to take advantage of special fuel prices (gasoline and diesel) at all Migrol and Shell filling stations with a Migrolino shop. Moreover, there are no annual fees or invoicing charges. Contact Marc Furrer today (<a href="mailto:mfurrer@migrol.ch">mfurrer@migrol.ch</a>, 044 495 13 04), who will be happy to assist you.</p></article>
+                  </div>
+              </logistik-o-wrapper>
+      
+      
+      
+      
+      </logistik-o-body>
+                      <logistik-o-footer namespace="footer-" namespace-fallback>
+                        <div class="logo"><a href="/"><span style="font-weight: 800; color: var(--color-secondary);">MGB</span> Logistik Transport</a></div>
+                        <ul>
+                          <li>
+                            <a href="/Dienstleistungen">Dienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Offertenanfrage">Offertenanfrage</a>
+                          </li>
+                          <li>
+                            <a href="/Strassentransporte">Strassentransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Bahntransporte">Bahntransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                          </li>
+                          <li>
+                            <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht">Seefracht</a>
+                          </li>
+                          <li>
+                            <a href="/Sammelkontainer">Sammelkontainer</a>
+                          </li>
+                          <li>
+                            <a href="/Express Sendungen">Express Sendungen</a>
+                          </li>
+                          <li>
+                            <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Verzollung">Verzollung</a>
+                          </li>
+                          <li>
+                            <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                          </li>
+                          <li>
+                            <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Instruktionen">Instruktionen</a>
+                          </li>
+                          <li>
+                            <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                          </li>
+                          <li>
+                            <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                          </li>
+                          <li>
+                            <a href="/Incoterms">Incoterms</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li class=bold>
+                            <a href="/Aktuelles">Aktuelles</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Kontakt">Kontakt</a>
+                          </li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li><a href=#>DE</a></li>
+                          <li><a href=#>FR</a></li>
+                          <li><a href=#>EN</a></li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li class=copy>© 2021 Logistik Transport</li>
+                          <li><a href=#>AGB</a></li>
+                          <li><a href=#>Datenschutz</a></li>
+                          <li><a href=#>Impressum</a></li>
+                        </ul>
+                        <div>
+                          <h3>Hello TextEditor</h3>
+                          <a href=/bahhh/baahhh.pdf>Dienstleistungen</a>
+                          <p>Lorem ipsum dolor sit amet consectetur <a href=#>adipisicing elit.</a> Eos a facere explicabo voluptatum pariatur. Quas illo magni ipsum quibusdam dolorum porro, minima recusandae, maiores aliquid asperiores expedita autem, modi obcaecati?</p>
+                          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International" />
+                        </div>
+                      </logistik-o-footer>
+                    </p-general>
+                    <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+                    <script rel=preload type=module>
+                      self.Environment = {
+                        mobileBreakpoint: '767px'
+                      }
+                    </script>
+                  </body>
+                  </html>
+                  

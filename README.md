@@ -5,10 +5,6 @@ Using web-components-cms-template Repository
 
 ## Releases with [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
 
-MVP TODO:
-- Tabellenstyle https://jira.migros.net/browse/WEBLOGTRAN-23
-  https://logistiktransport-testadmin.service.migros.cloud/national/dieseltreibstoffzuschlag/
-
 Nice TODO:
 - fact bubble stuff oder genrelles styling
 - footer sub nav aufklappbar (tbd), orange bar desktop only one

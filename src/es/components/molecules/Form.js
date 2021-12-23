@@ -18,10 +18,23 @@ import Button from '../web-components/src/es/components/atoms/buttons/Button.js'
 export default class Form extends Shadow() {
   constructor (options = {}, ...args) {
     super(Object.assign(options, { mode: 'false' }), ...args)
+
+    // scroll to first error
+    this.clickListener = event => {
+      setTimeout(() => {
+        let fieldValidationError
+        if ((fieldValidationError = this.root.querySelector('.field-validation-error')) && fieldValidationError.parentNode && fieldValidationError.parentNode.parentNode) fieldValidationError.parentNode.parentNode.scrollIntoView()
+      }, 50)
+    }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
+    if (this.submit) this.submit.addEventListener('click', this.clickListener)
+  }
+
+  disconnectedCallback () {
+    if (this.submit) this.submit.removeEventListener('click', this.clickListener)
   }
 
   /**
@@ -124,5 +137,9 @@ export default class Form extends Shadow() {
         }
       }
     `
+  }
+
+  get submit () {
+    return this.root.querySelector('input[type=submit]')
   }
 }

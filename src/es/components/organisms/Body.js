@@ -55,6 +55,11 @@ export default class Body extends BaseBody {
         list-style: none;
         padding: 0;
       }
+      :host > main hr {
+        border: 0;
+        border-bottom: 1px dashed var(--color);
+        background: 0;
+      }
       :host > main table {
         border-collapse: collapse;
         border-spacing: 0;

@@ -109,7 +109,7 @@ export default class Form extends Shadow() {
       .checkboxlist {
         align-items: center;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
       .checkboxlist img {
         padding: 0 var(--content-spacing);

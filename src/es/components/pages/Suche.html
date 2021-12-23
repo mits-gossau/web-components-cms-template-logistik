@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Suche</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://logistiktransport-testadmin.service.migros.cloud//media/otkaw3gu/m_logistik_transport_rgb_de.jpg?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132845733778600000" href="/"> </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="#">International</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a href="/Aktuelles">Aktuelles</a>
+                </li>
+                <li class=bold>
+                  <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a href="/Kontakt">Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">National</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">National - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">National - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">National - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">National - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">National - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">National - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">National - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">National - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">National - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">National - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">National - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">National - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">National - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">National - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">National - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">National - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">National - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">National - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">National - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">National - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">National - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">National - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">National - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">National - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">National - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Tauschgeräte</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Tauschgeräte - Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Tauschgeräte - Offertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Tauschgeräte - Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Tauschgeräte - Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Tauschgeräte - Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Tauschgeräte - Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Tauschgeräte - Seefracht</a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Tauschgeräte - Sammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Tauschgeräte - Express Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Tauschgeräte - Migros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Tauschgeräte - Verzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Tauschgeräte - Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Tauschgeräte - Elektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Tauschgeräte - Freihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Tauschgeräte - Instruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Tauschgeräte - Track & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Tauschgeräte - Verteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Tauschgeräte - Verteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Tauschgeräte - Shipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Tauschgeräte - Containertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Tauschgeräte - Incoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Tauschgeräte - Seefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Tauschgeräte - Aktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Tauschgeräte - Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Tauschgeräte - Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Über uns</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="/Dienstleistungen">Über unsDienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Offertenanfrage">Über unsOffertenanfrage</a>
+                </li>
+                <li>
+                  <a href="/Strassentransporte">Über unsStrassentransporte</a>
+                </li>
+                <li>
+                  <a href="/Bahntransporte">Über unsBahntransporte</a>
+                </li>
+                <li>
+                  <a href="/Kombinierter Verkehr">Über unsKombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="/Gekühlte Transporte">Über unsGekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="/Seefracht">Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht Über<br>unsSeefracht </a>
+                </li>
+                <li>
+                  <a href="/Sammelkontainer">Über unsSammelkontainer</a>
+                </li>
+                <li>
+                  <a href="/Express Sendungen">Über unsExpress Sendungen</a>
+                </li>
+                <li>
+                  <a href="/Migros Office Hongkong">Über unsMigros Office Hongkong</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Verzollung">Über unsVerzollung</a>
+                </li>
+                <li>
+                  <a href="/Zolldienstleistungen">Über unsZolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="/Elektronische Yolltarif Tares">Über unsElektronische Yolltarif Tares</a>
+                </li>
+                <li>
+                  <a href="/Freihandelsabkommen">Über unsFreihandelsabkommen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Instruktionen">Über unsInstruktionen</a>
+                </li>
+                <li>
+                  <a href="/Track & Trace (MTWEB)">Über unsTrack & Trace (MTWEB)</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Anlieferungsvorschriften">Über unsVerteilzentren Anlieferungsvorschriften</a>
+                </li>
+                <li>
+                  <a href="/Verteilzentren Sortiervorschriften">Über unsVerteilzentren Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="/Shipping Guidelines">Über unsShipping Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Containertragwagen Handbuch">Über unsContainertragwagen Handbuch</a>
+                </li>
+                <li>
+                  <a href="/Incoterms">Über unsIncoterms</a>
+                </li>
+                <li>
+                  <a href="/Seefracht & LKW Abmessungen">Über unsSeefracht & LKW Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/Aktuelles">Über unsAktuelles</a>
+                </li>
+                <li>
+                  <a href="/Oft gestellte Fragen">Über unsOft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="/Kontakt">Über unsKontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class=search><wc-f-input inputid="inputSearch" placeholder="Suchen..." search="Home.html?q=" namespace=search-></wc-f-input></li>
+        </ul>
+        <ul class=language-switcher>
+          <li><a href=#>DE</a></li>
+          <li><a href=#>FR</a></li>
+          <li><a href=#>EN</a></li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body>
+    
+
+    
+
+        
+
+
+      <h3>Suchresultate</h3>
+  <div>
+      <p>Ihre Suche Nach «Pal» ergab 16 Treffer:</p>
+  </div>
+              <div>
+                  <a class="no-icon" href="/mtm/disposition/eur-paletten/"><h5>EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten</h5></a>
+                  <p>...EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten Die Migros arbeitet ausschliesslich mit dem offenen EUR/E<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>PAL</span>-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenpool; <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten aus Privatpools können wir nicht annehmen. Grundsätzlich gelten die Tauschkriterien gemäss E<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>PAL</span> als Massstab für die EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenqualität und...<br /><a class="no-icon" href="/mtm/disposition/eur-paletten/">Mehr erfahren</a></p>
+                  
+                      <p>
+                          Der Suchbegriff 'Pal' wurde in verlinkte(n) PDF Dokument(en) gefunden:
+                          <ul class=icons>
+                                  <li><a href="/media/h5lbctcu/2020-02-20__infoblatt-palettenqualita-t-sort_d.pdf" target=""> => 2020 02 20 Infoblatt Palettenqualität SORT D</a></li>
+                                  <li><a href="/media/i3ebfiqj/2018_06_07_infoblatt-palettenqualität.pdf" target=""> => 2018 06 07 Infoblatt Palettenqualität</a></li>
+                          </ul>
+                      </p>
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/international/instruktionen/verteilzentren-sortiervorschriften/"><h5>Verteilzentren: Sortiervorschriften</h5></a>
+                  <p>...Anliefervorschriften gibt es in jedem Verteilzentrum unterschiedliche Vorschriften in Bezug auf die Sortierung und Kennzeichnung der <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten. Falls eine <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ette im Wareneingang aufgrund einer falschen oder nicht klar identifizierbaren...<br /><a class="no-icon" href="/international/instruktionen/verteilzentren-sortiervorschriften/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/disposition/palettenbons/"><h5><span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenbons</h5></a>
+                  <p>...<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenbons <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenbons werden verwendet, wenn kein direkter Austausch (1:1-Tausch) von EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten möglich ist. Bitte beachten Sie, dass <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettenbons nur an Lieferanten abgegeben werden, die keine Partnerschaft mit dem Migros...<br /><a class="no-icon" href="/mtm/disposition/palettenbons/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/allgemeine-informationen/oft-gestellte-fragen/"><h5>Oft gestellte Fragen</h5></a>
+                  <p>...«Popups für diese Seite immer zulassen» aus. Danach können sie die Buchung unter «Kontobewegungen» nochmals aufrufen und in der S<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>pal</span>te «Lieferschein» die entsprechende Nummer anklicken. Der Lieferschein sollte nun ersichtlich sein. Wenn die...<br /><a class="no-icon" href="/mtm/allgemeine-informationen/oft-gestellte-fragen/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/mtm-partnerschaft/"><h5>MTM-Partnerschaft</h5></a>
+                  <p>...Management (MTM) ist Ihr zentraler Ansprech- und Vertragspartner im Zusammenhang mit Tauschgeräten wie Kunststoffgebinden oder <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten. MTM steuert und verwaltet den Tauschgerätepool, disponiert die Tauschgeräte und stellt sicher, dass sie...<br /><a class="no-icon" href="/mtm/mtm-partnerschaft/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/allgemeine-informationen/"><h5>Allgemeine Informationen</h5></a>
+                  <p>...Erläuterungen zur MTM-Rechnung Chauffeur-Handbuch Alles, was ein Chauffeur wissen muss: Rechte und Pflichten, <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ettentausch und Handling, Öffnungszeiten und Ansprechpartner. Chauffeur-Handbuch Ausfall TGIS Sollte...<br /><a class="no-icon" href="/mtm/allgemeine-informationen/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/international/instruktionen/verteilzentren-anliefervorschriften/"><h5>Verteilzentren: Anliefervorschriften</h5></a>
+                  <p>...Mal anliefern. Bitte beachten Sie vor allem die Sortierungsvorschriften (siehe unten) und die maximal zugelassene Höhe einer <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ette. Spezifische Vorgaben gibt es zum Beispiel für das Schrumpfen und die Markierung der <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten. Informieren Sie...<br /><a class="no-icon" href="/international/instruktionen/verteilzentren-anliefervorschriften/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/international/instruktionen/seefrachtcontainer-lkw-abmessungen/"><h5>Seefrachtcontainer- & LKW-Abmessungen</h5></a>
+                  <p>...Bundesamt für Strassen (ASTRA) (admin.ch) . In Europa sind für uns mehrheitlich LKW mit Auflieger im Einsatz, die maximal 34 EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten laden können. Kühlauflieger können dagegen höchstens 33 EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten laden. Die zulässige Maximalhöhe...<br /><a class="no-icon" href="/international/instruktionen/seefrachtcontainer-lkw-abmessungen/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/national/leistungen-national/planung-und-disposition/"><h5>Transportplanung und Disposition</h5></a>
+                  <p>...Transportströme präzise zu koordinieren und Leerfahrten soweit als möglich zu vermeiden. 600 Destinationen, 2’000 Aufträge, 16’000 <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten Unsere Disponenten stellen mit Hilfe von CADIS eine optimale Transportplanung zusammen und...<br /><a class="no-icon" href="/national/leistungen-national/planung-und-disposition/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/national/leistungen-national/controlling/"><h5>Controlling</h5></a>
+                  <p>...anderem können wir für Sie folgende Zahlen aufbereiten: Finanzcontrolling Ertragsrechnung Kostenentwicklung pro <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>ette / Tour / Destination Leistungscontrolling Anzahl Aufträge / <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten / Destinationen...<br /><a class="no-icon" href="/national/leistungen-national/controlling/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/national/oft-gestellte-fragen/"><h5>Fragen zu den Kosten</h5></a>
+                  <p>...Transportpartner von MGB Logistik Transport bestätigen Sie auf einfache Art und Weise, bei jedem Zu- und Ablad, die effektiven <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten-Mengen (Bodenplätze) über unsere Mobile-App, zurück in unsere Systeme. Diese lassen Sie jeweils vom Absender...<br /><a class="no-icon" href="/national/oft-gestellte-fragen/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/international/oft-gestellte-fragen/"><h5>Oft gestellte Fragen</h5></a>
+                  <p>...40-Fuss-Standard-Container = ca. 58 m 3 (min. 50 m 3 ) 40-High-Cube-Container = ca. 67 m 3 (min. 63 m 3 ) Wieviele EURO-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten haben in einem LKW Platz? In einem Sattelschlepper haben 33 oder 34 <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten Platz. Weitere Informationen...<br /><a class="no-icon" href="/international/oft-gestellte-fragen/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/startseite-mtm/"><h5>Startseite MTM</h5></a>
+                  <p>...für jeden Zweck und jede Anwendung, die entlang der Migros-Supply-Chain zum Einsatz gelangen. Dazu zählen Kunststoff- und EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten, Klappboxen und Faltrahmen und M-Tainer, aber zum Beispiel auch Holzgrosskisten für die attraktive...<br /><a class="no-icon" href="/mtm/startseite-mtm/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/mtm/"><h5>MTM</h5></a>
+                  <p>...für jeden Zweck und jede Anwendung, die entlang der Migros-Supply-Chain zum Einsatz gelangen. Dazu zählen Kunststoff- und EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten, Klappboxen und Faltrahmen und M-Tainer, aber zum Beispiel auch Holzgrosskisten für die attraktive...<br /><a class="no-icon" href="/mtm/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/direktion-logistik-transport/glossar/"><h5>Glossar</h5></a>
+                  <p>...Behörde und Verbände ASTRA Bundesamt für Strassen ASTAG Schweizerische Nutzfahrzeugverband E<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>PAL</span> European <span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>let Association e.V., Dachverband der lizenzierten Hersteller und Reparateure von E<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>PAL</span>/EUR-<span style='color:var(--background-color); background-color:var(--color); padding: 0 0.2em;'>Pal</span>etten...<br /><a class="no-icon" href="/direktion-logistik-transport/glossar/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+              <div>
+                  <a class="no-icon" href="/direktion-logistik-transport/ubersicht-direktion/"><h5>Übersicht Direktion</h5></a>
+                  <p><br /><a class="no-icon" href="/direktion-logistik-transport/ubersicht-direktion/">Mehr erfahren</a></p>
+                  
+                  
+              </div>
+              <hr style="border: 0;border-bottom: 1px dashed #ccc;background: #999;" />
+  
+  
+          
+  
+  
+  
+  </logistik-o-body>
+                      <logistik-o-footer namespace="footer-" namespace-fallback>
+                        <div class="logo"><a href="/"><span style="font-weight: 800; color: var(--color-secondary);">MGB</span> Logistik Transport</a></div>
+                        <ul>
+                          <li>
+                            <a href="/Dienstleistungen">Dienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Offertenanfrage">Offertenanfrage</a>
+                          </li>
+                          <li>
+                            <a href="/Strassentransporte">Strassentransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Bahntransporte">Bahntransporte</a>
+                          </li>
+                          <li>
+                            <a href="/Kombinierter Verkehr">Kombinierter Verkehr</a>
+                          </li>
+                          <li>
+                            <a href="/Gekühlte Transporte">Gekühlte Transporte</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht">Seefracht</a>
+                          </li>
+                          <li>
+                            <a href="/Sammelkontainer">Sammelkontainer</a>
+                          </li>
+                          <li>
+                            <a href="/Express Sendungen">Express Sendungen</a>
+                          </li>
+                          <li>
+                            <a href="/Migros Office Hongkong">Migros Office Hongkong</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Verzollung">Verzollung</a>
+                          </li>
+                          <li>
+                            <a href="/Zolldienstleistungen">Zolldienstleistungen</a>
+                          </li>
+                          <li>
+                            <a href="/Elektronische Yolltarif Tares">Elektronische Yolltarif Tares</a>
+                          </li>
+                          <li>
+                            <a href="/Freihandelsabkommen">Freihandelsabkommen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <a href="/Instruktionen">Instruktionen</a>
+                          </li>
+                          <li>
+                            <a href="/Track & Trace (MTWEB)">Track & Trace (MTWEB)</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Anlieferungsvorschriften">Verteilzentren Anlieferungsvorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Verteilzentren Sortiervorschriften">Verteilzentren Sortiervorschriften</a>
+                          </li>
+                          <li>
+                            <a href="/Shipping Guidelines">Shipping Guidelines</a>
+                          </li>
+                          <li>
+                            <a href="/Containertragwagen Handbuch">Containertragwagen Handbuch</a>
+                          </li>
+                          <li>
+                            <a href="/Incoterms">Incoterms</a>
+                          </li>
+                          <li>
+                            <a href="/Seefracht & LKW Abmessungen">Seefracht & LKW Abmessungen</a>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li class=bold>
+                            <a href="/Aktuelles">Aktuelles</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Oft gestellte Fragen">Oft gestellte Fragen</a>
+                          </li>
+                          <li class=bold>
+                            <a href="/Kontakt">Kontakt</a>
+                          </li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li><a href=#>DE</a></li>
+                          <li><a href=#>FR</a></li>
+                          <li><a href=#>EN</a></li>
+                        </ul>
+                        <ul class=language-switcher>
+                          <li class=copy>© 2021 Logistik Transport</li>
+                          <li><a href=#>AGB</a></li>
+                          <li><a href=#>Datenschutz</a></li>
+                          <li><a href=#>Impressum</a></li>
+                        </ul>
+                        <div>
+                          <h3>Hello TextEditor</h3>
+                          <a href=/bahhh/baahhh.pdf>Dienstleistungen</a>
+                          <p>Lorem ipsum dolor sit amet consectetur <a href=#>adipisicing elit.</a> Eos a facere explicabo voluptatum pariatur. Quas illo magni ipsum quibusdam dolorum porro, minima recusandae, maiores aliquid asperiores expedita autem, modi obcaecati?</p>
+                          <img src="https://logistiktransport-testadmin.service.migros.cloud/media/yvllkn2x/international.jpg?anchor=center&amp;mode=crop&amp;width=850&amp;height=450&amp;format=png&amp;quality=80&amp;rnd=132797367638100000" alt="International" />
+                        </div>
+                      </logistik-o-footer>
+                    </p-general>
+                    <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+                    <script rel=preload type=module>
+                      self.Environment = {
+                        mobileBreakpoint: '767px'
+                      }
+                    </script>
+                  </body>
+                  </html>
+                  

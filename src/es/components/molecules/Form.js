@@ -93,7 +93,7 @@ export default class Form extends Shadow() {
         padding-bottom: var(--content-spacing);
       }
       .field-validation-error {
-        color: var(--m-red-700);
+        color: var(--color-secondary);
         padding: 0 10px;
         font-size: 0.875rem;
       }

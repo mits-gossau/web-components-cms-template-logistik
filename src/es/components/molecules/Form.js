@@ -65,6 +65,9 @@ export default class Form extends Shadow() {
       input, textarea {
         caret-color: var(--color-secondary);
       }
+      textarea {
+        resize: none;
+      }
       input[type=text], input[type=password], textarea, input[type=checkbox], select {
         background-color: transparent;
         box-sizing: border-box;

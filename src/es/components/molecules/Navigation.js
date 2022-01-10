@@ -25,7 +25,7 @@ export default class Navigation extends BaseNavigation {
       this.setFocusLostClickBehavior()
       // header removes no-scroll at body on resize, which must be avoided if navigation is open
       // console.log('changed', this.isDesktop === (this.isDesktop = this.checkMedia('desktop')));
-      if (this.hasAttribute('no-scroll') && this.isDesktop === (this.isDesktop = this.checkMedia('desktop')) && ((!this.isDesktop && this.classList.contains('open')) || (this.isDesktop && this.root.querySelector('li.open')))) document.body.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
+      if (this.hasAttribute('no-scroll') && this.isDesktop === (this.isDesktop = this.checkMedia('desktop')) && ((!this.isDesktop && this.classList.contains('open')) || (this.isDesktop && this.root.querySelector('li.open')))) document.documentElement.classList.add(this.getAttribute('no-scroll') || 'no-scroll')
       let section
       if ((section = this.root.querySelector('li.open section'))) {
         if (this.checkMedia('desktop')) {

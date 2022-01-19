@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Table</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://www.logistiktransport.ch/media/otkaw3gu/m_logistik_transport_rgb_de.jpg?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132845733778600000" href="https://www.logistiktransport.ch/">
+      </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="#">International</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/ubersicht-international/" target="">Übersicht International</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/" target="">Dienstleistungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/strassentransporte/" target="">Strassentransporte</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/bahntransporte/" target="">Bahntransporte</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/kombinierter-verkehr/" target="">Kombinierter Verkehr</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/gekuhlte-transporte/" target="">Gekühlte Transporte</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/seefracht/" target="">Seefracht</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/sammelcontainer/" target="">Sammelcontainer</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/express-sendungen/" target="">Express-Sendungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/dienstleistungen/migros-offices-hong-kong-und-dehli/" target="">Migros Offices Hong Kong und Dehli</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/verzollungen/" target="">Verzollungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/verzollungen/zolldienstleistungen/" target="">Zolldienstleistungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/verzollungen/elektronischer-zolltarif-tares/" target="">Elektronischer Zolltarif «Tares»</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/verzollungen/freihandelsabkommen-schweiz-china/" target="">Freihandelsabkommen Schweiz-China</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/instruktionen/" target="">Instruktionen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/instruktionen/verteilzentren-anliefervorschriften/" target="">Verteilzentren: Anliefervorschriften</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/instruktionen/verteilzentren-sortiervorschriften/" target="">Verteilzentren: Sortiervorschriften</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/instruktionen/incoterms/" target="">Incoterms</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/international/instruktionen/seefrachtcontainer-lkw-abmessungen/" target="">Seefrachtcontainer- & LKW-Abmessungen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a class='' href=/international/oft-gestellte-fragen/ target=''>Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/international/kontakt/ target=''>Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#" class="active">National</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/ubersicht-national/" target="">Übersicht National</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/leistungen-national/" target="">Leistungen National</a>
+                </li>
+                <li>
+                  <a class="active" href="https://www.logistiktransport.ch/national/leistungen-national/planung-und-disposition/" target="">Planung und Disposition</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/leistungen-national/verrechnung-und-vergutung/" target="">Verrechnung und Vergütung</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/leistungen-national/controlling/" target="">Controlling</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/leistungen-national/beratung-und-projekte/" target="">Beratung und Projekte</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/national/leistungen-national/agb/" target="">AGB</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a class='' href=/national/netzwerk/ target=''>Netzwerk</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/national/kombinierter-verkehr/ target=''>Kombinierter Verkehr</a>
+                </li>
+                <li class=bold>
+                  <a class='&#39; href=/national/dieseltreibstoffzuschlag/ target=''>Dieseltreibstoffzuschlag</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/national/transportpartner/ target=''>Transportpartner</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/national/oft-gestellte-fragen/ target=''>Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/national/nachhaltigkeit-im-transport/ target=''>Nachhaltigkeit im Transport</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/national/kontakt/ target=''>Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">MTM</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/startseite-mtm/" target="">Startseite MTM</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/allgemeine-informationen/" target="">Allgemeine Informationen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/allgemeine-informationen/oft-gestellte-fragen/" target="">Oft gestellte Fragen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/allgemeine-informationen/tgis-anleitungen/" target="">TGIS-Anleitungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/allgemeine-informationen/tauschgerate-inventur/" target="">Tauschgeräte-Inventur</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/mtm-partnerschaft/" target="">MTM-Partnerschaft</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/mtm-partnerschaft/anmeldung/" target="">Anmeldung</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/mtm-partnerschaft/adressanderungen/" target="">Adressänderungen</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/mtm-partnerschaft/formularbestellung/" target="">Formularbestellung</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/disposition/" target="">Disposition</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/disposition/palettenbons/" target="">Palettenbons</a>
+                </li>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/disposition/eur-paletten/" target="">EUR-Paletten</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/mtm/interner-bereich-fur-migros-betriebe/" target="">Interner Bereich für Migros-Betriebe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a class='' href=/mtm/kontakt/ target=''>Kontakt</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a href="#">Direktion Logistik Transport</a>
+            <section>
+              <ul>
+                <li>
+                  <a href="https://www.logistiktransport.ch/direktion-logistik-transport/ubersicht-direktion/" target="">Übersicht Direktion</a>
+                </li>
+              </ul>
+              <ul>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/nachhaltigkeit/ target=''>Nachhaltigkeit</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/geschichte/ target=''>Geschichte</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/mitarbeitende/ target=''>Mitarbeitende</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/organisation/ target=''>Organisation</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/kontakt/ target=''>Kontakt</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/medien/ target=''>Medien</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/glossar/ target=''>Glossar</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/oft-gestellte-fragen/ target=''>Oft gestellte Fragen</a>
+                </li>
+                <li class=bold>
+                  <a class='' href=/direktion-logistik-transport/rechtliche-informationen-und-datenschutz/ target=''>Rechtliche Informationen und Datenschutz</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class="search">
+            <wc-f-input inputid="inputSearch" placeholder="Suche..." search="https://www.logistiktransport.ch/suche?q=" namespace="search-">
+            </wc-f-input>
+          </li>
+        </ul>
+        <ul class="language-switcher">
+          <li>
+            <a href="http://www.logistiktransport.ch/en/national/services/planning-and-dispatch/">EN</a>
+          </li>
+          <li>
+            <a href="http://www.logistiktransport.ch/fr/national/prestations/planification-et-gestion-des-commandes/">FR</a>
+          </li>
+          <li>
+            <a href="http://www.logistiktransport.ch/it/nazionale/servizi/pianificazione-e-disposizione/">IT</a>
+          </li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body>
+      <logistik-a-emotion-pictures namespace="emotion-">
+        <a-picture namespace="picture-" defaultsource="https://www.logistiktransport.ch/media/uhrbsytz/national-lastwagenmitfahrer.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132832825246900000" sources="[{'src':'https://www.logistiktransport.ch/media/uhrbsytz/national-lastwagenmitfahrer.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825246900000','size':'small','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/uhrbsytz/national-lastwagenmitfahrer.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825246900000','size':'medium','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/uhrbsytz/national-lastwagenmitfahrer.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825246900000','size':'large','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/uhrbsytz/national-lastwagenmitfahrer.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825246900000','size':'extra-large','type':'image/webp'}]" alt="National Lastwagenmitfahrer">
+        </a-picture>
+        <a-picture namespace="picture-" defaultsource="https://www.logistiktransport.ch/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132832825260930000" sources="[{'src':'https://www.logistiktransport.ch/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'small','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'medium','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'large','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/hvjhsank/national-lastwagennacht.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825260930000','size':'extra-large','type':'image/webp'}]" alt="National Lastwagennacht">
+        </a-picture>
+        <a-picture namespace="picture-" defaultsource="https://www.logistiktransport.ch/media/ajbebqbv/national-maschinenarbeiter.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132832825274970000" sources="[{'src':'https://www.logistiktransport.ch/media/ajbebqbv/national-maschinenarbeiter.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825274970000','size':'small','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/ajbebqbv/national-maschinenarbeiter.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825274970000','size':'medium','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/ajbebqbv/national-maschinenarbeiter.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825274970000','size':'large','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/ajbebqbv/national-maschinenarbeiter.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825274970000','size':'extra-large','type':'image/webp'}]" alt="National Maschinenarbeiter">
+        </a-picture>
+        <a-picture namespace="picture-" defaultsource="https://www.logistiktransport.ch/media/5q3hyzfv/national-staplermitpakete.jpg?anchor=center&mode=crop&format=png&quality=80&rnd=132832825285830000" sources="[{'src':'https://www.logistiktransport.ch/media/5q3hyzfv/national-staplermitpakete.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825285830000','size':'small','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/5q3hyzfv/national-staplermitpakete.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825285830000','size':'medium','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/5q3hyzfv/national-staplermitpakete.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825285830000','size':'large','type':'image/webp'},{'src':'https://www.logistiktransport.ch/media/5q3hyzfv/national-staplermitpakete.jpg?anchor=center&mode=crop&format=webp&quality=80&rnd=132832825285830000','size':'extra-large','type':'image/webp'}]" alt="National Staplermitpakete">
+        </a-picture>
+      </logistik-a-emotion-pictures>
+      <h1>Transportplanung und Disposition</h1>
+      <article>
+        <div>Ein Team von rund zwanzig Transport-Disponenten engagiert sich täglich von morgens früh bis abends spät, das richtige Fahrzeug zum richtigen Zeitpunkt an die richtige Verladestelle zu dirigieren. Mit Hilfe einer computergestützten Tourenplanung gelingt es ihnen Tag für Tag, die vielen Aufträge termingerecht und effizient abzuwickeln.</div>
+        <div>
+        </div>
+        <div>
+        </div>
+        <div>
+          <strong>Mit GPS auf der Spur</strong>
+        </div>
+        <div>Computergestützt ist auch das Camion-Dispositions- und Informationssystem (CADIS), das den Chauffeuren die Transportaufträge direkt in die Fahrerkabine sendet, über kurzfristige Änderungen informiert und die optimale Routenwahl vorgibt. Dank GPS wissen die Disponenten stets, wo sich ein Fahrzeug gerade befindet und können die genauen Ankunfts- und Abfahrtszeiten überwachen. Diese Informationen helfen, die Transportströme präzise zu koordinieren und Leerfahrten soweit als möglich zu vermeiden.<br>
+          <br>
+          <strong>600 Destinationen, 2’000 Aufträge, 16’000 Paletten</strong>
+        </div>
+        <div>Unsere Disponenten stellen mit Hilfe von CADIS eine optimale Transportplanung zusammen und disponieren die benötigten Fahrzeuge. Das ermöglicht uns, täglich rund 600 Destination in der ganzen Schweiz anzufahren, mehr als 2'000 Transportaufträge abzuwickeln und im Durchschnitt rund 16’000 Paletten zu bewegen. Die schweizweite Ausrichtung unserer Transporte erlaubt es uns, die Distributionstransporte mit nachfolgenden Beschaffungstransporten zu kombinieren und eine hohe Touren-Auslastung zu erzielen. Ihre Güter liefern wir innerhalb des vereinbarten Zeitfensters. Sollte das für einmal nicht möglich sein, informieren wir Warenempfänger und Absender zeitnah, damit sie den Einsatz ihrer Leute an der Rampe planen können und klären die Situation mit dem Chauffeur.</div>
+      </article>
+    </logistik-o-body>
+    <logistik-o-footer namespace="footer-" namespace-fallback>
+      <div class="logo">
+      </div>
+      <div>
+      </div>
+      <ul class="language-switcher">
+        <li>
+          <a href="http://www.logistiktransport.ch/en/national/services/planning-and-dispatch/">EN</a>
+        </li>
+        <li>
+          <a href="http://www.logistiktransport.ch/fr/national/prestations/planification-et-gestion-des-commandes/">FR</a>
+        </li>
+        <li>
+          <a href="http://www.logistiktransport.ch/it/nazionale/servizi/pianificazione-e-disposizione/">IT</a>
+        </li>
+      </ul>
+      <ul class="language-switcher">
+        <li>
+          <a href="https://www.logistiktransport.ch/direktion-logistik-transport/glossar/"> Glossar </a>
+        </li>
+        <li>
+          <a href="https://www.logistiktransport.ch/direktion-logistik-transport/oft-gestellte-fragen/"> Oft gestellte Fragen </a>
+        </li>
+        <li>
+          <a href="https://www.logistiktransport.ch/direktion-logistik-transport/nachhaltigkeit/"> Nachhaltigkeit </a>
+        </li>
+        <li>
+          <a href="https://migros-gruppe.jobs/de/unsere-unternehmen/migros-gruppe/offene-stellen" target="_blank"> Stellen </a>
+        </li>
+        <li>
+          <a href="https://www.logistiktransport.ch/direktion-logistik-transport/rechtliche-informationen-und-datenschutz/"> Rechtliche Informationen und Datenschutz </a>
+        </li>
+      </ul>
+    </logistik-o-footer>
+  </p-general>
+  <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+  <script rel=preload type=module>
+    self.Environment = {
+      mobileBreakpoint: '767px'
+    }
+  </script>
+</body>
+</html>

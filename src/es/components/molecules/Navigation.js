@@ -99,6 +99,9 @@ export default class Navigation extends BaseNavigation {
         border-bottom: 2px solid transparent;
         transition: all 0.1s ease;
       }
+      :host > nav > ul > li:hover {
+        border-bottom: 2px solid var(--color);
+      }
       :host > nav > ul li.open {
         border-bottom: 2px solid var(--color-secondary);
       }
@@ -203,6 +206,9 @@ export default class Navigation extends BaseNavigation {
           justify-content: space-between;
           width: 100%;
         }
+        :host > nav > ul > li:hover {
+          border-bottom: var(--header-border-bottom);
+        }
         :host > nav > ul li.open {
           --a-link-content-spacing-no-scroll: var(--a-link-font-size-no-scroll-mobile) 1.2143rem var(--a-link-font-size-no-scroll-mobile) 0;
           --a-link-content-spacing: var(--a-link-content-spacing-no-scroll);
@@ -289,7 +295,9 @@ export default class Navigation extends BaseNavigation {
       Array.from(this.root.querySelectorAll('section')).forEach((section, i) => {
         const wrapper = new children[2][1]({ mode: 'false' })
         wrapper.setAttribute('id', `nav-section-${i}`)
-        Array.from(section.children).forEach(node => {
+        const sectionChildren = Array.from(section.children)
+        sectionChildren.forEach((node, i) => {
+          if (sectionChildren.length < 4) wrapper.setAttribute(`any-${i + 1}-width`, '25%')
           if (!node.getAttribute('slot')) wrapper.root.appendChild(node)
         })
         section.parentNode.prepend(this.getBackground())

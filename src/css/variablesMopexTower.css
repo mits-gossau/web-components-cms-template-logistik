@@ -5,11 +5,17 @@
 * - if a component holds other components you should share the attribute namespace with its children
 */
 html {
+  /* Munz, Marcel: Mopex Farben vom Migros Nachhaltigkeit Style-Guide */
+  --m-green-900: #1A3E3B;
+  --m-green-800: #068319;
+  --m-green-600: #40a529;
+  --btn-button-color-active: var(--m-green-900);
+  --btn-button-color-hover: var(--m-green-800);
+  --btn-button-color: var(--m-green-600);
   --color-hover: var(--m-green-800);
   --color-secondary: var(--m-green-600);
+  --search-icon-color: var(--m-green-600);
   --teaser-btn-button-color-active: var(--m-green-900);
   --teaser-btn-button-color-hover: var(--m-green-800);
   --teaser-btn-button-color: var(--m-green-600);
-  --btn-button-color: var(--m-green-600);
-  --search-icon-color: var(--m-green-600);
 }

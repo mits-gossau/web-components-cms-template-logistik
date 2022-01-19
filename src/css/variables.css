@@ -79,6 +79,7 @@ html {
   --header-a-white-space: nowrap;
   --header-align-items: end;
   --header-border-bottom: 1px solid var(--m-gray-300);
+  --header-box-sizing-open-mobile: border-box;
   --header-content-spacing-mobile: 0;
   --header-content-spacing: 0;
   --header-flex-wrap: wrap;
@@ -86,6 +87,7 @@ html {
   --header-height: auto;
   --header-justify-content-mobile: space-between;
   --header-justify-content: flex-start;
+  --header-left-open-mobile: 0;
   --header-logistik-m-navigation-background-color-mobile: var(--background-color);
   --header-logistik-m-navigation-height-mobile: calc(100vh - var(--header-logistik-m-navigation-top-mobile));
   --header-logistik-m-navigation-height-open-mobile: var(--header-logistik-m-navigation-height-mobile);
@@ -101,8 +103,11 @@ html {
   --header-order: 0;
   --header-padding-mobile: 0 0 0;
   --header-padding: 1.5rem 0 0;
+  --header-position-open-mobile: fixed;
   --header-position: static;
   --header-sticky-border-bottom: var(--header-border-bottom);
+  --header-top-open-mobile: 0;
+  --header-width-open-mobile: 100%;
   --home-spacer-height-mobile: 0;
   --home-spacer-height: 3.875rem;
   --main-padding: 1.5rem 0 1.5rem;

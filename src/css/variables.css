@@ -91,7 +91,7 @@ html {
   --header-logistik-m-navigation-background-color-mobile: var(--background-color);
   --header-logistik-m-navigation-height-mobile: calc(100vh - var(--header-logistik-m-navigation-top-mobile));
   --header-logistik-m-navigation-height-open-mobile: var(--header-logistik-m-navigation-height-mobile);
-  --header-logistik-m-navigation-top-mobile: calc(var(--header-height-mobile) + 1px);
+  --header-logistik-m-navigation-top-mobile: var(--header-height-mobile);
   --header-logistik-m-navigation-transition: none;
   --header-logo-align-items: baseline;
   --header-logo-flex-grow: 0;

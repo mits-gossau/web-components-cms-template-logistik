@@ -14,6 +14,7 @@ html {
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: var(--content-width);
+  --content-max-width-not-web-component: 850px;
   --content-width: 95%;
   --details-border-bottom: 2px solid var(--m-gray-100);
   --details-border-color: var(--m-gray-100);

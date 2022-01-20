@@ -70,41 +70,43 @@ export default class Footer extends Shadow() {
    */
   renderCSS () {
     this.css = /* css */`
-      :host {
-        border-top: var(--border-top, 0);
-        margin: var(--margin, 0);
-      }
-      :host > footer {
-        padding: var(--padding, 0);
-      }
-      :host > footer > * {
-        margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
-        width: var(--content-width, 80%);
-      }
-      :host > footer > div.logo {
-        margin: 0 auto;
-      }
-      :host > footer > div.logo > a {
-        align-self: var(--a-align-self, var(--align-self, auto));
-        color: var(--a-color, var(--color));
-        display: block;
-        font-family: var(--a-font-family, var(--font-family));
-        font-weight: var(--a-font-weight, var(--font-weight, normal));
-        font-size: var(--a-font-size, var(--font-size));
-        padding: var(--a-padding, 0);
-        margin: var(--a-margin, 0);
-        line-height: var(--a-line-height, 0);
-        order: var(--order, 1);
-        text-decoration: var(--a-text-decoration, var(--text-decoration, none));
-        text-underline-offset: var(--a-text-underline-offset, unset);
-        text-transform: var(--a-text-transform, uppercase);
-        transition: var(--a-transition, all 0.2s ease);
-        white-space: var(--a-white-space, normal);
-      }
-      :host > footer > div.logo > a:hover {
-        color: var(--a-color-hover, var(--a-color-hover, var(--a-color, var(--color))));
-        text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
-      }
+      ${this.logo ? /* css */`
+        :host {
+          border-top: var(--border-top, 0);
+          margin: var(--margin, 0);
+        }
+        :host > footer {
+          padding: var(--padding, 0);
+        }
+        :host > footer > * {
+          margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
+          width: var(--content-width, 80%);
+        }
+        :host > footer > div.logo {
+          margin: 0 auto;
+        }
+        :host > footer > div.logo > a {
+          align-self: var(--a-align-self, var(--align-self, auto));
+          color: var(--a-color, var(--color));
+          display: block;
+          font-family: var(--a-font-family, var(--font-family));
+          font-weight: var(--a-font-weight, var(--font-weight, normal));
+          font-size: var(--a-font-size, var(--font-size));
+          padding: var(--a-padding, 0);
+          margin: var(--a-margin, 0);
+          line-height: var(--a-line-height, 0);
+          order: var(--order, 1);
+          text-decoration: var(--a-text-decoration, var(--text-decoration, none));
+          text-underline-offset: var(--a-text-underline-offset, unset);
+          text-transform: var(--a-text-transform, uppercase);
+          transition: var(--a-transition, all 0.2s ease);
+          white-space: var(--a-white-space, normal);
+        }
+        :host > footer > div.logo > a:hover {
+          color: var(--a-color-hover, var(--a-color-hover, var(--a-color, var(--color))));
+          text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
+        }
+      ` : ''}
       :host > footer > ul.language-switcher {
         --color: var(--background-color);
         --color-hover: var(--m-orange-300);
@@ -228,7 +230,7 @@ export default class Footer extends Shadow() {
       Array.from(this.root.children).forEach(node => {
         if (!node.getAttribute('slot') && node.tagName !== 'STYLE' && !node.classList.contains('language-switcher') && node !== this.logo) wrapper.root.appendChild(node)
       })
-      this.footer.appendChild(this.logo)
+      if (this.logo) this.footer.appendChild(this.logo)
       this.footer.appendChild(wrapper)
       this.languageSwitchers.forEach(languageSwitcher => this.footer.appendChild(languageSwitcher))
       this.html = this.footer

@@ -2,6 +2,9 @@
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 import Button from '../web-components/src/es/components/atoms/buttons/Button.js'
 
+/* global customElements */
+/* global self */
+
 /**
  * As a molecule, this component shall hold Atoms
  * Umbraco Forms Styling
@@ -11,7 +14,7 @@ import Button from '../web-components/src/es/components/atoms/buttons/Button.js'
  * @class Wrapper
  * @type {CustomElementConstructor}
  * @attribute {
- *  
+ *
  * }
  * @return {CustomElementConstructor | *}
  */
@@ -53,7 +56,7 @@ export default class Form extends Shadow() {
    */
   renderCSS () {
     /** @type {any} */
-    const ButtonConstructor = class extends Button{} // otherwise the browser complains that this constructor was already defined
+    const ButtonConstructor = class extends Button {} // otherwise the browser complains that this constructor was already defined
     if (!customElements.get('a-button')) customElements.define('a-button', ButtonConstructor)
     const button = new ButtonConstructor({ namespace: 'btn-' })
     button.renderCSS()

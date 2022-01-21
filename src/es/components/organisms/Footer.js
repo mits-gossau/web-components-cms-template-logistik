@@ -71,14 +71,16 @@ export default class Footer extends Shadow() {
   renderCSS () {
     this.css = /* css */`
       :host {
-        ${this.logo ? /* css */`border-top: var(--border-top, 0);` : ''}
+        ${this.logo ? /* css */'border-top: var(--border-top, 0);' : ''}
         margin: var(--margin, 0);
       }
-      ${this.logo ? /* css */`
-        :host > footer {
-          padding: var(--padding, 0);
-        }
-      ` : ''}
+      ${this.logo
+        ? /* css */`
+            :host > footer {
+              padding: var(--padding, 0);
+            }
+          `
+        : ''}
       :host > footer > * {
         margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
         width: var(--content-width, 80%);

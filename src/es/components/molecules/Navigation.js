@@ -99,7 +99,7 @@ export default class Navigation extends BaseNavigation {
         border-bottom: 2px solid transparent;
         transition: all 0.1s ease;
       }
-      :host > nav > ul > li:hover {
+      :host > nav > ul > li:hover:not(.search) {
         border-bottom: 2px solid var(--color);
       }
       :host > nav > ul li.open {
@@ -206,7 +206,7 @@ export default class Navigation extends BaseNavigation {
           justify-content: space-between;
           width: 100%;
         }
-        :host > nav > ul > li:hover {
+        :host > nav > ul > li:hover:not(.search) {
           border-bottom: var(--header-border-bottom);
         }
         :host > nav > ul li.open {

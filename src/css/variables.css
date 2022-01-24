@@ -8,10 +8,12 @@ html {
   --body-wrapper-main-padding: 0;
   --body-wrapper-padding-last-child-mobile: 0 5%;
   --body-wrapper-padding-mobile: 0 5% 1.7rem;
+  --box-shadow-color: 0 -3px 3px var(--m-gray-400);
   --btn-font-size: 1rem;
   --contacts-any-1-width: 50%;
   --contacts-main-padding: 0;
-  --content-max-width-not-web-component: 850px;
+  --content-max-width-two: 1150px;
+  --content-max-width: 850px;
   --content-width-mobile: 100%;
   --content-width-not-web-component-mobile: 90%;
   --content-width-not-web-component: var(--content-width);
@@ -27,6 +29,7 @@ html {
   --details-summary-text-decoration: none;
   --details-text-align: left;
   --details-ul-icons-margin: 0;
+  --emotion-width-max: none;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;

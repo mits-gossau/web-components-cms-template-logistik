@@ -47,6 +47,7 @@ export default class EmotionPictures extends Shadow() {
         display: grid !important;
         margin: var(--margin, -1.5rem auto 1.5rem) !important;
         width: var(--width, 100%) !important;
+        max-width: var(--max-width, none) !important;
       }
       :host > * {
         grid-column: 1;

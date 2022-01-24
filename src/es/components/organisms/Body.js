@@ -23,11 +23,11 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host(.content-max-width) > main > * {
+      :host(.content-max-width) > main > *:not(.ignore-max-width) {
         max-width: var(--content-max-width, none);
       }
-      :host(.content-max-width-not-web-component) > main > span, :host(.content-max-width-not-web-component) > main > div, :host(.content-max-width-not-web-component) > main > p, :host(.content-max-width-not-web-component) > main > a, :host(.content-max-width-not-web-component) > main > article, :host(.content-max-width-not-web-component) > main > ul, :host(.content-max-width-not-web-component) > main > ol, :host(.content-max-width-not-web-component) > main > section, :host(.content-max-width-not-web-component) > main > h1, :host(.content-max-width-not-web-component) > main > h2, :host(.content-max-width-not-web-component) > main > h3, :host(.content-max-width-not-web-component) > main > h4, :host(.content-max-width-not-web-component) > main > h5, :host(.content-max-width-not-web-component) > main > h6 {
-        max-width: var(--content-max-width-not-web-component, none);
+      :host(.content-max-width-two) > main > *:not(.ignore-max-width) {
+        max-width: var(--content-max-width-two, none);
       }
       :host > main > *:not(style) {
         display: block;

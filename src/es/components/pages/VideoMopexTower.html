@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <link href=../../components/web-components/src/css/colors.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/migros.css rel=stylesheet>
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/variablesMopexTower.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../components/web-components/src/css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <title>Video Mopex Tower</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <p-general>
+    <logistik-o-header menu-icon="true" namespace="header-" namespace-fallback role="header" m-navigation="logistik-m-navigation" sticky>
+      <a-logo namespace="header-logo-" namespace-fallback src="https://testadmin.mopex-tower.service.migros.cloud/media/ht5dkswp/mopex-tower-logo.png?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132870643687200000" href="https://testadmin.mopex-tower.service.migros.cloud/">
+      </a-logo>
+      <logistik-m-navigation hover="false" namespace="navigation-" namespace-fallback hit-area="false" focus-lost-close no-scroll>
+        <ul>
+          <li>
+            <a href="https://testadmin.mopex-tower.service.migros.cloud/dekarbonisierungs-strategie/" target="" class="active">Dekarbonisierungs-Strategie</a>
+            <section>
+            </section>
+          </li>
+          <li>
+            <a href="https://testadmin.mopex-tower.service.migros.cloud/life-cycle-assessment-und-co2-analyse/" target="">Life Cycle Assessment und CO2 Analyse</a>
+            <section>
+            </section>
+          </li>
+          <li>
+            <a href="https://testadmin.mopex-tower.service.migros.cloud/fleet-analyse/" target="">Fleet Analyse</a>
+            <section>
+            </section>
+          </li>
+          <li class="search">
+            <wc-f-input inputid="inputSearch" placeholder="Suche..." search="https://testadmin.mopex-tower.service.migros.cloud/suche?q=" namespace="search-">
+            </wc-f-input>
+          </li>
+        </ul>
+        <ul class="language-switcher">
+          <li>
+            <a href="#">EN</a>
+          </li>
+        </ul>
+      </logistik-m-navigation>
+    </logistik-o-header>
+    <logistik-o-body class="content-max-width">
+      <h1>Dekarbonisierungs-Strategie</h1>
+      <a-video namespace="video-">
+        <style>:host{--video-margin:0 auto 0 0}</style>
+        <iframe src="https://player.vimeo.com/video/589548641" width="640" height="360" frameborder="0" allowfullscreen>
+        </iframe>
+      </a-video>
+      <article>
+        <p>Hier wären Erklärungen zu den Tools denkbar.</p>
+        <p>Der Migros LTOPEX Tower verleiht Ihrem Supply Chain Management Schub. Dank Zugang zu allen relevanten Informationen in Real-Time wird Effizienzsteigerung ganz einfach. Egal was wo und wann passiert, Sie wissen es umgehend, können Trends erkennen und Optimierungen frühzeitig planen.</p>
+        <p>
+          <img src="https://testadmin.mopex-tower.service.migros.cloud/media/wzuimjy4/nat_str.jpg?width=500&height=357.03125" alt="" width="500" height="357.03125">
+        </p>
+      </article>
+    </logistik-o-body>
+    <logistik-o-footer namespace="footer-" namespace-fallback>
+      <div>
+        <div class="logo">
+        </div>
+        <h3>Direktion Logistik Transport</h3>
+        <p>Mit Ihrer Persönlichkeit unterstützen Sie unsere digitale Transformation in einem komplexen, internationalen Umfeld und bewirken eine Weiterentwicklung unserer Organisation auf dem Weg zu Business Excellence und Innovationsführerschaft.</p>
+      </div>
+      <ul class="language-switcher">
+        <li>
+          <a href="#">EN</a>
+        </li>
+      </ul>
+    </logistik-o-footer>
+  </p-general>
+  <o-modal namespace="modal-" transition=500>
+    <div id="close"  style="font-size: 16px;"><a-menu-icon namespace="header-a-menu-icon-" namespace-fallback="" class="open" no-click></a-menu-icon></div>
+    <span style="color:white;">If event.detail has no child property holding HTMLElement as value, you will see this</span>
+  </o-modal>
+  <!--<msrc-cookie-banner props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'YZ2PxeiToHsMMnjPdpeEZU9Tp4N9adVVAwYLQKjJg89KQ6MCFcYKQL9Cdcq2HjgE'}" mobile-breakpoint="1000px"></msrc-cookie-banner>-->
+  <script rel=preload type=module>
+    self.Environment = {
+      mobileBreakpoint: '767px'
+    }
+  </script>
+</body>
+</html>

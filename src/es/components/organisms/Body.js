@@ -23,10 +23,10 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host(.content-max-width) > main > *:not(.ignore-max-width) {
+      :host(.content-max-width) > main > *:not(.ignore-max-width), :host> main > *.content-max-width {
         max-width: var(--content-max-width, none);
       }
-      :host(.content-max-width-two) > main > *:not(.ignore-max-width) {
+      :host(.content-max-width-two) > main > *:not(.ignore-max-width), :host > main > *.content-max-width-two {
         max-width: var(--content-max-width-two, none);
       }
       :host > main > *:not(style) {

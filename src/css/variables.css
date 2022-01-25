@@ -143,8 +143,9 @@ html {
   --navigation-a-link-font-size: var(--header-a-font-size);
   --navigation-a-link-font-weight-no-scroll: var(--navigation-a-link-font-weight);
   --navigation-a-link-font-weight: bold;
+  --navigation-color-active: var(--color-hover);
   --navigation-color-hover: var(--color-secondary);
-  --navigation-color-open: var(--color);
+  --navigation-color-open: var(--color-secondary);
   --navigation-flex-wrap: wrap;
   --navigation-li-padding: 0 0 1.5rem;
   --navigation-margin: 0 max(0.6vw, 0.75rem);

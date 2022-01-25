@@ -68,11 +68,11 @@ export default class Breadcrumb extends Shadow() {
         text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
       }
       :host > ul > li > span {
-        background-image: var(--background-image, url(${this.getAttribute('icon') || "../web-components/src/icons/chevron_right.svg"}));
+        ${this.getAttribute('icon') !== 'false' ? `background-image: var(--background-image, url(${this.getAttribute('icon') || "../web-components/src/icons/chevron_right.svg"}));` : ''}
         background-position: center;
         background-repeat: no-repeat;
         background-size: 1em;
-        color: transparent;
+        ${this.getAttribute('icon') !== 'false' ? 'color: transparent;' : ''}
         min-width: 1em;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {

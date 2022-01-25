@@ -45,7 +45,7 @@ export default class Breadcrumb extends Shadow() {
       :host > ul > li {
         display: flex;
       }
-      :host > ul a {
+      :host > ul > li > a {
         color: var(--a-color, var(--color-secondary, var(--color, pink)));
         font-weight: var(--a-font-weight, var(--font-weight, normal));
         text-align: var(--a-text-align, unset);
@@ -58,14 +58,22 @@ export default class Breadcrumb extends Shadow() {
         color: var(--a-color-hover, var(--color-hover-secondary, var(--color-hover, var(--color, green))));
         text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
       }
-      :host > ul a {
+      :host > ul > li > a {
         color: var(--a-color, var(--color-secondary, var(--color, pink)));
         text-decoration: var(--a-text-decoration, var(--text-decoration, none));
         text-underline-offset: var(--a-text-underline-offset, unset);
       }
-      :host > ul a:hover, :host > ul a:active, :host > ul a:focus {
+      :host > ul > li > a:hover, :host > ul > li > a:active, :host > ul > li > a:focus {
         color: var(--a-color-hover, var(--color-hover-secondary, var(--color-hover, var(--color, green))));
         text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
+      }
+      :host > ul > li > span {
+        background-image: var(--background-image, url(${this.getAttribute('icon') || "../web-components/src/icons/chevron_right.svg"}));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1em;
+        color: transparent;
+        min-width: 1em;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
@@ -76,7 +84,7 @@ export default class Breadcrumb extends Shadow() {
           margin: var(--ul-margin-mobile, var(--ul-margin, 0));
           padding: var(--ul-padding-mobile, var(--ul-padding, 0));
         }
-        :host > ul a {
+        :host > ul > li > a {
           margin: var(--a-margin-mobile, var(--a-margin, var(--content-spacing-mobile, var(--content-spacing, unset)))) auto;
         }
       }

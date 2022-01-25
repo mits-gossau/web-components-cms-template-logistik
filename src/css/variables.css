@@ -9,6 +9,10 @@ html {
   --body-wrapper-padding-last-child-mobile: 0 5%;
   --body-wrapper-padding-mobile: 0 5% 1.7rem;
   --box-shadow-color: 0 -3px 3px var(--m-gray-400);
+  --breadcrumb-margin-mobile: 0 auto var(--content-spacing);
+  --breadcrumb-margin: 0 auto 1.5rem;
+  --breadcrumb-width-mobile: var(--content-width-not-web-component-mobile);
+  --breadcrumb-width: var(--content-width-not-web-component);
   --btn-font-size: 1rem;
   --contacts-any-1-width: 50%;
   --contacts-main-padding: 0;

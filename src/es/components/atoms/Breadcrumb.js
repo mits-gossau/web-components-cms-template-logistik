@@ -38,12 +38,14 @@ export default class Breadcrumb extends Shadow() {
       }
       :host ul {
         display: flex;
+        flex-wrap: wrap;
         list-style: var(--list-style, none);
         margin: var(--ul-margin, 0);
         padding: var(--ul-padding, 0);
       }
       :host > ul > li {
         display: flex;
+        white-space: nowrap;
       }
       :host > ul > li > a {
         color: var(--a-color, var(--color-secondary, var(--color, pink)));

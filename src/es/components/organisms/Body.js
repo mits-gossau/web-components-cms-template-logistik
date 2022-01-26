@@ -128,7 +128,7 @@ export default class Body extends BaseBody {
         text-align: var(--text-align, center);
       }
       :host > main .quote > q {
-        text-decoration: var(--text-decoration, italic);
+        font-style: var(--font-style, italic);
       }
       :host > main .quote > small {
         font-size: var(--font-size, 0.8rem);

@@ -124,6 +124,15 @@ export default class Body extends BaseBody {
       :host > main wc-a-button ~ wc-a-button {
         padding-top: var(--content-spacing);
       }
+      :host > main .quote {
+        text-align: var(--text-align, center);
+      }
+      :host > main .quote > q {
+        text-decoration: var(--text-decoration, italic);
+      }
+      :host > main .quote > small {
+        font-size: var(--font-size, 0.8rem);
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host([home]) .spacer {
           height: var(--home-spacer-height-mobile, var(--home-spacer-height, 15vw));

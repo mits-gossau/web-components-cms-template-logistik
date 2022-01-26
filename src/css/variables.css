@@ -173,9 +173,6 @@ html {
   --picture-text-wrapper-padding: 0;
   --picture-width-mobile: 100%;
   --picture-width: 100%;
-  --q-font-size-mobile: 1.333rem;
-  --q-font-size: 1.272rem;
-  --q-margin: 0 auto 0.227rem;
   --search-border-color-focus: var(--m-gray-500);
   --search-border-color-hover: var(--search-border-color-focus);
   --search-border-focus: 1px solid var(--m-gray-500);

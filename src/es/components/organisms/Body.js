@@ -125,13 +125,13 @@ export default class Body extends BaseBody {
         padding-top: var(--content-spacing);
       }
       :host > main .quote {
-        text-align: var(--text-align, center);
+        text-align: var(--q-text-align, center);
       }
       :host > main .quote > q {
-        font-style: var(--font-style, italic);
+        font-style: var(--q-font-style, italic);
       }
       :host > main .quote > small {
-        font-size: var(--font-size, 0.8rem);
+        font-size: var(--q-font-size, 0.8rem);
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host([home]) .spacer {

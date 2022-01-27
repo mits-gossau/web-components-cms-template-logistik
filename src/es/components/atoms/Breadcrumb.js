@@ -70,7 +70,7 @@ export default class Breadcrumb extends Shadow() {
         text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
       }
       :host > ul > li > span {
-        ${this.getAttribute('icon') !== 'false' ? `background-image: var(--background-image, url(${this.getAttribute('icon') || "../web-components/src/icons/chevron_right.svg"}));` : ''}
+        ${this.getAttribute('icon') !== 'false' ? `background-image: var(--background-image, url(${this.getAttribute('icon') || `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../web-components/src/icons/chevron_right.svg`}));` : ''}
         background-position: center;
         background-repeat: no-repeat;
         background-size: 1em;

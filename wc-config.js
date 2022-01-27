@@ -79,9 +79,10 @@
    *
    * @param {string} tagName
    * @param {string} url
+   * @param {string} [query='']
    * @returns {ImportEl}
    */
-  const load = (tagName, url) => {
+  const load = (tagName, url, query = '') => {
     // baseUrl is only used if url is relative / does not start with "." nor "/"
     if (!customElements.get(tagName)) {
       /** @type {Directory} */
@@ -104,7 +105,7 @@
         const fileName = /.[m]{0,1}js/.test(url) ? '' : `${(tagName.replace(directory.selector, '') || tagName).charAt(0).toUpperCase()}${(tagName.replace(directory.selector, '') || tagName).slice(1).replace(/-([a-z]{1})/g, (match, p1) => p1.toUpperCase())}.${fileEnding}`
         if (directory.separateFolder) url += `${fileName.replace(`.${fileEnding}`, '').toLowerCase()}s/`
         /** @type {ImportEl} */
-        const importEl = import(`${/[./]{1}/.test(url.charAt(0)) ? '' : baseUrl}${url}${fileName}`).then(module => /** @returns {[string, CustomElementConstructor]} */ [tagName, module.default || module])
+        const importEl = import(`${/[./]{1}/.test(url.charAt(0)) ? '' : baseUrl}${url}${fileName}${query}`).then(module => /** @returns {[string, CustomElementConstructor]} */ [tagName, module.default || module])
         if (src.searchParams.get('resolveImmediately') === 'true') resolve([importEl])
         return importEl
       }
@@ -123,7 +124,16 @@
         return nodes
       }
       return [...nodes, currentNode]
-    }, []).forEach(node => imports.push(load(node.tagName.toLowerCase(), node.getAttribute(urlAttributeName) || '')))
+    }, []).forEach(node => {
+      // assemble query to url that the attributes can be read by the web components script before defining its class expl. ("import.meta.url" before "export default class Breadcrumb extends Shadow() {")
+      let query = ''
+      if (node.hasAttribute('query') && node.attributes) {
+        for (const key in node.attributes) {
+          if (node.attributes[key] && node.attributes[key].nodeName) query += `${query ? '&' : '?'}${node.attributes[key].nodeName}${node.attributes[key].nodeValue ? `=${self.encodeURIComponent(node.attributes[key].nodeValue)}` : ''}`
+        }
+      }
+      imports.push(load(node.tagName.toLowerCase(), node.getAttribute(urlAttributeName) || '', query))
+    })
     // after all the imports have started we can resolve and do customElements.define
     Promise.all(imports).then(elements => {
       if (src.searchParams.get('resolveImmediately') !== 'true') resolve(imports)

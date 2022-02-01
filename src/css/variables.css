@@ -196,6 +196,7 @@ html {
   --teaser-content-spacing: 0;
   --teaser-content-width: 100%;
   --teaser-h1-margin: 0 0 0.75rem;
+  --teaser-justify-content: space-between;
   --teaser-p-text-align: var(--p-text-align);
   --teaser-picture-width-mobile: var(--picture-width-mobile);
   --teaser-picture-width: var(--picture-width);

@@ -160,7 +160,7 @@ html {
   --picture-logo-text-align: left;
   --picture-margin: 0 auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
   --picture-padding: 0;
-  --picture-text-align: left;
+  --picture-text-align: center;
   --picture-text-wrapper-any-1-width: 67%;
   --picture-text-wrapper-h1-margin: var(--teaser-h1-margin);
   --picture-text-wrapper-main-padding: 0;

@@ -85,6 +85,10 @@ export default class Footer extends Shadow() {
         margin: var(--content-spacing, 40px) auto;  /* Warning! Keep horizontal margin at auto, otherwise the content width + margin may overflow into the scroll bar */
         width: var(--content-width, 80%);
       }
+      :host > footer > *, :host > footer {
+        --background-color: var(--background-color-custom, var(--m-gray-100));
+        background-color: var(--background-color);
+      }
       :host > footer > div.logo {
         margin: 0 auto;
       }
@@ -141,6 +145,9 @@ export default class Footer extends Shadow() {
         border: 0;
         list-style: var(--list-style, none);
         width: auto;
+      }
+      :host .hidden {
+        display: none;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host {
@@ -229,9 +236,14 @@ export default class Footer extends Shadow() {
       })
       const wrapper = new children[1][1]()
       wrapper.root.appendChild(this.wrapperStyle)
+      let wrapperChildren = 0
       Array.from(this.root.children).forEach(node => {
-        if (!node.getAttribute('slot') && node.tagName !== 'STYLE' && !node.classList.contains('language-switcher') && node !== this.logo) wrapper.root.appendChild(node)
+        if (!node.getAttribute('slot') && node.tagName !== 'STYLE' && !node.classList.contains('language-switcher') && node !== this.logo) {
+          wrapper.root.appendChild(node)
+          wrapperChildren++
+        }
       })
+      if (!wrapperChildren) wrapper.classList.add('hidden')
       if (this.logo) this.footer.appendChild(this.logo)
       this.footer.appendChild(wrapper)
       this.languageSwitchers.forEach(languageSwitcher => this.footer.appendChild(languageSwitcher))

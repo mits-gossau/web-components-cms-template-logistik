@@ -69,6 +69,8 @@ export default class EmotionPictures extends Shadow() {
       --picture-img-max-height: var(--${this.getAttribute('namespace') || ''}img-max-height);
       --${this.getAttribute('namespace') || ''}img-width: var(--${this.getAttribute('namespace') || ''}width, 100%);
       --picture-img-width: var(--${this.getAttribute('namespace') || ''}img-width);
+      --${this.getAttribute('namespace') || ''}img-object-fit: var(--${this.getAttribute('namespace') || ''}object-fit, cover);
+      --picture-img-object-fit: var(--${this.getAttribute('namespace') || ''}img-object-fit);
     }`, undefined, '', false)
   }
 

@@ -35,6 +35,9 @@ html {
   --details-text-align: left;
   --details-ul-icons-margin: 0;
   --emotion-width-max: none;
+  --emotion-object-fit: cover;
+  --emotion-max-height: 75vh;
+  --emotion-min-width: 100%;
   --figcaption-padding-mobile: 1.5rem 5% 0;
   --figcaption-padding: 1.5rem 0 0;
   --flex-grow: 1;
